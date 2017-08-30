@@ -1,0 +1,86 @@
+@charset 'UTF-8';
+@mixin defaultFontSize {
+    font-size: 14px;
+    line-height: 1.7em;
+    color: #555;
+}
+
+@mixin containerOne {
+    width: 80%;
+    height: auto;
+    background: #eee;
+    margin: 0 auto;
+}
+
+@mixin transitions($arg) {
+    -webkit-transition: $arg;
+    -moz-transition: $arg;
+    -ms-transition: $arg;
+    -o-transition: $arg;
+    transition: $arg;
+}
+
+
+/* clearfix */
+
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+/* main body*/
+
+body {
+    background: #fff;
+    @include defaultFontSize;
+}
+
+#titleBar {
+    background: #555;
+    color: #fff;
+    & div:second-child {
+        padding: 0 0 0 20px;
+    }
+    & div:nth-last-child(2) {
+        display: flex;
+        div {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+    }
+}
+
+#about {
+    @include containerOne
+}
+
+#work {
+    width: auto;
+    .item {
+        background: #555;
+        color: #fff;
+        height: 350px;
+        outline: none;
+    }
+    .slick-prev {
+        left: 10px;
+        z-index: 2;
+    }
+    .slick-next {
+        right: 10px;
+        z-index: 2;
+    }
+}
+
+#contact {
+    @include containerOne
+}
