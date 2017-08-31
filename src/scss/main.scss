@@ -25,7 +25,7 @@ $mNavToggleH: 50px;
 }
 
 @mixin topRightPos {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
 }
@@ -57,23 +57,17 @@ a {
 /*responsive nav*/
 
 #mNav {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    visibility: visible;
-    overflow: hidden;
-    color: $mNavTextColour;
-    z-index: 100;
     .menuContainer {
+        @include topRightPos;
         background: $mNavBgColour;
+        color: $mNavTextColour;
         //visibility: hidden;
         pointer-events: none;
         opacity: 0;
         width: 100%;
         height: 100%;
         transition: all 0.5s linear;
+        z-index: 100;
     }
     .checkboxToggle {
         @include topRightPos;
