@@ -1,4 +1,5 @@
 import 'jquery';
+import 'photoswipe';
 import '../node_modules/purecss/build/pure-min.css';
 import '../node_modules/purecss/build/grids-responsive-min.css';
 import './scss/main.scss';
@@ -7,6 +8,7 @@ import '../node_modules/slick-carousel/slick/slick.scss';
 import 'slick-carousel';
 import './js/layoutAnimation.js';
 import '../node_modules/photoswipe/dist/photoswipe.css';
-import '../node_modules/photoswipe/dist/photoswipe.min.js';
+/*import '../node_modules/photoswipe/dist/photoswipe.min.js';*/
 import '../node_modules/photoswipe/dist/photoswipe-ui-default.min.js';
+import './js/photoswipeGallery.js'
 import '../node_modules/photoswipe/dist/default-skin/default-skin.css';

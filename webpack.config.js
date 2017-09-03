@@ -70,7 +70,9 @@ module.exports = {
     }), new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
-        "window.jQuery": 'jquery'
+        "window.jQuery": 'jquery',
+        PhotoSwipe: 'photoswipe',
+        PhotoSwipeUI_Default: 'photoswipe'
     })]
 
 
