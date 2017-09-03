@@ -29,7 +29,7 @@ module.exports = {
                         presets: 'es2015'
                     }
                 }
-},
+            },
             {
                 test: /\.html$/,
                 use: ['html-loader']
@@ -51,7 +51,7 @@ module.exports = {
 
             },
             {
-                test: /\.(jpg|png|gif|eot|svg|ttf|woff)$/,
+                test: /\.(jpg|jpeg|png|gif|eot|svg|ttf|woff)$/,
                 use: [{
                     loader: 'file-loader',
                     options: {

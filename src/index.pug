@@ -3,8 +3,10 @@ html
     head
         title Hello world
     body
-        include modules/photoswipe.pug
-        #mNav
+        
+        
+       
+        //-#mNav
             input.checkboxToggle(type="checkbox")
             .checkboxLabel b
             .menuContainer
@@ -13,14 +15,14 @@ html
                 a Three
         
         
-        .pure-g#titleBar
+        //-.pure-g#titleBar
             .pure-u-1-24
             .pure-u-10-24
                 h2 2UNIQ
             .pure-u-12-24
                 div About work contact
             .pure-u-1-24
-        #about
+        //-#about
             .pure-g
                 .pure-u-1.pure-u-md-1-2
                     
@@ -28,7 +30,7 @@ html
                     h2 Heading
                     p Admodum in dolore possumus ab e de aliqua quorum labore e ad fugiat irure illum deserunt si aliquip exquisitaque hic commodo. Magna ea ullamco si legam. Non multos illustriora ut do an tractavissent, nulla arbitror si iudicem, an malis aut fore et incurreret nisi aut singulis arbitrantur do ubi do anim quamquam de
                     
-        #work
+        //-#work
             
                 .item
                     button#openWork fkljds
@@ -50,7 +52,7 @@ html
                     p kjflds
 
         
-        #contact
+        //-#contact
             .pure-g
                 .pure-u-1.pure-u-md-1-2
                     h2 Contact
@@ -58,4 +60,7 @@ html
 
                     
                 .pure-u-1.pure-u-md-1-2
+        
+        include modules/photoswipe.pug
+       
                     
