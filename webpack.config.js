@@ -17,6 +17,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
 
         filename: 'all.js'
+
     },
     module: {
 
@@ -56,7 +57,7 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: 'img/'
+                        outputPath: 'files/'
                     }
                 }]
 
@@ -70,9 +71,7 @@ module.exports = {
     }), new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
-        "window.jQuery": 'jquery',
-        PhotoSwipe: 'photoswipe',
-        PhotoSwipeUI_Default: 'photoswipe'
+        "window.jQuery": 'jquery'
     })]
 
 
