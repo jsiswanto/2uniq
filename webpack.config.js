@@ -24,21 +24,24 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                use: {
+                use: [{
                     loader: 'babel-loader',
                     options: {
                         presets: 'es2015'
                     }
-                }
+                }]
             },
             {
                 test: /\.html$/,
-                use: ['html-loader']
+                use: ['html-loader?interpolate']
+
             },
 
             {
                 test: /\.pug$/,
-                use: ['html-loader', 'pug-html-loader']
+                use: ['html-loader?interpolate', 'pug-html-loader']
+
+
             },
             {
                 test: /\.css$/,

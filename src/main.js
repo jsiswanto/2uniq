@@ -1,3 +1,5 @@
+/*ES6*/
+
 import 'jquery';
 import '@fancyapps/fancybox';
 import '../node_modules/purecss/build/pure-min.css';
@@ -12,5 +14,3 @@ import './js/layoutAnimation.js';
 
 /*fancybox*/
 import '../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
-
-import './images/cat5.jpeg';

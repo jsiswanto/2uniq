@@ -146,5 +146,13 @@ body {
 }
 
 #contact {
-    @include containerOne
+    @include containerOne;
+    margin-bottom: 50px;
+}
+
+#footer {
+    background: #000;
+    div {
+        height: 30px;
+    }
 }
