@@ -108,8 +108,9 @@ body {
 }
 
 #titleBar {
-    background: #555;
-    color: #fff;
+    background: none;
+    color: #555;
+    padding: 1%;
     & div:second-child {
         padding: 0 0 0 20px;
     }
@@ -120,6 +121,16 @@ body {
             align-items: center;
             margin-left: auto;
         }
+    }
+    ul {
+        margin: 0;
+        li {
+            display: inline;
+        }
+    }
+    #twoUniqLogo {
+        width: 20%;
+        min-width: 70px;
     }
 }
 
@@ -132,8 +143,29 @@ body {
     .item {
         background: #555;
         color: #fff;
-        height: 350px;
+        height: 600px;
         outline: none;
+        margin: 0.5%;
+        a {
+            background-size: 100% !important;
+            width: 100%;
+            height: 100%;
+            display: block;
+            outline: none;
+        }
+        /*Gallery*/
+        #one {
+            background: url("../images/work/1prev.png") top left #fff no-repeat;
+        }
+        #two {
+            background: url("../images/work/2prev.png") top left #fff no-repeat;
+        }
+        #three {
+            background: url("../images/work/3prev.png") top left #fff no-repeat;
+        }
+        #four {
+            background: url("../images/work/4prev.png") top left #fff no-repeat;
+        }
     }
     .slick-prev {
         left: 10px;

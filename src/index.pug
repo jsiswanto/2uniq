@@ -2,11 +2,13 @@ doctype html
 html
     head
         title Hello world
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+
     body
         
         
        
-        #mNav
+        //--#mNav
             input.checkboxToggle(type="checkbox")
             .checkboxLabel b
             .menuContainer
@@ -18,9 +20,13 @@ html
         .pure-g#titleBar
             .pure-u-1-24
             .pure-u-10-24
-                h2 2UNIQ
+                img#twoUniqLogo(src="${require('./images/2uniq.png')}")
             .pure-u-12-24
-                div About work contact
+                div 
+                    ul
+                     li About 
+                     li work 
+                     li contact
             .pure-u-1-24
         #about
             .pure-g
@@ -33,20 +39,14 @@ html
         #work
             
                 .item
-                    a(href="${require('./images/cat1.jpeg')}" data-fancybox="group" data-caption="This is a cute cat") Cat1
+                       a#one(href="${require('./images/work/1prev.png')}" data-fancybox="group" data-caption="This is a cute cat")  
                     
                 .item
-                    a(href="${require('./images/cat2.jpeg')}" data-fancybox="group" data-caption="This is a cute cat") Cat2
+                    a#two(href="${require('./images/work/2prev.png')}" data-fancybox="group" data-caption="This is a cute cat") 
                 .item
-                    a(href="${require('./images/cat3.jpeg')}" data-fancybox="group" data-caption="This is a cute cat") Cat3
+                    a#three(href="${require('./images/work/3prev.png')}" data-fancybox="group" data-caption="This is a cute cat")
                 .item
-                    a(href="${require('./images/cat4.jpeg')}" data-fancybox="group" data-caption="This is a cute cat") Cat4
-                .item
-                    a(href="${require('./images/cat5.jpeg')}" data-fancybox="group" data-caption="This is a cute cat") Cat5
-                .item
-                    a(href="${require('./images/cat6.jpeg')}" data-fancybox="group" data-caption="This is a cute cat") Cat6
-                .item
-                    a(href="${require('./images/cat7.jpg')}" data-fancybox="group" data-caption="This is a cute cat") Cat7
+                    a#four(href="${require('./images/work/4prev.png')}" data-fancybox="group" data-caption="This is a cute cat")
                 .item
                     p kjflds
                 .item
