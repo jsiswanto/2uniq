@@ -2,9 +2,10 @@
 
 import 'jquery';
 import '@fancyapps/fancybox';
+import './scss/main.scss';
 import '../node_modules/purecss/build/pure-min.css';
 import '../node_modules/purecss/build/grids-responsive-min.css';
-import './scss/main.scss';
+
 
 /*slick carousel*/
 import '../node_modules/slick-carousel/slick/slick-theme.scss';
