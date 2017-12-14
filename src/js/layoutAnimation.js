@@ -26,4 +26,10 @@ $(document).ready(function ()
         });
 
 
+        $("#work .item a").fancybox({
+
+            'slideShow': false
+
+        });
+
     });
