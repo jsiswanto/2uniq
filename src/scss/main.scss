@@ -6,9 +6,11 @@ $mNavToggleH: 50px;
 $lightBlue: #b9c4d4;
 $darkBlue: #7f8f9c;
 $defaultTextColour: #30353c;
+$inactiveButton: #1c2127;
+$backgroundGrad: #49657b;
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300i,400,600,700');
 @mixin defaultFontSize {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 2em;
     color: $defaultTextColour;
 }
@@ -52,13 +54,9 @@ $defaultTextColour: #30353c;
 /* clearfix */
 
 %clearfix {
-    *zoom: 1;
-    &:before,
     &:after {
         content: " ";
         display: table;
-    }
-    &:after {
         clear: both;
     }
 }
@@ -184,9 +182,30 @@ h2 {
 /* main body*/
 
 body {
-    background: url('../images/bg.png') top right no-repeat #fff;
+    //background: url('../images/bg.png') top right no-repeat #fff;
+    background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, #ffffff 35%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, #ffffff 35%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, $backgroundGrad 0%, #ffffff 35%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     background-size: 100% auto;
     @include defaultFontSize;
+    #bgImage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        //@extend %clearfix;
+        .img {
+            min-width: 100%;
+            min-height: 1500px;
+            background: url("../images/bg.png") no-repeat top left;
+            //  @extend %clearfix;
+        }
+    }
 }
 
 .shadow {
@@ -230,7 +249,6 @@ body {
 }
 
 #about {
-    @include containerOne;
     p,
     b {
         @include defaultFont;
@@ -255,7 +273,9 @@ body {
         width: 30px;
         height: 30px;
     }
-    text-align: center;
+    text-align: left;
+    margin: 30px 5% 0 40%;
+    width: 55%;
 }
 
 #work {
@@ -291,6 +311,15 @@ body {
         }
         #four {
             background: url("../images/work/4prev.png") top left #fff no-repeat;
+        }
+        #five {
+            background: url("../images/work/5prev.png") top left #fff no-repeat;
+        }
+        #six {
+            background: url("../images/work/6prev.png") top left #fff no-repeat;
+        }
+        #seven {
+            background: url("../images/work/7prev.png") top left #fff no-repeat;
         }
     }
     .slick-prev {
@@ -382,7 +411,7 @@ body {
         margin: 50px 50px 50px 0;
         h2 {
             display: inline-block;
-            margin: -5px 0 0 15px;
+            margin: -1px 0 0 15px;
         }
         img {
             width: 30px;
@@ -408,7 +437,7 @@ body {
             }
             a {
                 padding: 10px;
-                background: #1c2127;
+                background: $inactiveButton;
                 display: block;
                 margin: 10px 0;
                 span {
@@ -419,9 +448,9 @@ body {
     }
 }
 
-#footer {
-    background: #000;
+.viewPort {
+    background: $inactiveButton;
     div {
-        height: 30px;
+        height: 12px;
     }
 }
