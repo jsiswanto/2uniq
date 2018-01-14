@@ -26,6 +26,8 @@ $(document).ready(function ()
         });
 
 
+
+
         $("#work .item a").fancybox({
 
             'slideShow': false
@@ -33,3 +35,15 @@ $(document).ready(function ()
         });
 
     });
+
+$(window).scroll(function ()
+
+    {
+
+        if ($(document).scrollTop() > 25) {
+            $('#titleBar').addClass('bgFill');
+        } else {
+            $('#titleBar').removeClass('bgFill');
+        }
+    }
+);
