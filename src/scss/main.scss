@@ -72,6 +72,10 @@ $backgroundGrad2: #ffffff;
     }
 }
 
+p {
+    margin-top: 20px !important;
+}
+
 
 /* clearfix */
 
@@ -108,7 +112,8 @@ h2 {
 
 @media screen and(max-width: 1350px) {
     #about {
-        width: 60%;
+        margin: 95px 5% 0 5% !important;
+        width: 90% !important;
     }
     #work {
         .item {
@@ -118,9 +123,6 @@ h2 {
 }
 
 @media screen and(min-width: 1351px) {
-    #about {
-        width: 80%;
-    }
     #work {
         .item {
             height: 450px;
@@ -272,12 +274,15 @@ body {
         font-size: 0.8em;
         li {
             display: inline;
-            padding: 0 2%;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            &.active {
-                color: $defaultTextColour;
-                font-weight: bold;
+            a {
+                @extend li;
+                padding: 0 2%;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                &.active {
+                    color: $defaultTextColour !important;
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -302,9 +307,6 @@ body {
     h1 {
         @include titleStyle2;
         margin-top: 0;
-    }
-    p {
-        margin-top: 30px;
     }
     img {
         width: 30px;
@@ -397,8 +399,8 @@ body {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9bac8', endColorstr='#7f8f9c', GradientType=1);
         p {
             text-transform: uppercase;
+            margin-left: 30px;
             color: #fff;
-            margin: 20px 0 0 20px;
             font-size: 1.1em;
             line-height: 2em;
             font-weight: 600;
@@ -423,6 +425,7 @@ body {
     img {
         width: 30px;
         height: 30px;
+        vertical-align: top;
     }
 }
 
@@ -452,6 +455,7 @@ body {
         img {
             width: 30px;
             height: 30px;
+            vertical-align: top;
         }
     }
     .flex {
@@ -466,7 +470,8 @@ body {
         .right {
             p {
                 color: #fff;
-                margin-top: 0;
+                margin-top: 0 !important;
+                line-height: 1.5em;
             }
             h3 {
                 margin: 0;

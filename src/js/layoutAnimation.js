@@ -1,7 +1,7 @@
 $(document).ready(function ()
 
     {
-        $("#work").slick({
+        $('#work').slick({
             infinite: false,
             slidesToShow: 5,
             slidesToScroll: 1,
@@ -28,7 +28,7 @@ $(document).ready(function ()
 
 
 
-        $("#work .item a").fancybox({
+        $('#work .item a').fancybox({
 
             'slideShow': false
 
@@ -50,3 +50,8 @@ $(window).scroll(function ()
         }
     }
 );
+
+$("body").scrollspy({
+    target: '#titleBar',
+    offset: 250
+});
