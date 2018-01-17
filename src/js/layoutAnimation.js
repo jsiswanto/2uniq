@@ -36,6 +36,9 @@ $(document).ready(function ()
 
     });
 
+
+/*nav*/
+
 $(window).scroll(function ()
 
     {
