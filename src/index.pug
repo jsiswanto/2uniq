@@ -22,18 +22,19 @@ html
         #bgImage
             .img
         
-        .pure-g#titleBar
-            .pure-u-1-24
-            .pure-u-10-24
-                img#twoUniqLogo(src="${require('./images/2uniq.svg')}")
-            .pure-u-12-24
-         
-                    ul
-                     li#aboutNav.active About 
-                     li#workNav work 
-                     li#contactNav contact
-            .pure-u-1-24
-        
+        #titleBar.container-fluid
+            .row
+                .col-1
+                .col
+                    img#twoUniqLogo(src="${require('./images/2uniq.svg')}")
+                .col
+
+                        ul
+                         li#aboutNav.active About 
+                         li#workNav work 
+                         li#contactNav contact
+                .col-1
+
        
         
         #about
@@ -83,40 +84,42 @@ html
             .title
                 img(src="${require('./images/tech.svg')}" align="top")
                 h2 Technical Proficiency
-            .pure-g
-                .pure-u-1.pure-u-md-1-2
-                    .flex
-                        .techBody
-                            p 
-                                span Photoshop 
-                                span HTML5 
-                                span CSS3 
-                                span Vanilla&nbsp;JS 
-                                span Pure.css 
-                                span Preprocessors 
-                                span Webpack 
-                                span Git 
-                                span User&nbsp;Experience 
-                                span Interaction&nbsp;Design
-                                span Illustrator
-                        .diagonal
-                    
-                .pure-u-1.pure-u-md-1-2
-                    .techDesc
-                        h3 By making careful adjustments to what is already simple, I can turn anything ordinary into something extraordinary.
-                        p After years of experience communicating and understanding the needs of different end-users through personas and market research, I began to notice that the most impactful and memorable experiences are accomplished by taking simple, efficient design approaches. Why take the more complicated path when there is a shorter one to reach the destination?
-                        p A Graphic Designer with the skills of a Front-end Developer. With my creative skills and experience in UI, I bring value to my clients by avoiding the need to hire an additional designer or developer.
-        
-        #contact
-            .pure-g
-                .pure-u-1.pure-u-md-1-2
+            .container-fluid
+                .row
+                    .col-xl
+                        .flex
+                            .techBody
+                                p 
+                                    span Photoshop 
+                                    span HTML5 
+                                    span CSS3 
+                                    span Vanilla&nbsp;JS 
+                                    span Pure.css 
+                                    span Preprocessors 
+                                    span Webpack 
+                                    span Git 
+                                    span User&nbsp;Experience 
+                                    span Interaction&nbsp;Design
+                                    span Illustrator
+                            .diagonal
+
+                    .col-xl
+                        .techDesc
+                            h3 By making careful adjustments to what is already simple, I can turn anything ordinary into something extraordinary.
+                            p After years of experience communicating and understanding the needs of different end-users through personas and market research, I began to notice that the most impactful and memorable experiences are accomplished by taking simple, efficient design approaches. Why take the more complicated path when there is a shorter one to reach the destination?
+                            p A Graphic Designer with the skills of a Front-end Developer. With my creative skills and experience in UI, I bring value to my clients by avoiding the need to hire an additional designer or developer.
+
+        #contact.container-fluid
+            .row
+                .col-1
+                .col
                     .marginRight    
                         img(src="${require('./images/startshere.svg')}" align="top")
                         h2 It starts here
                         p Let’s collaborate and create something amazing for your customers. From Web banners, prototypes, mockups, concepts to development, I am available for full-time employment and freelancing.
 
                     
-                .pure-u-1.pure-u-md-1-2
+                .col
                     .flex
                         .left
                             img(src="${require('./images/jeffthumb.png')}")
@@ -127,9 +130,7 @@ html
                                 |jeff@2uniq.com
                             a(href="#") Download my CV
                                 span  (.pdf)
-        
-        .viewPort.pure-g
-            .pure-u-1.pure-u-md-1-2
-            .pure-u-1.pure-u-md-1-2
+                .col-1
+
                
                     

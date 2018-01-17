@@ -1,11 +1,15 @@
 /*ES6*/
 
 import 'jquery';
-//import 'bootstrap';
+import 'popper.js';
+import 'bootstrap';
 import '@fancyapps/fancybox';
 import './scss/main.scss';
-import '../node_modules/purecss/build/pure-min.css';
-import '../node_modules/purecss/build/grids-responsive-min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+//import '../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
+
+//import '../node_modules/purecss/build/pure-min.css';
+//import '../node_modules/purecss/build/grids-responsive-min.css';
 
 
 /*slick carousel*/
