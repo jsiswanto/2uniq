@@ -25,14 +25,13 @@ $(document).ready(function ()
             ]
         });
 
-
-
-
         $('#work .item a').fancybox({
 
             'slideShow': false
 
         });
+
+        //sticky nav
 
         $(window).scroll(function ()
 
@@ -44,24 +43,26 @@ $(document).ready(function ()
                     $('#titleBar').removeClass('bgFill');
                 }
 
+            }
+        );
 
+        //mNav hide click
 
+        $('.mNav.menuContainer a').click(function ()
+
+            {
+                $('input.mNav').prop('checked', false);
+                console.log("Hello");
+                console.log($('input.mNav'));
             }
         );
 
     });
 
 
-
-
-/*$("body").scrollspy({
-    target: '#titleBar',
-    offset: 250
-
-});*/
-
+//scrollspy
 
 $("body").scrollspy({
     target: '.scrollSpy',
-    offset: 250
+    offset: 150
 });
