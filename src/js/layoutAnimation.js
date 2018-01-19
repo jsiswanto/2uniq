@@ -34,24 +34,34 @@ $(document).ready(function ()
 
         });
 
+        $(window).scroll(function ()
+
+            {
+                //sticky nav
+                if ($(document).scrollTop() > 25) {
+                    $('#titleBar').addClass('bgFill');
+                } else {
+                    $('#titleBar').removeClass('bgFill');
+                }
+
+
+
+            }
+        );
+
     });
 
 
-/*nav*/
 
-$(window).scroll(function ()
 
-    {
+/*$("body").scrollspy({
+    target: '#titleBar',
+    offset: 250
 
-        if ($(document).scrollTop() > 25) {
-            $('#titleBar').addClass('bgFill');
-        } else {
-            $('#titleBar').removeClass('bgFill');
-        }
-    }
-);
+});*/
+
 
 $("body").scrollspy({
-    target: '#titleBar',
+    target: '.scrollSpy',
     offset: 250
 });

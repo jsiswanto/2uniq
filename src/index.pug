@@ -8,13 +8,27 @@ html
         
         
        
-        //#mNav
-            input.checkboxToggle(type="checkbox")
-            .checkboxLabel b
-            .menuContainer
-                a One
-                a Two
-                a Three
+     
+        input.mNav.checkboxToggle(type="checkbox")
+        .mNav.checkboxLabel
+                span.outer
+                span.middle
+                span.middle2
+        .mNav.menuContainer.scrollSpy
+            ul
+                li
+                    img#twoUniqLogo(src="${require('./images/2uniq.svg')}")
+                li.left
+                    a.nav-link(href="#about") About
+                li.right
+                    a.nav-link(href="#work") Work
+                li.left
+                    a.nav-link(href="#tech") Skills
+                li.right
+                    a.nav-link(href="#contact") Contact
+                    
+                li.copy Copyright 2018 Jeff Siswanto. All rights reserved.
+                
         //.viewPort.pure-g
             .pure-u-1.pure-u-md-1-2
             .pure-u-1.pure-u-md-1-2
@@ -22,7 +36,7 @@ html
         #bgImage
             .img
         
-        #titleBar.container-fluid
+        #titleBar.container-fluid.scrollSpy
             .row
                 .col-1
                 .col
@@ -34,6 +48,9 @@ html
                             a.nav-link(href="#about") About 
                          li
                             a.nav-link(href="#work") work 
+                            
+                         li
+                            a.nav-link(href="#tech") skills 
                          li
                             a.nav-link(href="#contact") contact
                 .col-1
