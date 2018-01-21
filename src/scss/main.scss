@@ -5,6 +5,7 @@ $mNavToggleW: 50px;
 $mNavToggleH: 50px;
 $lightBlue: #b9c4d4;
 $darkBlue: #7f8f9c;
+$violet: #861be7;
 $defaultTextColour: #30353c;
 $inactiveNav: #ccc;
 $inactiveButton: #1c2127;
@@ -450,7 +451,7 @@ body {
         @include titleStyle;
         display: inline-block;
         margin: 5px 0 30px 0;
-        color: $darkBlue;
+        opacity: .35;
     }
     h1 {
         @include titleStyle2;
@@ -586,6 +587,7 @@ body {
             height: 460px * 0.41;
             top: 172px;
             left: 308px;
+            background: #000;
             z-index: 1;
             div {
                 width: 100%;
@@ -651,37 +653,37 @@ body {
                 -webkit-animation: $fadeIndex $duration infinite;
             }
             .one {
-                background: url("../images/macslide/1.png") no-repeat center;
+                background: url("../images/macslide/1s.png") no-repeat center;
                 @include animateSlide (fade1,
                 16s);
             }
             .two {
-                background: url("../images/macslide/2.png") no-repeat center;
+                background: url("../images/macslide/2s.png") no-repeat center;
                 @include animateSlide (fade2,
                 16s);
             }
             .three {
-                background: url("../images/macslide/3.png") no-repeat center;
+                background: url("../images/macslide/3s.png") no-repeat center;
                 @include animateSlide (fade3,
                 16s);
             }
             .four {
-                background: url("../images/macslide/4.png") no-repeat center;
+                background: url("../images/macslide/4s.png") no-repeat center;
                 @include animateSlide (fade4,
                 16s);
             }
             .five {
-                background: url("../images/macslide/5.png") no-repeat center;
+                background: url("../images/macslide/5s.png") no-repeat center;
                 @include animateSlide (fade5,
                 16s);
             }
             .six {
-                background: url("../images/macslide/6.png") no-repeat center;
+                background: url("../images/macslide/6s.png") no-repeat center;
                 @include animateSlide (fade6,
                 16s);
             }
             .seven {
-                background: url("../images/macslide/7.png") no-repeat center;
+                background: url("../images/macslide/7s.png") no-repeat center;
                 @include animateSlide (fade7,
                 16s);
             }
