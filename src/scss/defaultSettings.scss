@@ -1,0 +1,126 @@
+$mNavTextColour: #30353c;
+$mNavBgColour: #fff;
+$mNavToggleW: 50px;
+$mNavToggleH: 50px;
+$lightBlue: #b9c4d4;
+$darkBlue: #7f8f9c;
+$violet: #861be7;
+$defaultTextColour: #30353c;
+$inactiveNav: #ccc;
+$inactiveButton: #1c2127;
+$backgroundGrad: #597083;
+$backgroundGrad2: #ffffff;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300, 300i,400,600,700');
+@mixin defaultFontSize {
+    font-size: 16px;
+    line-height: 2.2em !important;
+    color: $defaultTextColour;
+}
+
+@mixin defaultFont {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+}
+
+@mixin titleStyle {
+    font-weight: 300 !important;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+}
+
+@mixin titleStyle2 {
+    font-weight: 600 !important;
+    letter-spacing: -0.01em;
+}
+
+@mixin containerOne {
+    height: auto;
+    margin: 100px auto;
+}
+
+@mixin containerTwo {
+    margin: 100px auto 50px auto;
+}
+
+@mixin transitions($arg) {
+    -webkit-transition: $arg;
+    -moz-transition: $arg;
+    -ms-transition: $arg;
+    -o-transition: $arg;
+    transition: $arg;
+}
+
+@mixin topRightPos {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+@mixin mNavStyling {
+    //mNav icon
+    background: $darkBlue;
+    width: 100%;
+    height: 3px;
+    border-radius: 0;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 48%;
+    @include transitions(all .2s ease-in);
+    visibility: hidden; // prevents middle rectangle to fade, outer rectangles are set to visible 
+}
+
+
+/*bootstrap override*/
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.row {
+    margin: 0 !important;
+    &>div {
+        @extend .container-fluid;
+    }
+}
+
+p {
+    margin-top: 20px !important;
+}
+
+
+/* clearfix */
+
+%clearfix {
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+    #mNav & {
+        width: 100%;
+        display: block;
+    }
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px 0;
+}
+
+h3 {
+    line-height: 1.5em !important;
+}
