@@ -351,6 +351,7 @@ body {
         color: #fff;
         outline: none;
         margin: 0.5%;
+        overflow: hidden;
         a {
             background-size: 100% !important;
             width: 100%;
@@ -358,28 +359,51 @@ body {
             display: block;
             outline: none;
             box-shadow: 0 0 2px #ddd;
+            @include transitions(all .2s linear);
+            &:hover {
+                @include scale(1.05);
+            }
             div {
-                @include transitions(all .2s linear);
+                @include transitions(all .3s linear);
                 &.bg {
                     background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), #fff);
                     width: 100%;
                     height: 100%;
-                    .caption {
-                        @include titleStyle;
-                        line-height: 1.4em;
-                        font-size: 1.4em;
-                        color: #fff;
+                    position: relative;
+                    div {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
                         width: 100%;
                         height: 100%;
-                        padding: 20px;
                         opacity: 0;
                         &:hover {
                             opacity: 1;
+                            img {
+                                @include translate(20px,
+                                0);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .caption {
+                        @include titleStyle;
+                        line-height: 1.4em;
+                        font-size: 1.3em;
+                        color: #fff;
+                        padding: 25px;
+                        img {
+                            position: absolute;
+                            right: 50px;
+                            bottom: 30px;
+                            width: 35px;
+                            opacity: 0;
+                            @include transitions(all .5s ease-out);
                         }
                     }
                     &:hover {
                         background-color: rgba(127, 143, 156, 1);
-                        background-image: none;
+                        //background-image: none;
                     }
                 }
             }

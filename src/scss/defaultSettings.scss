@@ -52,6 +52,19 @@ $backgroundGrad2: #ffffff;
     transition: $arg;
 }
 
+@mixin scale($arg) {
+    -ms-transform: scale($arg);
+    -webkit-transform: scale($arg);
+    transform: scale($arg);
+}
+
+@mixin translate($x,
+$y) {
+    -ms-transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
 @mixin topRightPos {
     position: fixed;
     right: 0;
