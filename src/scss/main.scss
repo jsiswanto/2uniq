@@ -437,8 +437,13 @@ body {
     .slick-prev,
     .slick-next {
         z-index: 2;
-        width: 2413px *0.02;
-        height: 3208px *0.02;
+        width: 2413px *0.05;
+        height: 3208px *0.015;
+        opacity: 0.5;
+        @include transitions(all .2s linear);
+        &:hover {
+            opacity: 1;
+        }
     }
     .slick-prev {
         left: 10px;
@@ -446,9 +451,10 @@ body {
     }
     .slick-next {
         right: 10px;
+        background: url("../images/next.svg") no-repeat top right;
     }
     .slick-disabled {
-        opacity: 0.5;
+        visibility: hidden;
     }
     .slick-prev:before,
     .slick-next:before {
