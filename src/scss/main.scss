@@ -389,6 +389,7 @@ body {
                     .caption {
                         @include titleStyle;
                         line-height: 1.4em;
+                        letter-spacing: 0.2em;
                         font-size: 1.3em;
                         color: #fff;
                         padding: 25px;
@@ -439,22 +440,30 @@ body {
         z-index: 2;
         width: 2413px *0.05;
         height: 3208px *0.015;
-        opacity: 0.5;
-        @include transitions(all .2s linear);
+        opacity: 0.4;
+        @include transitions(all .2s ease-out);
         &:hover {
             opacity: 1;
         }
     }
     .slick-prev {
         left: 10px;
-        background: url("../images/prev.svg") no-repeat top left;
+        background: url("../images/prev.svg") no-repeat 20% 100%;
+        &:active {
+            background-position: 0% 100%;
+        }
     }
     .slick-next {
         right: 10px;
-        background: url("../images/next.svg") no-repeat top right;
+        background: url("../images/next.svg") no-repeat 80% 100%;
+        &:active {
+            background-position: 100% 100%;
+        }
     }
-    .slick-disabled {
-        visibility: hidden;
+    .slick-disabled,
+    .slick-disabled:hover {
+        opacity: 0;
+        cursor: default;
     }
     .slick-prev:before,
     .slick-next:before {
