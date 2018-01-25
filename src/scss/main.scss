@@ -434,13 +434,25 @@ body {
             background: url("../images/work/8prev.png") top left #fff no-repeat;
         }
     }
+    .slick-prev,
+    .slick-next {
+        z-index: 2;
+        width: 2413px *0.02;
+        height: 3208px *0.02;
+    }
     .slick-prev {
         left: 10px;
-        z-index: 2;
+        background: url("../images/prev.svg") no-repeat top left;
     }
     .slick-next {
         right: 10px;
-        z-index: 2;
+    }
+    .slick-disabled {
+        opacity: 0.5;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        content: none;
     }
 }
 
