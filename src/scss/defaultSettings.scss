@@ -19,7 +19,7 @@ $backgroundGrad2: #ffffff;
 
 @mixin defaultFont {
     font-family: 'Source Sans Pro', sans-serif !important;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
     font-weight: 400;
 }
 
@@ -45,11 +45,11 @@ $backgroundGrad2: #ffffff;
 }
 
 @mixin transitions($arg) {
-    -webkit-transition: $arg;
-    -moz-transition: $arg;
-    -ms-transition: $arg;
-    -o-transition: $arg;
-    transition: $arg;
+    -webkit-transition: $arg !important;
+    -moz-transition: $arg !important;
+    -ms-transition: $arg !important;
+    -o-transition: $arg !important;
+    transition: $arg !important;
 }
 
 @mixin scale($arg) {

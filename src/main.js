@@ -1,7 +1,6 @@
 /*ES6*/
 
 import 'jquery';
-import 'popper.js';
 import 'bootstrap';
 import '@fancyapps/fancybox';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';

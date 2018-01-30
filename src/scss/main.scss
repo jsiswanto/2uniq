@@ -230,6 +230,78 @@
     }
 }
 
+@mixin prevNextArrows {
+    z-index: 2;
+    width: 2413px *0.05 !important;
+    height: 3208px *0.015 !important;
+    opacity: 0.4 !important;
+    transform: none !important;
+    @include transitions(all .2s ease-out);
+    &:hover {
+        opacity: 1 !important;
+    }
+}
+
+.fancybox-arrow {
+    @include prevNextArrows;
+    &:disabled {
+        opacity: 0 !important;
+        cursor: default;
+    }
+}
+
+.fancybox-button:before,
+.fancybox-button:after,
+.fancybox-arrow:after {
+    content: none !important;
+}
+
+.fancybox-arrow--left {
+    left: 10px !important;
+    background: url("../images/prev.svg") no-repeat 20% 100% !important;
+    &:active {
+        background-position: 0% 100% !important;
+    }
+}
+
+.fancybox-arrow--right {
+    right: 10px !important;
+    background: url("../images/next.svg") no-repeat 80% 100% !important;
+    &:active {
+        background-position: 100% 100% !important;
+    }
+}
+
+.fancybox-button--fullscreen {
+    background: url("../images/fullscreen.svg") no-repeat top left !important;
+    width: 90px * 0.5 !important;
+    height: 50px * 0.5 !important;
+}
+
+.fancybox-button--close {
+    background: url("../images/close.svg") no-repeat top left !important;
+    width: 50px * 0.5 !important;
+    height: 50px * 0.5 !important;
+    margin-left: 20px !important;
+}
+
+.fancybox-toolbar {
+    margin: 20px;
+}
+
+.fancybox-button {
+    opacity: 0.5;
+    @include transitions (all .2s ease-out);
+}
+
+.fancybox-button:hover {
+    opacity: 1;
+}
+
+button:focus {
+    outline: 0 !important;
+}
+
 
 /* main body*/
 
@@ -436,15 +508,9 @@ body {
         }
     }
     .slick-prev,
-    .slick-next {
-        z-index: 2;
-        width: 2413px *0.05;
-        height: 3208px *0.015;
-        opacity: 0.4;
-        @include transitions(all .2s ease-out);
-        &:hover {
-            opacity: 1;
-        }
+    .slick-next,
+    {
+        @include prevNextArrows;
     }
     .slick-prev {
         left: 10px;
@@ -462,7 +528,7 @@ body {
     }
     .slick-disabled,
     .slick-disabled:hover {
-        opacity: 0;
+        opacity: 0 !important;
         cursor: default;
     }
     .slick-prev:before,
@@ -548,8 +614,59 @@ body {
             @mixin scene($opac...) {
                 //seven frames
                 0% {
-                    opacity: nth($opac, 1)
+                    opacity: nth($opac, 1);
                 }
+                6.7% {
+                    opacity: nth($opac, 1);
+                }
+                13.3% {
+                    opacity: nth($opac, 2);
+                }
+                20% {
+                    opacity: nth($opac, 2);
+                }
+                26.7% {
+                    opacity: nth($opac, 3);
+                }
+                33.3% {
+                    opacity: nth($opac, 3);
+                }
+                40.0% {
+                    opacity: nth($opac, 4);
+                }
+                46.7% {
+                    opacity: nth($opac, 4);
+                }
+                53.3% {
+                    opacity: nth($opac, 5);
+                }
+                60.0% {
+                    opacity: nth($opac, 5);
+                }
+                66.7% {
+                    opacity: nth($opac, 6);
+                }
+                73.3% {
+                    opacity: nth($opac, 6);
+                }
+                80% {
+                    opacity: nth($opac, 7);
+                }
+                86.7% {
+                    opacity: nth($opac, 7);
+                }
+                93.3% {
+                    opacity: nth($opac, 8);
+                }
+                100% {
+                    opacity: nth($opac, 8);
+                }
+                /*
+                
+                   0% {
+                    opacity: nth($opac, 1);
+                }
+                
                 14.28% {
                     opacity: nth($opac, 2)
                 }
@@ -571,28 +688,7 @@ body {
                 100% {
                     opacity: nth($opac, 8)
                 }
-                /*
-                    0% {
-                        opacity: nth($opac, 1)
-                    }
-                    16.66% {
-                        opacity: nth($opac, 2)
-                    }
-                    33.32% {
-                        opacity: nth($opac, 3)
-                    }
-                    49.99% {
-                        opacity: nth($opac, 4)
-                    }
-                    66.65% {
-                        opacity: nth($opac, 5)
-                    }
-                    83.30% {
-                        opacity: nth($opac, 6)
-                    }
-                    100% {
-                        opacity: nth($opac, 7)
-                    }*/
+                */
             } //end mixin
             @mixin animateSlide($fadeIndex,
             $duration) {
@@ -602,37 +698,37 @@ body {
             .one {
                 background: url("../images/macslide/1s.png") no-repeat center;
                 @include animateSlide (fade1,
-                16s);
+                60s);
             }
             .two {
                 background: url("../images/macslide/2s.png") no-repeat center;
                 @include animateSlide (fade2,
-                16s);
+                60s);
             }
             .three {
                 background: url("../images/macslide/3s.png") no-repeat center;
                 @include animateSlide (fade3,
-                16s);
+                60s);
             }
             .four {
                 background: url("../images/macslide/4s.png") no-repeat center;
                 @include animateSlide (fade4,
-                16s);
+                60s);
             }
             .five {
                 background: url("../images/macslide/5s.png") no-repeat center;
                 @include animateSlide (fade5,
-                16s);
+                60s);
             }
             .six {
                 background: url("../images/macslide/6s.png") no-repeat center;
                 @include animateSlide (fade6,
-                16s);
+                60s);
             }
             .seven {
                 background: url("../images/macslide/7s.png") no-repeat center;
                 @include animateSlide (fade7,
-                16s);
+                60s);
             }
             @keyframes fade1 {
                 @include scene(1,

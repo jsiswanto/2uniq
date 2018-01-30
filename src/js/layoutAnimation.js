@@ -36,9 +36,12 @@ $(document).ready(function ()
             ]
         });
 
+        //fancybox init
+
         $('#work .item a').fancybox({
 
-            'slideShow': false
+            'slideShow': false,
+            'thumbs': false
 
         });
 
