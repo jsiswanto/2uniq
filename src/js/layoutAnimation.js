@@ -51,7 +51,7 @@ $(document).ready(function ()
 
             {
                 //sticky nav
-                if ($(document).scrollTop() > 25) {
+                if ($(document).scrollTop() > 25 && ($('#titleBar').css('visibility') != 'hidden')) {
                     $('#titleBar').addClass('bgFill');
                 } else {
                     $('#titleBar').removeClass('bgFill');
