@@ -472,7 +472,8 @@ body {
             height: 100%;
             display: block;
             outline: none;
-            box-shadow: 0 0 2px #ddd;
+            //box-shadow: 1px 1px 2px #000;
+            border: 1px solid $workThumbBorder;
             @include transitions(all .2s linear);
             &:hover {
                 @include scale(1.05);
