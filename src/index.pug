@@ -2,7 +2,7 @@ doctype html
 html
     head
         title 2UNIQ - a Web Design Portfolio
-        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8")
 
     body
 
@@ -26,7 +26,8 @@ html
                     
                 li.copy 
                     p Handcrafted and developed with love.
-                    |Copyright 2018 Jeff Siswanto. All rights reserved.
+                        br 
+                        |Copyright 2018 Jeff Siswanto. All rights reserved.
                 
         //.viewPort.pure-g
             .pure-u-1.pure-u-md-1-2
@@ -64,10 +65,11 @@ html
             
             
                     h2 Every moment is beautiful
-                    h3 My name is Jeff Siswanto, a Front-end Web Artisan specializing in Graphic, UX, and Interaction Design, with unparalleled dedication to refinement, craftsmanship, and attention to detail.
+                    h3 My name is Jeff Siswanto, a Front-end Web Artisan specializing in Graphic, UX, and Interaction Design, with an unparalleled dedication to refinement, craftsmanship, and attention to detail.
                     p I am a firm believer in continuous improvement. My current focus in HTML5, CSS3, and knowledge in JS frameworks allow me to streamline my workflows to design, code, and optimize prototypes 
-                        i from scratch.
-                    p The skills and experience acquired in the past must be used accordingly to tackle new challenges. I adapt to these growing requirements, while keeping the client's vision and objectives in mind. I deliver more with less, adapting to today's demanding user requirements and the diminishing human attention span. I design things that are elegant and simple without sacrificing usability. I listen and find new ways to deliver the best, most effective client experience possible.
+                        i from scratch. 
+                        |This is because I believe in delivering the best, most effective user experience for you.
+                    p The skills and experience acquired in the past must be used accordingly to tackle new challenges. I adapt to these growing requirements, while valuing our objectives and your user's perspective. I deliver more with less, adapting to today's demanding user requirements and the diminishing human attention span. I design things that are elegant and simple without sacrificing usability.
 
                     
                    
@@ -81,17 +83,17 @@ html
                                 img(src="${require('./images/expand.svg')}")
                                
                 .item
-                    a#two(href="${require('./images/work/2.png')}"  data-caption="<h4>Sun Life Illustrations UI</h4><a href='${require('./images/work/sample/CII_05282015.pdf')}' target='_blank'>See the mockups<span> (.pdf)</span></a><p>Sun Life Illustrations is a tool used for advisors to estimate insurance premiums by product and client data such as age, gender, and insurance coverage. A separate UI was designed for Sun Life’s wealth products, allowing Sun Life advisors to analyze based on asset allocation on different segregated funds and their return based on given market conditions.</p><p>Working with the UX and a team of third party developers at Equisoft, months of user testing and feedback was incorporated to continually refine the wireframes and design of the interface for each desktop and Web release.</p>" data-fancybox="gal")
+                    a#two(href="${require('./images/work/2.png')}"  data-caption="<h4>Sun Life Illustrations UI</h4><a class='button' href='${require('./images/work/sample/CII_05282015.pdf')}' target='_blank'>See the mockups for Sun Critical Illness Insurance<span> (.pdf)</span></a><a class='button' href='${require('./images/work/sample/CII_Wireframes_Package.pdf')}' target='_blank'>View the wireframes <span>(.pdf)</span></a><p>Sun Life Illustrations is a tool used for advisors to estimate insurance premiums by product and client data such as age, gender, and insurance coverage. A separate UI was designed for Sun Life’s wealth products, allowing Sun Life advisors to analyze based on asset allocation on different segregated funds and their return based on given market conditions.</p><p>Working with the UX and a team of third party developers, months of user testing and feedback was incorporated to continually refine the wireframes and design of the interface for each desktop and Web release. <a href='https://www.sunnet.sunlife.com/SunLifeIllustrations/ProductSelectorAdv' target='_blank'>View the production version here</a> (you will be taken to the Sun Life Advisor site).</p>" data-fancybox="gal")
                         .bg
                             .caption Sun Life Illustrations UI
                                 img(src="./images/expand.svg")
                 .item
-                    a#three(href="${require('./images/work/3.png')}" data-caption="<h4>Sun Life Illustrations reports</h4><a href='${require('./images/work/sample/SLAGIF_10182014_2.pdf')}' target='_blank'>View a sample report<span> (.pdf)</span></a><p>With a click of a button, the Sun Life Illustrations app can automatically generate PDF reports for advisors to present details of their client’s illustrations. My responsibility is to create InDesign mockups of reports for the Sun Life product portfolio (insurance and wealth) with feedback from advisors, product owners, the Illustrations team, and Equisoft.</p><p>This is to ensure all required copy, tables, and diagrams are presented in an easy-to-read, logical, and concise manner, while minimize printing costs.</p>" data-fancybox="gal")
+                    a#three(href="${require('./images/work/3.png')}" data-caption="<h4>Sun Life Illustrations reports</h4><a class='button' href='${require('./images/work/sample/SLAGIF_10182014_2.pdf')}' target='_blank'>View a sample report<span> (.pdf)</span></a><p>With a click of a button, the Sun Life Illustrations app can automatically generate PDF reports for advisors to present details of their client’s illustrations. My responsibility is to create InDesign mockups of reports for the Sun Life product portfolio (Insurance and Wealth) with feedback from advisors, product owners, the Illustrations team, and the third party vendor.</p><p>This is to ensure all required copy, tables, and diagrams are presented in an easy-to-read, logical, and concise manner, while minimizing printing costs.</p>" data-fancybox="gal")
                         .bg
                             .caption Sun Life Illustrations Reports
                                img(src="./images/expand.svg")
                 .item
-                    a#four(href="${require('./images/work/4.png')}" data-caption="<h4>Sun Life GIF Solutions client statements</h4><a href='${require('./images/work/sample/FOXB_post06162015.pdf')}' target='_blank'>View a sample statement <span>(.pdf)</span></a><p>I was commissioned to design paper statements for clients of Sun Life’s suite of wealth products. Working in collaboration with advisors, product owners, and IFDS (International Financial Data Services), I ensured tables, diagrams and other design deliverables were up to specifications while minimizing costs. The objective was to make sure clients easily understand their financial standings presented in these paper statements mailed semiannually.</p>" data-fancybox="gal")
+                    a#four(href="${require('./images/work/4.png')}" data-caption="<h4>Sun Life GIF Solutions client statements</h4><a class='button' href='${require('./images/work/sample/FOXB_post06162015.pdf')}' target='_blank'>View a sample statement <span>(.pdf)</span></a><p>I was commissioned to design paper statements for clients of Sun Life’s suite of Wealth products. Working in collaboration with advisors, product owners, and IFDS (International Financial Data Services), I ensured tables, diagrams and other design deliverables were up to specifications while minimizing costs. The objective was to make sure clients easily understand their financial standings presented in these paper statements mailed semiannually.</p>" data-fancybox="gal")
                         .bg
                             .caption Sun Life GIF Solutions Client Statements
                                 img(src="./images/expand.svg")
@@ -101,20 +103,20 @@ html
                             .caption Hyperconnect
                                img(src="./images/expand.svg")
                 .item
-                    a#six(href="${require('./images/work/6.png')}" data-caption="<h4>MarketClouds.co</h4><p>An HTML website was designed and developed from scratch as the homepage for the startup  MarketClouds, an online platform that aggregates real-time stock-related tweets using a customizable dashboard. Competitive research were conducted while focusing on aesthetics and usability, the site generated up to 1000 unique visitors per month and conversion rates up to 3%, comprised of organic traffic from prospective Individual and institutional investors.</p>" data-fancybox="gal")
+                    a#six(href="${require('./images/work/6.png')}" data-caption="<h4>MarketClouds.co</h4><p>An HTML website was designed and developed from scratch as the homepage for the startup  MarketClouds, an online platform that aggregates real-time stock-related tweets using a customizable dashboard. Competitive research were conducted. Aesthetics and usability was a priority. The site generated up to 1000 unique visitors per month and conversion rates were up to 3%, comprised of organic traffic from prospective individual and institutional investors.</p>" data-fancybox="gal")
                         .bg
                             .caption MarketClouds
                                 br
                                 |.co
                                 img(src="./images/expand.svg")
                 .item
-                    a#seven(href="${require('./images/work/7.png')}" data-caption="<h4>2UNIQ v2</h4><a href='#'>Visit site</a><p>This is an old predecessor of my current online portfolio. It is not fully optimized for mobile devices. However, feel free to browse my older commercial, conceptual, and artistic works not shown here. Built from scratch using the usual Web technologies including HTML, CSS, and jQuery.</p>" data-fancybox="gal")
+                    a#seven(href="${require('./images/work/7.png')}" data-caption="<h4>2UNIQ v2</h4><a class='button' href='http://www.2uniq.com/v2' target='_blank'>Visit site</a><p>This is an old predecessor of my current online portfolio. It is not fully optimized for mobile devices. However, feel free to browse my older commercial, conceptual, and artistic works not shown here. Built from scratch using the usual Web technologies including HTML, CSS, and jQuery.</p>" data-fancybox="gal")
                         .bg
                             .caption 2UNIQ v2
                                 img(src="./images/expand.svg")
                         
                 .item
-                    a#eight(href="${require('./images/work/8.png')}" data-caption="<h4>2UNIQ Photography</h4><a href='#'>Visit site</a><p>A relatively old gallery showcasing my photography skills, using filters and spiffy animation. Built without any templates.</p>" data-fancybox="gal")
+                    a#eight(href="${require('./images/work/8.png')}" data-caption="<h4>2UNIQ Photography</h4><a class='button' href='http://www.2uniq.com/v2/photography' target='_blank'>Visit site</a><p>A relatively old gallery showcasing my photography skills, using filters and spiffy animation. Built without any templates.</p>" data-fancybox="gal")
                         .bg
                             .caption 2UNIQ Photography
                                 img(src="./images/expand.svg")
@@ -166,7 +168,7 @@ html
                     .col-xl
                         .techDesc
                             h3 By making careful adjustments to what is already simple, I can turn anything ordinary into something extraordinary.
-                            p After years of experience communicating and understanding the needs of different end-users through personas and market research, I noticed patterns and began to realize that the most impactful and memorable experiences are accomplished by taking simple, efficient design approaches. Why take the more complicated path when there is a shorter one to reach the destination?
+                            p After years of experience communicating and understanding the needs of different end-users through personas and market research, I began to notice patterns. It came to my realization that the most impactful and memorable experiences are accomplished by taking simple, efficient design approaches. Why take the more complicated path when there is a shorter one to reach the destination?
                             p I have designed high-fidelity mockups, prototypes, e-blasts, banners, and wireframes for my clients including Sun Life Financial, DossierView, various tech startups, and BMO Financial Group. 
 
         #contact.container-fluid
@@ -176,7 +178,7 @@ html
                     .marginRight    
                         img(src="${require('./images/startshere.svg')}" align="top")
                         h2 It starts here
-                        p Let’s collaborate and create something amazing for your customers. From Web banners, e-blasts, prototypes, mockups, concepts to development, I am available for full-time employment and freelancing. Thank you for your visit.
+                        p Let’s collaborate and create something amazing for your customers. From Web banners, e-blasts, prototypes, mockups, concepts to development, I am available for full-time employment. Thank you for your visit.
 
                     
                 .col
@@ -187,8 +189,8 @@ html
                             h3 Jeff Siswanto
                             p Web Designer
                                 br
-                                |jeff@2uniq.com
-                            a(href="#") Download my CV
+                                |jeff at 2uniq.com
+                            a(href="${require('./JeffSiswanto2018.pdf')}" target="_blank") Download my CV
                                 span  (.pdf)
                 .col-1
 

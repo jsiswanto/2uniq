@@ -237,20 +237,26 @@
 }
 
 .fancybox-caption-wrap {
-    background: linear-gradient(180deg, transparent 0, rgba(255, 255, 255, .5) 20%, rgba(255, 255, 255, .85) 40%, rgba(255, 255, 255, 1)) !important;
+    background: linear-gradient(180deg, transparent 0, rgba(255, 255, 255, .5) 10%, rgba(255, 255, 255, .85) 20%, rgba(255, 255, 255, 1)) !important;
     .fancybox-caption {
         border: none !important;
         color: $defaultTextColour;
         @include defaultFont;
         @include defaultFontSize;
         a {
+            color: $darkBlue !important;
+            &:hover {
+                color: $inactiveButton !important;
+            }
+        }
+        a.button {
             @include buttonStyle;
             background: $darkBlue !important;
             color: #fff !important;
-            display: block;
             margin-left: 0 !important;
             padding: 3px 10px !important;
             display: inline-table;
+            margin-right: 20px;
             &:hover {
                 background: $inactiveButton !important;
             }
