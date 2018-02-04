@@ -56,9 +56,7 @@
         text-align: center !important;
     }
     #about {
-        margin: 0 5% 0 5% !important;
-        padding-top: 95px;
-        width: 90% !important;
+        padding: 0 5% 0 5% !important;
     }
     #work {
         .item {
@@ -390,7 +388,8 @@ body {
         .img {
             min-width: 100%;
             min-height: 1500px;
-            background: url("../images/bg.png") no-repeat top left;
+            width: 100%;
+            height: 100%;
         }
     }
 }
@@ -457,7 +456,7 @@ body {
 
 #titleBarM {
     text-align: center;
-    margin-top: 100px;
+    padding-top: 100px;
     img {
         width: 100px;
         height: auto;
@@ -465,6 +464,7 @@ body {
 }
 
 #about {
+    background: url("../images/bg.png") no-repeat top left;
     p,
     h3 {
         display: block;
@@ -479,14 +479,8 @@ body {
         @include titleStyle2;
         margin-top: 0;
     }
-    img {
-        width: 30px;
-        height: 30px;
-    }
     text-align: left;
-    margin: 0 5% 0 40%;
-    padding: 100px 0 0 0;
-    width: 55%;
+    padding: 100px 5% 100px 40%;
 }
 
 #work {
