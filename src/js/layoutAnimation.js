@@ -60,14 +60,13 @@ $(document).ready(function ()
             }
         );
 
-        //mNav hide click
+        //mNav hide after click on a link
 
         $('.mNav.menuContainer a').click(function ()
 
             {
                 $('input.mNav').prop('checked', false);
-                console.log("Hello");
-                console.log($('input.mNav'));
+
             }
         );
 
@@ -78,5 +77,5 @@ $(document).ready(function ()
 
 $("body").scrollspy({
     target: '.scrollSpy',
-    offset: 150
+    offset: 250
 });
