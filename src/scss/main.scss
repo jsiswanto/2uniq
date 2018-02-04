@@ -40,7 +40,7 @@
 
 /*breakpoints*/
 
-@media screen and(max-width: 1350px) {
+@media screen and (max-width: 1350px) {
     .mNav {
         visibility: visible;
     }
@@ -49,6 +49,17 @@
     }
     #titleBarM {
         display: block;
+    }
+    .fancybox-caption {
+        a.button {
+            line-height: 1.1em !important;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+        p {
+            font-size: 0.9em !important;
+            line-height: 1.4em !important;
+        }
     }
     #about,
     #tech .techDesc,
@@ -61,6 +72,19 @@
     #work {
         .item {
             height: 375px;
+        }
+    }
+    #tech {
+        .techBody {
+            width: 50%;
+            #mac {
+                top: 165px!important;
+                left: 135px !important;
+            }
+            #slide {
+                top: 177px !important;
+                left: 185px !important;
+            }
         }
     }
     #contact {
@@ -276,7 +300,6 @@
             @include buttonStyle;
             color: #fff !important;
             margin-left: 0 !important;
-            padding: 3px 10px !important;
             display: inline-table;
             margin-right: 20px;
             background: $darkBlue;
@@ -379,6 +402,7 @@ body {
     @include defaultFont;
     background: url("../images/bg.png") no-repeat top left;
     margin: 0;
+    min-width: 540px; // layout min-width
 }
 
 .shadow {
@@ -559,7 +583,7 @@ body {
                         }
                     }
                     &:hover {
-                        background-color: rgba(127, 143, 156, 0.9);
+                        background-color: rgba(66, 57, 47, 0.9);
                         //background-image: none;
                     }
                 }
@@ -646,6 +670,7 @@ body {
         margin-bottom: 100px;
     }
     .techBody {
+        position: relative;
         width: 500px;
         height: 300px;
         background: $darkBlue;
@@ -913,7 +938,7 @@ body {
 
 #contact {
     width: 100%;
-    background: #30353c;
+    background: $defaultTextColour;
     color: #fff;
     p {
         color: $lightBlue;
