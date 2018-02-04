@@ -29,12 +29,11 @@ $backgroundGrad2: #ffffff;
     font-weight: 300;
     font-style: italic;
     text-transform: uppercase;
-    letter-spacing: 0.35em;
+    letter-spacing: 0.1em;
 }
 
 @mixin titleStyle2 {
-    font-weight: 600 !important;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.01em;
 }
 
 @mixin containerOne {
