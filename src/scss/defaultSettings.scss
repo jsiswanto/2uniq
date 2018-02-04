@@ -9,9 +9,10 @@ $violet: #861be7;
 $defaultTextColour: #30353c;
 $inactiveNav: #ccc;
 $inactiveButton: #1c2127;
+$activeButton: #3d4249;
 $backgroundGrad: #597083;
 $backgroundGrad2: #ffffff;
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300, 300i,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700');
 @mixin defaultFontSize {
     font-size: 16px;
     line-height: 2.2em !important;
@@ -25,7 +26,7 @@ $backgroundGrad2: #ffffff;
 }
 
 @mixin titleStyle {
-    font-weight: 300 !important;
+    font-weight: 300;
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.35em;
