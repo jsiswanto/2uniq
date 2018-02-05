@@ -40,7 +40,7 @@
 
 /*breakpoints*/
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1100px) {
     .mNav {
         visibility: visible;
     }
@@ -109,7 +109,7 @@
     }
 }
 
-@media screen and(min-width: 1351px) {
+@media screen and(min-width: 1101px) {
     .mNav {
         visibility: hidden !important;
         span,
@@ -446,18 +446,17 @@ body {
     left: 0;
     z-index: 999;
     width: 100%;
-    height: 5%;
-    min-height: 30px;
-    max-height: 35px;
+    height: 35px;
     color: $inactiveNav;
     background: rgba(255, 255, 255, 0);
-    @include transitions(background .2s linear);
+    @include transitions(all .2s linear);
     &.bgFill {
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 1);
         position: fixed;
         left: 0;
         top: 0;
         margin: 0;
+        color: $navBarInactive;
     }
     & div:second-child {
         padding: 0 0 0 20px;
@@ -479,12 +478,31 @@ body {
             display: inline;
             a {
                 @extend li;
-                padding: 0 2%;
+                margin: 0 2%;
+                padding: 0;
                 letter-spacing: 0.2em;
                 text-transform: uppercase;
+                position: relative;
+                &:after {
+                    position: absolute;
+                    width: 100%;
+                    left: -15px;
+                    top: 112%;
+                    content: " ";
+                    display: block;
+                    border-top: 3px solid $lightBlue;
+                    border-right: 3px solid transparent;
+                    opacity: 0;
+                    @include transitions (all .3s ease-in);
+                }
                 &.active {
                     color: $defaultTextColour !important;
-                    font-weight: bold;
+                    font-weight: 700;
+                    &:after {
+                        @include translate (14px,
+                        0);
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -512,6 +530,7 @@ body {
     }
     h2 {
         @include titleStyle;
+        font-weight: 400;
         display: inline-block;
         margin: 5px 0 30px 0;
         opacity: .35;
@@ -541,7 +560,7 @@ body {
             left: 0;
             width: 100%;
             height: 100%;
-            box-shadow: 1px 1px 5px $inactiveNav;
+            box-shadow: 1px 1px 0 $lightBlue;
             opacity: 0;
             content: '';
             border: 5px solid #000;
@@ -957,7 +976,7 @@ body {
     .diagonal {
         width: 0;
         border-top: 300px solid $darkBlue;
-        border-right: 133px solid transparent;
+        border-right: 126px solid transparent;
         height: 0;
     }
     img {
