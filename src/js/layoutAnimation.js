@@ -1,6 +1,9 @@
 $(document).ready(function ()
 
     {
+
+        var fancyboxClicked = false;
+
         $('#work').slick({
             infinite: false,
             slidesToShow: 5,
@@ -40,10 +43,33 @@ $(document).ready(function ()
 
         $('#work .item a').fancybox({
 
-            'slideShow': false,
-            'thumbs': false
+
+            idleTime: 7,
+            transitionEffect: 'zoom-in-out',
+            transitionDuration: 500,
+            buttons: ['fullScreen', 'close'],
+            margin: [0, 80],
+            protect: true,
+            clickSlide: 'toggleControls',
+
+
+            beforeShow: function () {
+
+                if (fancyboxClicked == false) {
+                    $('.displayNotify').addClass('active').delay(8000).queue(function (next) {
+
+                        $(this).removeClass('active');
+                        next();
+                    });
+
+                    fancyboxClicked = true;
+                }
+            }
+
 
         });
+
+
 
         //sticky nav
 
