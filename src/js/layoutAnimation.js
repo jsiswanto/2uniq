@@ -56,7 +56,7 @@ $(document).ready(function ()
             beforeShow: function () {
 
                 if (fancyboxClicked == false) {
-                    $('.displayNotify').addClass('active').delay(8000).queue(function (next) {
+                    $('.dialogBox').addClass('active').delay(8000).queue(function (next) {
 
                         $(this).removeClass('active');
                         next();
