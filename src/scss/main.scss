@@ -11,10 +11,12 @@
     display: block;
     margin: 10px 0;
     background: $inactiveButton;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0);
     position: relative;
     z-index: 1;
+    @include transitions (all .1s linear);
     span {
-        color: $lightBlue;
+        color: $light;
     }
     &:before {
         background: -moz-linear-gradient(left, $activeButton 0%, $inactiveButton 100%);
@@ -34,6 +36,8 @@
         &:before {
             opacity: 1;
         }
+        @include translate(-2px, -2px);
+        box-shadow: 3px 3px 0 rgba(0, 0, 0, .3);
     }
 }
 
@@ -151,7 +155,7 @@
     @include transitions (all .5s linear);
     span {
         padding: 30px;
-        background: $darkBlue;
+        background: $dark;
         color: #fff;
         font-weight: bold;
         opacity: .9;
@@ -209,7 +213,7 @@
                         top: 100%;
                         content: " ";
                         display: block;
-                        border-top: 5px solid $lightBlue;
+                        border-top: 5px solid $light;
                         border-right: 5px solid transparent;
                     }
                 }
@@ -303,7 +307,7 @@
 /*fancybox*/
 
 .fancybox-stage {
-    background: $lightBlue;
+    background: $light;
 }
 
 .fancybox-is-open .fancybox-bg {
@@ -322,7 +326,7 @@
         padding: 0 !important;
         line-height: 2em !important;
         a {
-            color: $darkBlue !important;
+            color: $dark !important;
             &:hover {
                 color: $inactiveButton !important;
             }
@@ -333,15 +337,15 @@
             margin-left: 0 !important;
             display: inline-table;
             margin-right: 20px;
-            background: $darkBlue;
+            background: $dark;
             &:before {
-                background: -moz-linear-gradient(left, $lightBlue 0%, $darkBlue 100%);
-                background: -webkit-linear-gradient(left, $lightBlue 0%, $darkBlue 100%);
-                background: linear-gradient(to right, $lightBlue 0%, $darkBlue 100%);
+                background: -moz-linear-gradient(left, $light 0%, $dark 100%);
+                background: -webkit-linear-gradient(left, $light 0%, $dark 100%);
+                background: linear-gradient(to right, $light 0%, $dark 100%);
             }
         }
         h4 {
-            color: $darkBlue;
+            color: $dark;
             margin-bottom: 10px;
             // @include defaultFont;
             @include titleStyle;
@@ -425,19 +429,25 @@ button:focus {
 /* main body*/
 
 body {
-    /*background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 35%);
+    background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 35%);
     background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 35%);
     background: linear-gradient(135deg, $backgroundGrad 0%, $backgroundGrad2 35%);
-    background-size: 100% auto;*/
+    background-size: 100% auto;
     @include defaultFontSize;
     @include defaultFont;
-    background: url("../images/bg.png") no-repeat top left;
     margin: 0;
     min-width: 540px; // layout min-width
 }
 
-.shadow {
+#bgOverlay {
+    z-index: -123;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 1500px;
+    background: url("../images/bg.png") no-repeat top left;
+    background-size: 65%;
 }
 
 #titleBar {
@@ -490,7 +500,7 @@ body {
                     top: 112%;
                     content: " ";
                     display: block;
-                    border-top: 3px solid $lightBlue;
+                    border-top: 3px solid $light;
                     border-right: 3px solid transparent;
                     opacity: 0;
                     @include transitions (all .3s ease-out);
@@ -538,9 +548,6 @@ body {
     h3 {
         @include titleStyle2;
         margin-top: 0;
-        span {
-            color: $lightBlue;
-        }
     }
     text-align: left;
     padding: 200px 5% 0 40%;
@@ -550,12 +557,12 @@ body {
     width: auto;
     padding: 125px 0 40px 0;
     .item {
-        background: #555;
         color: #fff;
         outline: none;
         margin: 0.5%;
         position: relative;
         z-index: 0;
+        @include transitions (all .1s linear);
         &:before {
             z-index: -1;
             position: absolute;
@@ -563,16 +570,17 @@ body {
             left: 0;
             width: 100%;
             height: 100%;
-            box-shadow: 1px 1px 0 $lightBlue;
+            box-shadow: 3px 3px 0 rgba(216, 206, 194, .3);
             opacity: 0;
             content: '';
-            border: 5px solid #000;
-            @include transitions (all 0.2s linear);
+            @include transitions (all .2s linear);
         }
         &:hover {
             &:before {
                 opacity: 1;
             }
+            @include translate(-2px,
+            -2px);
         }
         a {
             background-size: 100% !important;
@@ -587,19 +595,19 @@ body {
             div {
                 @include transitions(all .3s linear);
                 &.bg {
-                    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), #fff);
+                    background-image: linear-gradient(to bottom, rgba(66, 57, 47, 0.9), #fff);
                     width: 100%;
                     height: 100%;
                     position: relative;
+                    opacity: 0;
+                    @include transitions(all .2s linear);
                     div {
                         position: absolute;
                         top: 0;
                         left: 0;
                         width: 100%;
                         height: 100%;
-                        opacity: 0;
                         &:hover {
-                            opacity: 1;
                             h4 {
                                 @include translate(5px,
                                 0);
@@ -607,7 +615,6 @@ body {
                             img {
                                 @include translate(20px,
                                 0);
-                                opacity: 1;
                             }
                         }
                     }
@@ -619,7 +626,7 @@ body {
                             position: absolute;
                             top: 0;
                             left: 0;
-                            padding: 20px;
+                            padding: 20px 15px;
                             @include transitions(all .5s ease-out);
                         }
                         //letter-spacing: 0.1em;
@@ -631,13 +638,11 @@ body {
                             right: 50px;
                             bottom: 30px;
                             width: 35px;
-                            opacity: 0;
                             @include transitions(all .5s ease-out);
                         }
                     }
                     &:hover {
-                        background-color: rgba(66, 57, 47, 0.9);
-                        //background-image: none;
+                        opacity: 1;
                     }
                 }
             }
@@ -697,10 +702,10 @@ body {
         content: none;
     }
     .slick-dots li button:before {
-        color: $darkBlue !important;
+        color: $dark !important;
     }
     .slick-dots li.slick-active button:before {
-        color: $darkBlue !important;
+        color: $dark !important;
         opacity: 1 !important;
     }
 }
@@ -717,7 +722,7 @@ body {
             margin: -5px 0 0 15px;
         }
         width: 80%;
-        color: $darkBlue;
+        color: $dark;
     }
     .flex {
         margin-bottom: 100px;
@@ -726,10 +731,10 @@ body {
         position: relative;
         width: 500px;
         height: 300px;
-        background: $darkBlue;
-        background: -moz-linear-gradient(left, $lightBlue 0%, $darkBlue 100%);
-        background: -webkit-linear-gradient(left, $lightBlue 0%, $darkBlue 100%);
-        background: linear-gradient(to right, $lightBlue 0%, $darkBlue 100%);
+        background: $dark;
+        background: -moz-linear-gradient(left, $light 0%, $dark 100%);
+        background: -webkit-linear-gradient(left, $light 0%, $dark 100%);
+        background: linear-gradient(to right, $light 0%, $dark 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9bac8', endColorstr='#7f8f9c', GradientType=1);
         p {
             text-transform: uppercase;
@@ -973,12 +978,12 @@ body {
     .techDesc {
         margin: 0 60px 0 30px;
         h3 {
-            color: $darkBlue;
+            color: $dark;
         }
     }
     .diagonal {
         width: 0;
-        border-top: 300px solid $darkBlue;
+        border-top: 300px solid $dark;
         border-right: 126px solid transparent;
         height: 0;
     }
@@ -993,8 +998,9 @@ body {
     width: 100%;
     background: $defaultTextColour;
     color: #fff;
+    padding: 50px 0 75px 0 !important;
     p {
-        color: $lightBlue;
+        color: $light;
     }
     h2 {
         @include titleStyle;

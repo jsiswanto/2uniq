@@ -3,8 +3,8 @@ $mNavBgColour: #fff;
 $mNavToggleW: 50px;
 $mNavToggleH: 50px;
 $workThumbBorder: #e0e7f1;
-$lightBlue: #d8cec2;
-$darkBlue: #807766;
+$light: #d8cec2;
+$dark: #807766;
 $violet: #861be7;
 $defaultTextColour: #252219;
 $inactiveNav: #ccc;
@@ -35,7 +35,9 @@ $backgroundGrad2: #fff;
 }
 
 @mixin titleStyle2 {
-    letter-spacing: 0.005em;
+    letter-spacing: -0.01em;
+    line-height: 1.5em !important;
+    font-weight: 600 !important;
 }
 
 @mixin containerOne {
@@ -76,7 +78,7 @@ $y) {
 
 @mixin mNavStyling {
     //mNav icon
-    background: $darkBlue;
+    background: $dark;
     width: 100%;
     height: 3px;
     border-radius: 0;
@@ -135,8 +137,4 @@ h2 {
     flex-direction: row;
     justify-content: flex-start;
     padding: 20px 0;
-}
-
-h3 {
-    line-height: 1.5em !important;
 }
