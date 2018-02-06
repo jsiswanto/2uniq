@@ -12,7 +12,7 @@ $inactiveButton: #42392f;
 $activeButton: #595047;
 $navBarInactive: #726a62;
 $navBarActive: #fff;
-$backgroundGrad: #597083;
+$backgroundGrad: #807766;
 $backgroundGrad2: #fff;
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i');
 @mixin defaultFontSize {
@@ -128,8 +128,8 @@ a {
     }
 }
 
-h2 {
-    font-size: 1.4em;
+h3 {
+    line-height: 1.5em !important;
 }
 
 .flex {
