@@ -496,23 +496,22 @@ body {
                 position: relative;
                 &:after {
                     position: absolute;
-                    width: 100%;
-                    left: -15px;
+                    width: 0%;
+                    left: -1px;
                     top: 112%;
                     content: " ";
                     display: block;
                     border-top: 3px solid $light;
                     border-right: 3px solid transparent;
                     opacity: 0;
-                    @include transitions (all .3s ease-out);
+                    @include transitions (width .3s ease-out);
                 }
                 &.active {
                     color: $defaultTextColour !important;
                     font-weight: 700;
                     &:after {
-                        @include translate (14px,
-                        0);
                         opacity: 1;
+                        width: 100%;
                     }
                 }
             }
@@ -545,14 +544,14 @@ body {
         &.squareOne {
             background: url('../images/jeff.png') 0 40% no-repeat #000;
             background-size: cover;
-            left: 160px;
-            top: 300px;
+            left: 10%;
+            top: 40%;
             z-index: 1;
         }
         &.squareTwo {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-            left: 160px - 100;
-            top: 300px - 100;
+            left: 10% - 5;
+            top: 40% - 10;
             z-index: 2;
             opacity: 1;
         }
@@ -734,10 +733,16 @@ body {
     }
 }
 
+hr {
+    margin-top: 120px !important;
+    width: 15%;
+    border-top: 1px solid $light !important;
+}
+
 #tech {
     width: 100%;
     height: auto;
-    margin: 180px 0 100px 0;
+    margin: 120px 0 100px 0;
     .title {
         @include containerTwo;
         h2 {
