@@ -44,6 +44,22 @@
 
 /*breakpoints*/
 
+@media screen and (max-width: 650px) {
+    #tech {
+        #mac {
+            top: 275px!important;
+            left: 105px !important;
+        }
+        #slide {
+            top: 287px !important;
+            left: 155px !important;
+        }
+        .techDesc {
+            margin-top: 170px !important;
+        }
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .mNav {
         visibility: visible;
@@ -99,16 +115,11 @@
         }
     }
     #tech {
+        .title {
+            text-align: center;
+        }
         .techBody {
-            width: 50%;
-            #mac {
-                top: 165px!important;
-                left: 135px !important;
-            }
-            #slide {
-                top: 177px !important;
-                left: 185px !important;
-            }
+            width: 70% !important;
         }
     }
     #contact {
@@ -457,7 +468,7 @@ body {
     @include defaultFontSize;
     @include defaultFont;
     margin: 0;
-    min-width: 540px; // layout min-width
+    min-width: 500px; // layout min-width
 }
 
 #bgOverlay {
