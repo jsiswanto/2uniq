@@ -11,7 +11,6 @@
     display: block;
     margin: 10px 0;
     background: $inactiveButton;
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0);
     position: relative;
     z-index: 1;
     @include transitions (all .1s linear);
@@ -542,6 +541,7 @@ body {
                 letter-spacing: 0.2em;
                 text-transform: uppercase;
                 position: relative;
+                @include transitions (all .2s linear);
                 &:after {
                     position: absolute;
                     width: 0%;
@@ -557,10 +557,16 @@ body {
                 &.active {
                     color: $defaultTextColour !important;
                     font-weight: 700;
+                    text-shadow: none !important;
+                    cursor: default;
                     &:after {
                         opacity: 1;
                         width: 100%;
                     }
+                }
+                &:hover {
+                    color: $defaultTextColour !important;
+                    text-shadow: 3px 3px 0 rgba(0, 0, 0, .3);
                 }
             }
         }
