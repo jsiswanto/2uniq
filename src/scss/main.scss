@@ -1150,13 +1150,13 @@ hr {
 
 #social {
     z-index: 3;
-    width: 33px;
-    height: 33px;
+    width: 34px;
+    height: 34px;
     background: url('../images/social.svg') 45% 50% no-repeat $defaultTextColour;
     background-size: 50%;
-    border-radius: 33px*0.5;
-    -moz-border-radius: 33px*0.5;
-    -webkit-border-radius: 33px*0.5;
+    border-radius: 34px*0.5;
+    -moz-border-radius: 34px*0.5;
+    -webkit-border-radius: 34px*0.5;
     position: fixed;
     bottom: 25px;
     right: 25px;
@@ -1168,21 +1168,19 @@ hr {
 #socialB {
     pointer-events: none;
     z-index: 2;
-    width: 33px;
-    height: 33px;
+    width: 31px;
+    height: 31px;
     background: $light;
-    border-radius: 33px*0.5;
-    -moz-border-radius: 33px*0.5;
-    -webkit-border-radius: 33px*0.5;
+    border-radius: 31px*0.5;
+    -moz-border-radius: 31px*0.5;
+    -webkit-border-radius: 31px*0.5;
     position: fixed;
-    bottom: 22px;
-    right: 22px;
-    opacity: 0;
-    //border: 3px solid rgba(216, 206, 194, 0);
+    bottom: 26px;
+    right: 26px;
     @include transitions (all .1s linear);
     &.active {
-        //border: 3px solid rgba(216, 206, 194, 1);
-        opacity: 1;
+        @include translate(3px,
+        3px);
     }
 }
 
