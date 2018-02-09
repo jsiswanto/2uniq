@@ -7,10 +7,14 @@ $(document).ready(function ()
 
         function socialIn() {
             $('#socialIcons ul').addClass('active');
+            $('#socialB').addClass('active');
+            $('#social').addClass('active');
         }
 
         function socialOut() {
             $('#socialIcons ul').removeClass('active');
+            $('#socialB').removeClass('active');
+            $('#social').removeClass('active');
         }
 
 
@@ -109,7 +113,9 @@ $(document).ready(function ()
         );
 
         //social icons hover over
-        $('#social').hover(socialIn, socialOut);
+
+
+        $('#socialIcons ul').hover(socialIn, socialOut);
 
     });
 
