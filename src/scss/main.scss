@@ -1162,10 +1162,7 @@ hr {
     right: 25px;
     pointer-events: none;
     @include transitions(all .1s linear);
-    &.active {
-        @include translate(-3px,
-        -3px);
-    }
+    &.active {}
 }
 
 #socialB {
@@ -1178,8 +1175,8 @@ hr {
     -moz-border-radius: 33px*0.5;
     -webkit-border-radius: 33px*0.5;
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 22px;
+    right: 22px;
     opacity: 0;
     //border: 3px solid rgba(216, 206, 194, 0);
     @include transitions (all .1s linear);
