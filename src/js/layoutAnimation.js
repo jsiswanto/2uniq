@@ -3,6 +3,18 @@ $(document).ready(function ()
     {
 
         var fancyboxClicked = false;
+        //custom functions
+
+        function socialIn() {
+            $('#socialIcons ul').addClass('active');
+        }
+
+        function socialOut() {
+            $('#socialIcons ul').removeClass('active');
+        }
+
+
+        //slick
 
         $('#work').slick({
             infinite: false,
@@ -95,6 +107,9 @@ $(document).ready(function ()
 
             }
         );
+
+        //social icons hover over
+        $('#social').hover(socialIn, socialOut);
 
     });
 

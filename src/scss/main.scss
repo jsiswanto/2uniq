@@ -1148,10 +1148,11 @@ hr {
     }
 }
 
-#share {
+#social {
+    z-index: 2;
     width: 33px;
     height: 33px;
-    background: url('../images/share.svg') 45% 50% no-repeat $defaultTextColour;
+    background: url('../images/social.svg') 45% 50% no-repeat $defaultTextColour;
     background-size: 50%;
     border-radius: 33px*0.5;
     -moz-border-radius: 33px*0.5;
@@ -1177,5 +1178,38 @@ hr {
         right: 22px;
         border: 1px solid rgba(216, 204, 194, 0);
         @include transitions (all .1s linear);
+    }
+}
+
+#socialIcons {
+    width: 200px;
+    height: 33px;
+    background: yellow;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1;
+    overflow: hidden;
+    ul {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        @include transitions (all .3s ease-out);
+        li {
+            display: inline-table;
+            list-style: none;
+            margin: 0 20px;
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &.active {
+            @include translate(-100%,
+            0);
+        }
     }
 }
