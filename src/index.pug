@@ -18,13 +18,13 @@ html
                 li
                     img#twoUniqLogo(src="${require('./images/2uniq.svg')}")
                 li.left
-                    a.nav-link(href="#about") About
+                    a.nav-link(href="#about" title="About") About
                 li.right
-                    a.nav-link(href="#work") Work
+                    a.nav-link(href="#work" title="Work") Work
                 li.left
-                    a.nav-link(href="#tech") Skills
+                    a.nav-link(href="#tech" title="Skills") Skills
                 li.right
-                    a.nav-link(href="#contact") Contact
+                    a.nav-link(href="#contact" title="Contact") Contact
                     
                 li.copy 
                     p Handcrafted and developed with love.
@@ -191,6 +191,9 @@ html
                                 .step 
                                     .caption 
                                         h1 01
+                                        .text
+                                            h4 Research
+                                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien eu malesuada mollis, ipsum ex maximus justo, non tristique diam velit id est. Vestibulum et magna eu leo commodo posuere non sit amet massa. 
                                 .step 
                                     .caption 
                                         h1 02
@@ -200,7 +203,8 @@ html
                                 .step
                                     .caption 
                                         h1 04
-                        .row
+                .row
+                    .col
                             .techDesc
                                 h3 By making adjustments to what is already simple, I can turn anything ordinary into something extraordinary.
                                 p After years of experience communicating and understanding the needs of different end-users through personas and market research, I began to notice patterns. It came to my realization that the most impactful and memorable experiences are accomplished by taking simple, efficient design approaches. Why take the more complicated path when there is a shorter one to reach the destination?
