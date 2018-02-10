@@ -2,6 +2,7 @@
 
 import 'jquery';
 import 'bootstrap';
+import 'scrolltrigger-classes';
 import '@fancyapps/fancybox';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 //import '../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';

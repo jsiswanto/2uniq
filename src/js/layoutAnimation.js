@@ -3,6 +3,19 @@ $(document).ready(function ()
     {
 
         var fancyboxClicked = false;
+
+        var trigger = new ScrollTrigger({
+            toggle: {
+                visible: 'fadeVisible',
+                hidden: 'fadeScroll'
+            },
+
+            offset: {
+                x: 0,
+                y: 500
+            }
+
+        });
         //custom functions
 
         function socialIn() {

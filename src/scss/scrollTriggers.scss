@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+/*scrolltrigger override*/
+
+.fadeScroll {
+    opacity: .3;
+}
+
+.fadeVisible {
+    opacity: 1;
+}
+
+#work,
+#tech {
+    @include transitions (all .5s linear);
+}
