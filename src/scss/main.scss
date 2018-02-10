@@ -1034,11 +1034,44 @@ hr {
     }
     /*steps*/
     #process {
+        width: 80%;
+        margin: 0 10% 100px 10%;
         flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
         .step {
-            width: 100%;
-            height: 100px;
-            background: $light;
+            width: 50%;
+            height: 200px;
+            border: 1px solid $light;
+            -webkit-transform: skew(-20deg);
+            -moz-transform: skew(-20deg);
+            -o-transform: skew(-20deg);
+            position: relative;
+            &:nth-child(n+3) //select 3 and 4
+            {
+                margin-top: -1px;
+            }
+            &:nth-child(2n) {
+                border-left: none;
+            }
+            .caption {
+                -webkit-transform: skew(20deg);
+                -moz-transform: skew(20deg);
+                -o-transform: skew(20deg);
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: $light;
+                h1 {
+                    text-transform: uppercase;
+                    font-weight: 200;
+                    font-style: normal;
+                    margin-left: 10px;
+                    font-size: 3em;
+                    letter-spacing: 0.1em;
+                }
+            }
         }
     }
     .techDesc {

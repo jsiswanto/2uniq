@@ -14,7 +14,7 @@ $navBarInactive: #726a62;
 $navBarActive: #fff;
 $backgroundGrad: #807766;
 $backgroundGrad2: #fff;
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300i,400,400i,600,700,700i');
 @mixin defaultFontSize {
     font-size: 16px;
     line-height: 2.2em !important;
