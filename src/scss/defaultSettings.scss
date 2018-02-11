@@ -29,9 +29,9 @@ $backgroundGrad2: #fff;
 
 @mixin titleStyle {
     font-weight: 300;
-    font-style: italic;
+    // font-style: italic;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
 }
 
 @mixin titleStyle2 {
@@ -95,6 +95,7 @@ $y) {
 
 @mixin buttonStyle {
     @include titleStyle;
+    font-style: italic;
     letter-spacing: 0.14em;
     font-weight: 400 !important;
     padding: 5px 10px;

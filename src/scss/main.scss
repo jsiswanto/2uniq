@@ -751,26 +751,28 @@ body {
     .slick-next:before {
         content: none;
     }
-    .slick-dots li button:before {
-        color: $dark !important;
-        font-size: 7px;
+    .slick-dots {
+        li,
+        button,
+        button:before {
+            width: 50px;
+            height: 3px;
+            margin: 0;
+            padding: 0;
+            background: $dark;
+            content: none;
+            opacity: .3;
+        }
+        .slick-active {
+            opacity: 1 !important;
+        }
     }
-    .slick-dots li.slick-active button:before {
-        color: $dark !important;
-        opacity: 1 !important;
-    }
-}
-
-hr {
-    margin-top: 120px !important;
-    width: 15%;
-    border-top: 1px solid $light !important;
 }
 
 #tech {
     width: 100%;
     height: auto;
-    padding: 0 0 150px 0;
+    padding: 75px 0 150px 0;
     .title {
         @include containerTwo;
         h2 {
@@ -1053,7 +1055,7 @@ hr {
             overflow: hidden;
             &:nth-child(n+3) //select 3 and 4
             {
-                margin-top: -1px;
+                margin-top: 20px;
             }
             &:nth-child(2n) {
                 border-left: none;
@@ -1072,11 +1074,14 @@ hr {
             .caption {
                 position: relative;
                 width: 50%;
-                height: 50%;
+                height: 200px;
                 color: $dark;
                 overflow: hidden;
                 opacity: .5;
                 @include transitions (all .2s linear);
+                &:nth-child(n+3) {
+                    margin-top: 20px;
+                }
                 h3 {
                     position: absolute;
                     top: 0;
