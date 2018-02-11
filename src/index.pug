@@ -5,6 +5,7 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8")
 
     body
+    
         #bgOverlay
         //#bgOverlay2
         .dialogBox
@@ -60,14 +61,15 @@ html
 
        
         
-        #about
+        #about(data-scroll data-scroll-showCallback="squareShiftTowards()" data-scroll-hideCallback="squareShiftAway()")
                     #titleBarM
                         img(src="./images/2uniq.svg")
                     
                     
+                  
                     .graphicCon
-                            .square.squareOne
-                            .square.squareTwo
+                        .square.squareOne.init
+                        .square.squareTwo.init
                     .main
 
                         h2 Every moment is beautiful
@@ -140,7 +142,7 @@ html
 
 
         
-        //hr
+      
         #tech
             .title
                 img(src="${require('./images/tech.svg')}" align="top")
@@ -221,9 +223,10 @@ html
                     .col-1
                     .col
                             .techDesc
-                                h3 By making adjustments to what is already simple, I can turn anything ordinary into something extraordinary.
-                                p After years of experience communicating and understanding the needs of different end-users through personas and market research, I began to notice patterns. It came to my realization that the most impactful and memorable experiences are accomplished by taking simple, efficient design approaches. Why take the more complicated path when there is a shorter one to reach the destination?
-                                p I have designed high-fidelity mockups, UI, e-blasts, banners, and wireframes for my clients including Sun Life Financial, DossierView, various tech startups, and BMO Financial Group. 
+                                h3 Client focused, maximum impact
+                                p Not every designer notices patterns after years of experience communicating and understanding the needs of different end-users in various industries. Through personas and user research, I came to the realization that our attention spans are getting shorter throughout the years. As a result, I follow an approach to create the most impactful and memorable experiences. They are accomplished through transparent, minimalistic, simple, and efficient designs.
+                                
+                                p My contemporary design philosophy, along with my knowledge in UX and Interaction Design, allows maximum impact to your clients. I have followed this approach to design high-fidelity mockups, UI, e-blasts, banners, and wireframes for my clients including Sun Life Financial, DossierView, various tech startups, and BMO Financial Group. 
 
                     .col-1
         .diagonalG

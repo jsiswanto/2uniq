@@ -5,6 +5,8 @@ $(document).ready(function ()
         var fancyboxClicked = false;
         var scope = {};
 
+        //scrolltrigger
+
         var trigger = new ScrollTrigger({
             toggle: {
                 visible: 'fadeVisible',
@@ -13,7 +15,7 @@ $(document).ready(function ()
 
             offset: {
                 x: 0,
-                y: 300
+                y: 200
             }
 
 
@@ -32,6 +34,21 @@ $(document).ready(function ()
             $('#social').removeClass('active');
         }
 
+        //square shift
+
+        scope.squareShiftTowards = function () {
+
+            $('#about .squareOne').removeClass('init');
+            $('#about .squareTwo').removeClass('init');
+
+        }
+
+        scope.squareShiftAway = function () {
+            $('#about .squareOne').addClass('init');
+            $('#about .squareTwo').addClass('init');
+        }
+
+        scope.squareShiftTowards();
 
 
         //bg shift
@@ -142,6 +159,8 @@ $(document).ready(function ()
 
 
         $('#socialIcons ul').hover(socialIn, socialOut);
+
+
 
     });
 

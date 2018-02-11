@@ -10,6 +10,21 @@
     opacity: 1;
 }
 
+#about {
+    .squareOne {
+        @include transitions (all .5s ease-out);
+        &.init {
+            @include translate (3%, 3%);
+        }
+    }
+    .squareTwo {
+        @include transitions (all .5s ease-out);
+        &.init {
+            @include translate (-3%, -3%);
+        }
+    }
+}
+
 #work,
 #tech {
     @include transitions (all .5s linear);
