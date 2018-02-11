@@ -3,6 +3,7 @@ $(document).ready(function ()
     {
 
         var fancyboxClicked = false;
+        var scope = {};
 
         var trigger = new ScrollTrigger({
             toggle: {
@@ -12,10 +13,13 @@ $(document).ready(function ()
 
             offset: {
                 x: 0,
-                y: 500
+                y: 300
             }
 
+
         });
+
+        trigger.callScope = scope;
         //custom functions
 
         function socialIn() {
@@ -26,6 +30,17 @@ $(document).ready(function ()
         function socialOut() {
             $('#socialIcons ul').removeClass('active');
             $('#social').removeClass('active');
+        }
+
+
+
+        //bg shift
+        scope.bgShiftOne = function () {
+            $('#bgOverlay').addClass('active');
+        }
+
+        scope.bgShiftOne_r = function () {
+            $('#bgOverlay').removeClass('active');
         }
 
 

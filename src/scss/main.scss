@@ -438,25 +438,34 @@ button:focus {
 /* main body*/
 
 body {
-    background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 25%);
-    background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 25%);
-    background: linear-gradient(135deg, $backgroundGrad 0%, $backgroundGrad2 25%);
+    background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
+    background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
+    background: linear-gradient(135deg, $backgroundGrad 0%, $backgroundGrad2 50%);
     background-size: 100% auto;
     @include defaultFontSize;
     @include defaultFont;
     margin: 0;
     min-width: 500px; // layout min-width
+    background-attachment: fixed;
 }
 
 #bgOverlay {
     z-index: -123;
-    position: absolute;
+    position: fixed;
+    background: #fff;
     top: 0;
     left: 0;
     width: 100%;
-    height: 1500px;
+    height: 100%;
+    opacity: 0;
+    @include transitions(all 1s ease-out);
+    &.active {
+        opacity: 1;
+    }
+    /*
     background: url("../images/bg.png") no-repeat top left;
     background-size: 65%;
+    */
 }
 
 #titleBar {
@@ -1037,9 +1046,9 @@ hr {
             width: 50%;
             height: 200px;
             border: 1px solid $light;
-            -webkit-transform: skew(-23deg);
-            -moz-transform: skew(-23deg);
-            -o-transform: skew(-23deg);
+            -webkit-transform: skew(-22deg);
+            -moz-transform: skew(-22deg);
+            -o-transform: skew(-22deg);
             position: relative;
             overflow: hidden;
             &:nth-child(n+3) //select 3 and 4
