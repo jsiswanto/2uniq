@@ -45,10 +45,6 @@ $backgroundGrad2: #fff;
     margin: 100px auto;
 }
 
-@mixin containerTwo {
-    margin: 100px auto 50px auto;
-}
-
 @mixin transitions($arg) {
     -webkit-transition: $arg !important;
     -moz-transition: $arg !important;

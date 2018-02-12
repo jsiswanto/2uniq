@@ -6,7 +6,7 @@ html
 
     body
     
-        #bgOverlay
+        #bgOverlay.active
         //#bgOverlay2
         .dialogBox
                 span To toggle the caption, click the background area
@@ -143,10 +143,15 @@ html
 
         
       
-        #tech
-            .title
-                img(src="${require('./images/tech.svg')}" align="top")
-                h2 Technical Proficiency
+        #tech(data-scroll)
+            .container-fluid
+                .row
+                    .col-1
+                    .col
+                        .title
+                            img(src="${require('./images/tech.svg')}" align="top")
+                            h2 Technical Proficiency
+                    .col-1
             .container-fluid
                 .row
                     .col-xl

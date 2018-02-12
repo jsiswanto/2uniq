@@ -448,9 +448,7 @@ body {
     margin: 0;
     min-width: 500px; // layout min-width
     background-attachment: fixed;
-    border: 3px solid $light;
-    border-left: none;
-    border-right: none;
+    border-top: 3px solid $light;
 }
 
 #bgOverlay {
@@ -581,7 +579,6 @@ body {
                 left: 20% - 5;
                 top: 15% - 12;
                 z-index: 2;
-                opacity: 1;
             }
         }
     }
@@ -777,15 +774,13 @@ body {
 #tech {
     width: 100%;
     height: auto;
-    padding: 75px 0 150px 0;
+    padding: 150px 0 50px 0;
     .title {
-        @include containerTwo;
         h2 {
             @include titleStyle;
             display: inline-block;
             margin: -5px 0 0 13px;
         }
-        width: 80%;
         color: $dark;
     }
     .flex {
@@ -1043,7 +1038,7 @@ body {
     /*steps*/
     #process {
         width: 85%;
-        margin: 0 auto 100px auto;
+        margin: 0 auto 50px auto;
         flex-direction: row;
         flex-wrap: wrap;
         display: flex;

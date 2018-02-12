@@ -9,14 +9,15 @@ $(document).ready(function ()
 
         var trigger = new ScrollTrigger({
             toggle: {
-                visible: 'fadeVisible',
-                hidden: 'fadeScroll'
+                visible: 'visible',
+                hidden: 'visible'
             },
 
             offset: {
                 x: 0,
-                y: 200
+                y: 300
             }
+
 
 
         });
@@ -48,7 +49,7 @@ $(document).ready(function ()
             $('#about .squareTwo').addClass('init');
         }
 
-        scope.squareShiftTowards();
+        scope.squareShiftTowards(); //initialization for first page load
 
 
         //bg shift
@@ -59,6 +60,8 @@ $(document).ready(function ()
         scope.bgShiftOne_r = function () {
             $('#bgOverlay').removeClass('active');
         }
+
+        scope.bgShiftOne_r(); // initialization for first page load
 
 
         //slick

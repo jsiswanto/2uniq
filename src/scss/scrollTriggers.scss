@@ -2,30 +2,21 @@
 
 /*scrolltrigger override*/
 
-.fadeScroll {
-    opacity: .3;
-}
-
-.fadeVisible {
-    opacity: 1;
-}
-
 #about {
     .squareOne {
+        opacity: 1;
         @include transitions (all .5s ease-out);
         &.init {
+            opacity: 0;
             @include translate (3%, 3%);
         }
     }
     .squareTwo {
+        opacity: 1;
         @include transitions (all .5s ease-out);
         &.init {
+            opacity: 0;
             @include translate (-3%, -3%);
         }
     }
-}
-
-#work,
-#tech {
-    @include transitions (all .5s linear);
 }
