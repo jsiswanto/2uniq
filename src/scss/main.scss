@@ -5,6 +5,11 @@
 /*breakpoints*/
 
 @media screen and (max-width: 690px) {
+    #about {
+        .graphicCon {
+            margin-bottom: 0 !important;
+        }
+    }
     #tech {
         .title {
             img,

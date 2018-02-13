@@ -5,7 +5,7 @@
 #about {
     .squareOne {
         opacity: 1;
-        @include transitions (all .5s ease-out);
+        @include transitions (all 1s ease-out);
         &.init {
             opacity: 0;
             @include translate (3%, 3%);
@@ -13,7 +13,7 @@
     }
     .squareTwo {
         opacity: 1;
-        @include transitions (all .5s ease-out);
+        @include transitions (all 1s ease-out);
         &.init {
             opacity: 0;
             @include translate (-3%, -3%);
