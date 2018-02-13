@@ -5,6 +5,7 @@ $(document).ready(function ()
         var fancyboxClicked = false;
         var scope = {};
         var hash;
+        var scrollPositionTop = true; // fixes scrolltrigger bug on mobile version where squareOne and squareTwo fades away on the very top of window scroll
 
         //scrolltrigger
 
@@ -38,19 +39,44 @@ $(document).ready(function ()
 
         //square shift
 
+        // bug fix so that squareOne and squareTwo doesn't fade away when scrolling to top of smaller window
+        $(window).scroll(function (event) {
+
+            if ($(this).scrollTop() <= $('#about h2').offset().top) {
+                scrollPositionTop = true;
+
+
+            } else {
+                scrollPositionTop = false;
+
+            }
+
+        });
+
+
+
         scope.squareShiftTowards = function () {
+
 
             $('#about .squareOne').removeClass('init');
             $('#about .squareTwo').removeClass('init');
 
         }
 
+
         scope.squareShiftAway = function () {
-            $('#about .squareOne').addClass('init');
-            $('#about .squareTwo').addClass('init');
+
+            if (scrollPositionTop == false) { // don't fade away when scroll position is top of window
+                $('#about .squareOne').addClass('init');
+                $('#about .squareTwo').addClass('init');
+
+
+            }
         }
 
         scope.squareShiftTowards(); //initialization for first page load
+
+
 
 
         //bg shift
