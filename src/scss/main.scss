@@ -115,7 +115,7 @@
             margin: 0 !important;
             padding: 0 0 100px 0 !important;
             flex-direction: column;
-            a {
+            a.cv {
                 display: inline-block !important;
                 margin: 20px 0 !important;
             }
@@ -123,6 +123,15 @@
                 margin: 20px;
             }
         }
+    }
+    a#social {
+        display: none;
+    }
+    #socialIcons {
+        display: none;
+    }
+    #socialIconsM {
+        display: block;
     }
 }
 
@@ -144,6 +153,98 @@
     #work {
         .item {
             height: 450px;
+        }
+    }
+    #socialIconsM {
+        display: none;
+    }
+}
+
+
+/*social icons*/
+
+@mixin socialIconsli {
+    li {
+        display: inline-table;
+        list-style: none;
+        width: auto;
+        height: auto;
+        a {
+            display: block;
+            margin: 0 20px;
+            vertical-align: middle;
+            background-size: contain;
+            position: relative;
+            &.behance {
+                width: 16px;
+                height: 16px;
+                background: url('../images/behance.svg') no-repeat center;
+                &:before {
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    background: url('../images/behance.svg') no-repeat center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    @include transitions(all .2s linear);
+                }
+                &:hover {
+                    &:before {
+                        top: 5px;
+                        left: 5px;
+                        opacity: .5;
+                    }
+                }
+            }
+            &.linkedin {
+                margin-top: -16px;
+                width: 14px;
+                height: 14px;
+                background: url('../images/linkedin.svg') no-repeat center;
+                &:before {
+                    content: '';
+                    width: 14px;
+                    height: 14px;
+                    background: url('../images/linkedin.svg') no-repeat center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    @include transitions(all .2s linear);
+                }
+                &:hover {
+                    &:before {
+                        top: 5px;
+                        left: 5px;
+                        opacity: .5;
+                    }
+                }
+            }
+            &.twitter {
+                width: 16px;
+                height: 16px;
+                background: url('../images/twitter.svg') no-repeat center;
+                &:before {
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    background: url('../images/twitter.svg') no-repeat center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    @include transitions(all .2s linear);
+                }
+                &:hover {
+                    &:before {
+                        top: 5px;
+                        left: 5px;
+                        opacity: .5;
+                    }
+                }
+            }
         }
     }
 }
@@ -1201,8 +1302,16 @@ body {
                 font-weight: 600 !important;
                 text-transform: uppercase;
             }
-            a {
+            a.cv {
                 @include buttonStyle;
+            }
+            #socialIconsM {
+                ul {
+                    padding: 0;
+                    margin: 30px 0;
+                    display: block;
+                    @include socialIconsli;
+                }
             }
         }
     }
@@ -1245,89 +1354,7 @@ body {
         width: 100%;
         opacity: 0;
         @include transitions (all .3s ease-out);
-        li {
-            display: inline-table;
-            list-style: none;
-            width: auto;
-            height: auto;
-            a {
-                display: block;
-                margin: 0 20px;
-                vertical-align: middle;
-                background-size: contain;
-                position: relative;
-                &.behance {
-                    width: 16px;
-                    height: 16px;
-                    background: url('../images/behance.svg') no-repeat center;
-                    &:before {
-                        content: '';
-                        width: 16px;
-                        height: 16px;
-                        background: url('../images/behance.svg') no-repeat center;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        opacity: 0;
-                        @include transitions(all .2s linear);
-                    }
-                    &:hover {
-                        &:before {
-                            top: 5px;
-                            left: 5px;
-                            opacity: .5;
-                        }
-                    }
-                }
-                &.linkedin {
-                    margin-top: -16px;
-                    width: 14px;
-                    height: 14px;
-                    background: url('../images/linkedin.svg') no-repeat center;
-                    &:before {
-                        content: '';
-                        width: 14px;
-                        height: 14px;
-                        background: url('../images/linkedin.svg') no-repeat center;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        opacity: 0;
-                        @include transitions(all .2s linear);
-                    }
-                    &:hover {
-                        &:before {
-                            top: 5px;
-                            left: 5px;
-                            opacity: .5;
-                        }
-                    }
-                }
-                &.twitter {
-                    width: 16px;
-                    height: 16px;
-                    background: url('../images/twitter.svg') no-repeat center;
-                    &:before {
-                        content: '';
-                        width: 16px;
-                        height: 16px;
-                        background: url('../images/twitter.svg') no-repeat center;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        opacity: 0;
-                        @include transitions(all .2s linear);
-                    }
-                    &:hover {
-                        &:before {
-                            top: 5px;
-                            left: 5px;
-                            opacity: .5;
-                        }
-                    }
-                }
-            }
-        }
+        @include socialIconsli;
         &.active {
             opacity: 1;
             @include translate(-167px,
