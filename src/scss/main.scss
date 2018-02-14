@@ -14,8 +14,12 @@
         .title {
             img,
             h2 {
-                margin: 10px auto;
+                margin: 20px auto !important;
                 display: block;
+            }
+            img {
+                width: 50px !important;
+                height: 50px !important;
             }
         }
         #mac {
@@ -28,14 +32,23 @@
         }
         #process {
             margin-top: 100px !important;
+            .caption {
+                .text {
+                    width: 75% !important;
+                }
+            }
         }
     }
     #contact {
         .marginRight {
             h2,
             img {
-                margin: 10px auto;
+                margin: 20px auto !important;
                 display: block;
+            }
+            img {
+                width: 50px !important;
+                height: 50px !important;
             }
         }
     }
@@ -101,6 +114,15 @@
         }
         .techBody {
             width: 70% !important;
+        }
+        #process {
+            .step,
+            .caption {
+                height: 130px !important;
+                .text {
+                    top: 93px !important;
+                }
+            }
         }
     }
     #contact {
@@ -552,7 +574,7 @@ body {
     @include defaultFontSize;
     @include defaultFont;
     margin: 0;
-    min-width: 500px; // layout min-width
+    min-width: 550px; // layout min-width
     background-attachment: fixed;
     border-top: 3px solid $light;
 }
@@ -1202,9 +1224,9 @@ body {
                 }
                 .text {
                     position: absolute;
-                    width: 80%;
+                    width: 85%;
                     top: 163px;
-                    right: 50px;
+                    right: 38px;
                     text-align: right;
                     @include transitions (all .2s ease-out);
                     h4 {
@@ -1223,7 +1245,7 @@ body {
                     }
                     .text {
                         @include translate(0,
-                        -50px);
+                        -60px);
                     }
                 }
             }
@@ -1306,7 +1328,10 @@ body {
                 @include buttonStyle;
             }
             #socialIconsM {
+                width: 100%;
+                overflow: hidden;
                 ul {
+                    @include scale(1.5);
                     padding: 0;
                     margin: 30px 0;
                     display: block;
