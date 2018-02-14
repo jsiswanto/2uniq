@@ -17,7 +17,7 @@ $(document).ready(function ()
 
             offset: {
                 x: 0,
-                y: 300
+                y: 350
             }
 
 
@@ -77,7 +77,19 @@ $(document).ready(function ()
         scope.squareShiftTowards(); //initialization for first page load
 
 
+        //techStepsShift
 
+
+        scope.techStepsShiftTowards = function () {
+            $('#process .step').addClass('active');
+            $('#process .captionWrap').addClass('active');
+
+        }
+        scope.techStepsShiftAway = function () {
+            $('#process .step').removeClass('active');
+            $('#process .captionWrap').removeClass('active');
+
+        }
 
         //bg shift
         scope.bgShiftOne = function () {

@@ -143,7 +143,7 @@ html
 
         
       
-        #tech(data-scroll)
+        #tech
             .container-fluid
                 .row
                     .col-1
@@ -157,22 +157,23 @@ html
                     .col-xl
                         .flex
                             .techBody
-                                p 
-                                    span Photoshop 
-                                    span HTML5 
-                                    span CSS3 
-                                    span Vanilla&nbsp;JS 
-                                    span Bootstrap
-                                    span Preprocessors 
-                                    span Webpack 
-                                    span Git
-                                    span User&nbsp;Interfaces
-                                    span User&nbsp;Experience&nbsp;Design
-                                   
-                                    span Interaction&nbsp;Design
-                                    span Illustrator
-                                    span Photography
-                                
+                                .techBodyBg
+                                    p 
+                                        span Photoshop 
+                                        span HTML5 
+                                        span CSS3 
+                                        span Vanilla&nbsp;JS 
+                                        span Bootstrap
+                                        span Preprocessors 
+                                        span Webpack 
+                                        span Git
+                                        span User&nbsp;Interface&nbsp;Design
+                                        span User&nbsp;Experience&nbsp;Design
+
+                                        span Interaction&nbsp;Design
+                                        span Illustrator
+                                        span Photography
+
                                 #mac
                                     
                                     img.m(src="${require('./images/mac.png')}")
@@ -195,7 +196,7 @@ html
 
                     .col-xl
                         .row
-                            #process
+                            #process(data-scroll data-scroll-showCallback="techStepsShiftTowards()" data-scroll-hideCallback="techStepsShiftAway()")
                                 .step 
                                    
                                 .step 

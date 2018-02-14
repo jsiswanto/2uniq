@@ -589,7 +589,7 @@ body {
     height: 100%;
     opacity: 0;
     pointer-events: none;
-    @include transitions(all 1s ease-out);
+    @include transitions(all 1.5s ease-out);
     &.active {
         opacity: 1;
     }
@@ -921,10 +921,17 @@ body {
         width: 80%;
         height: 300px;
         background: $dark;
-        background: -moz-linear-gradient(left, $light 0%, $dark 100%);
-        background: -webkit-linear-gradient(left, $light 0%, $dark 100%);
-        background: linear-gradient(to right, $light 0%, $dark 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9bac8', endColorstr='#7f8f9c', GradientType=1);
+        .techBodyBg {
+            background: -moz-linear-gradient(left, $light 0%, $dark 100%);
+            background: -webkit-linear-gradient(left, $light 0%, $dark 100%);
+            background: linear-gradient(to right, $light 0%, $dark 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9bac8', endColorstr='#7f8f9c', GradientType=1);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
         p {
             text-transform: uppercase;
             margin-left: 30px;
@@ -1177,9 +1184,14 @@ body {
             width: 50%;
             height: 200px;
             border: 1px solid $light;
-            -webkit-transform: skew(-22deg);
-            -moz-transform: skew(-22deg);
-            -o-transform: skew(-22deg);
+            opacity: 0;
+            @include transitions(all 1s ease-out 1s);
+            &.active {
+                opacity: 1;
+                -webkit-transform: skew(-22deg);
+                -moz-transform: skew(-22deg);
+                -o-transform: skew(-22deg);
+            }
             position: relative;
             overflow: hidden;
             &:nth-child(n+3) //select 3 and 4
@@ -1200,6 +1212,11 @@ body {
             flex-wrap: wrap;
             display: flex;
             align-items: center;
+            opacity: 0;
+            @include transitions (all .2s ease-out);
+            &.active {
+                opacity: 1;
+            }
             .caption {
                 position: relative;
                 width: 50%;
