@@ -1,187 +1,7 @@
 @charset 'UTF-8';
 @import 'defaultSettings';
 @import 'scrollTriggers';
-
-/*breakpoints*/
-
-@media screen and (max-width: 690px) {
-    #about {
-        .graphicCon {
-            margin-bottom: 0 !important;
-        }
-    }
-    #tech {
-        .title {
-            img,
-            h2 {
-                margin: 20px auto !important;
-                display: block;
-            }
-            img {
-                width: 50px !important;
-                height: 50px !important;
-            }
-        }
-        #mac {
-            top: 275px!important;
-            left: 105px !important;
-        }
-        #slide {
-            top: 287px !important;
-            left: 155px !important;
-        }
-        #process {
-            margin-top: 100px !important;
-            .caption {
-                .text {
-                    width: 75% !important;
-                }
-            }
-        }
-    }
-    #contact {
-        .marginRight {
-            h2,
-            img {
-                margin: 20px auto !important;
-                display: block;
-            }
-            img {
-                width: 50px !important;
-                height: 50px !important;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .mNav {
-        visibility: visible;
-    }
-    #titleBar {
-        visibility: hidden;
-    }
-    #titleBarM {
-        display: block;
-    }
-    #about {
-        margin: 0 60px !important;
-        .graphicCon,
-        .main {
-            display: block !important;
-            text-align: center !important;
-            width: 100% !important;
-        }
-        .graphicCon {
-            margin: 40px 0;
-            .squareOne {
-                left: 5% !important;
-                top: 10% !important;
-            }
-            .squareTwo {
-                left: 5% - 5 !important;
-                top: 10% - 12 !important;
-            }
-        }
-    }
-    .fancybox-caption {
-        a.button {
-            line-height: 1.1em !important;
-            padding-top: 10px !important;
-            padding-bottom: 10px !important;
-        }
-        p {
-            font-size: 0.9em !important;
-            line-height: 1.4em !important;
-        }
-    }
-    #about,
-    #tech .techDesc,
-    #contact {
-        text-align: center !important;
-    }
-    #about {
-        padding: 0 5% 0 5% !important;
-    }
-    #work {
-        .item {
-            height: 375px;
-        }
-    }
-    #tech {
-        .title {
-            text-align: center;
-        }
-        .techBody {
-            width: 70% !important;
-        }
-        #process {
-            .step,
-            .caption {
-                height: 130px !important;
-                .text {
-                    top: 93px !important;
-                }
-            }
-        }
-    }
-    #contact {
-        .row>div {
-            flex: none;
-        }
-        .marginRight {
-            margin: 100px 50px !important;
-            text-align: center;
-        }
-        .flex {
-            margin: 0 !important;
-            padding: 0 0 100px 0 !important;
-            flex-direction: column;
-            a.cv {
-                display: inline-block !important;
-                margin: 20px 0 !important;
-            }
-            img {
-                margin: 20px;
-            }
-        }
-    }
-    a#social {
-        display: none;
-    }
-    #socialIcons {
-        display: none;
-    }
-    #socialIconsM {
-        display: block;
-    }
-}
-
-@media screen and (orientation: landscape) and (min-width: 1101px) {
-    .mNav {
-        visibility: hidden !important;
-        span,
-        span:before,
-        span:after {
-            visibility: hidden !important;
-        }
-    }
-    #titleBar {
-        visibility: visible;
-    }
-    #titleBarM {
-        display: none;
-    }
-    #work {
-        .item {
-            height: 450px;
-        }
-    }
-    #socialIconsM {
-        display: none;
-    }
-}
-
+@import 'mobile';
 
 /*social icons*/
 
@@ -452,7 +272,6 @@
 
 .fancybox-caption-wrap {
     background: #fff !important;
-    /*background: linear-gradient(180deg, transparent 0, rgba(255, 255, 255, .5) 10%, rgba(255, 255, 255, .85) 20%, rgba(255, 255, 255, 1)) !important;*/
     padding-top: 15px !important;
     padding-bottom: 5px !important;
     .fancybox-caption {
@@ -574,7 +393,6 @@ body {
     @include defaultFontSize;
     @include defaultFont;
     margin: 0;
-    min-width: 550px; // layout min-width
     background-attachment: fixed;
     border-top: 3px solid $light;
 }
@@ -593,10 +411,6 @@ body {
     &.active {
         opacity: 1;
     }
-    /*
-    background: url("../images/bg.png") no-repeat top left;
-    background-size: 65%;
-    */
 }
 
 #titleBar {
@@ -607,10 +421,7 @@ body {
     width: 100%;
     height: 35px;
     color: $inactiveNav;
-    //background: rgba(255, 255, 255, 0);
-    //include transitions(all .1s linear);
     &.bgFill {
-        // background: rgba(255, 255, 255, 1);
         position: fixed;
         left: 0;
         top: 0;
@@ -1339,7 +1150,7 @@ body {
                 margin: 0;
                 font-size: 1.1em;
                 font-weight: 600 !important;
-                text-transform: uppercase;
+                letter-spacing: 0.04em;
             }
             a.cv {
                 @include buttonStyle;

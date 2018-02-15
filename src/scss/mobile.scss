@@ -1,0 +1,252 @@
+@charset 'UTF-8';
+
+/*breakpoints*/
+
+@media screen and (max-width: 690px) {
+    .mNav {
+        visibility: visible;
+    }
+    #titleBar {
+        visibility: hidden;
+    }
+    #titleBarM {
+        display: block;
+    }
+    #about,
+    #tech .techDesc,
+    #contact {
+        text-align: center !important;
+    }
+    #about {
+        margin: 0 !important;
+        padding: 0 !important;
+        .graphicCon,
+        .main {
+            display: block !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+        .graphicCon {
+            margin: 40px 0;
+            .squareOne {
+                left: 5% !important;
+                top: 10% !important;
+            }
+            .squareTwo {
+                left: 5% - 5 !important;
+                top: 10% - 12 !important;
+            }
+        }
+    }
+    #work {
+        .item {
+            height: 205px;
+        }
+        .slick-dots {
+            li,
+            button,
+            button:before {
+                width: 30px !important;
+            }
+        }
+    }
+    #tech {
+        padding-top: 50px !important;
+        .title {
+            img,
+            h2 {
+                margin: 20px auto !important;
+                display: block;
+                text-align: center;
+            }
+            img {
+                width: 50px !important;
+                height: 50px !important;
+            }
+        }
+        #mac {
+            top: 245px!important;
+            left: 65px !important;
+            img.m {
+                width: 1000px * 0.17 !important;
+                height: 568px * 0.17 !important;
+            }
+            .reflection {
+                top: 1px !important;
+                left: 137px !important;
+                img.s {
+                    width: 392px * 0.17 !important;
+                    height: 510px * 0.17 !important;
+                }
+            }
+        }
+        #slide {
+            top: 257px !important;
+            left: 111px !important;
+            width: 741px * 0.17 !important;
+            height: 460px * 0.17 !important;
+        }
+        #process {
+            margin-top: 100px !important;
+            .step,
+            .caption {
+                width: 100% !important;
+                margin-top: 20px !important;
+                height: 130px !important;
+            }
+            .caption {
+                display: block !important;
+                width: 100% !important;
+                h3 {
+                    top: 5px !important;
+                    left: 24px !important;
+                }
+                .text {
+                    width: 75% !important;
+                    top: 93px !important;
+                }
+            }
+        }
+    }
+    #contact {
+        .marginRight {
+            h2,
+            img {
+                margin: 20px auto !important;
+                display: block;
+            }
+            img {
+                width: 50px !important;
+                height: 50px !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 691px) and (max-width: 1100px) {
+    .mNav {
+        visibility: visible;
+    }
+    #titleBar {
+        visibility: hidden;
+    }
+    #titleBarM {
+        display: block;
+    }
+    #about {
+        margin: 0 60px !important;
+        .graphicCon,
+        .main {
+            display: block !important;
+            text-align: center !important;
+            width: 100% !important;
+        }
+        .graphicCon {
+            margin: 40px 0;
+            .squareOne {
+                left: 5% !important;
+                top: 10% !important;
+            }
+            .squareTwo {
+                left: 5% - 5 !important;
+                top: 10% - 12 !important;
+            }
+        }
+    }
+    .fancybox-caption {
+        a.button {
+            line-height: 1.1em !important;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+        p {
+            font-size: 0.9em !important;
+            line-height: 1.4em !important;
+        }
+    }
+    #about,
+    #tech .techDesc,
+    #contact {
+        text-align: center !important;
+    }
+    #about {
+        padding: 0 5% 0 5% !important;
+    }
+    #work {
+        .item {
+            height: 375px;
+        }
+    }
+    #tech {
+        .title {
+            text-align: center;
+        }
+        .techBody {
+            width: 70% !important;
+        }
+        #process {
+            .step,
+            .caption {
+                height: 130px !important;
+                .text {
+                    top: 93px !important;
+                }
+            }
+        }
+    }
+    #contact {
+        .row>div {
+            flex: none;
+        }
+        .marginRight {
+            margin: 100px 50px !important;
+            text-align: center;
+        }
+        .flex {
+            margin: 0 !important;
+            padding: 0 0 100px 0 !important;
+            flex-direction: column;
+            a.cv {
+                display: inline-block !important;
+                margin: 20px 0 !important;
+            }
+            img {
+                margin: 20px;
+            }
+        }
+    }
+    a#social {
+        display: none;
+    }
+    #socialIcons {
+        display: none;
+    }
+    #socialIconsM {
+        display: block;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1101px) {
+    .mNav {
+        visibility: hidden !important;
+        span,
+        span:before,
+        span:after {
+            visibility: hidden !important;
+        }
+    }
+    #titleBar {
+        visibility: visible;
+    }
+    #titleBarM {
+        display: none;
+    }
+    #work {
+        .item {
+            height: 450px;
+        }
+    }
+    #socialIconsM {
+        display: none;
+    }
+}
