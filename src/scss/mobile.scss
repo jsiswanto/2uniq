@@ -25,12 +25,12 @@
         }
         .main {
             display: block !important;
-            width: 100% !important;
+            width: 90% !important;
             text-align: center !important;
-            margin: 0 !important;
+            margin: 0 auto !important;
         }
         .graphicCon {
-            margin: 40px 0;
+            margin: 40px 0 !important;
             .squareOne {
                 left: 5% !important;
                 top: 10% !important;
@@ -43,7 +43,7 @@
     }
     #work {
         .item {
-            height: 205px;
+            height: 320px;
         }
         .slick-dots {
             li,
@@ -69,35 +69,26 @@
         }
         .techBody {
             width: 100% !important;
+            height: auto !important;
             text-align: center;
-            p {
-                margin-left: 0 !important;
+            .techBodyBg {
+                position: relative !important;
+                p {
+                    margin: 0 !important;
+                    padding: 30px 0 !important;
+                    display: block;
+                    line-height: 2.5em;
+                }
             }
         }
         .diagonal {
             display: none;
         }
         #mac {
-            top: 245px!important;
-            left: 26% !important;
-            img.m {
-                width: 1000px * 0.25 !important;
-                height: 568px * 0.25 !important;
-            }
-            .reflection {
-                top: 1px !important;
-                left: 126px !important;
-                img.s {
-                    width: 392px * 0.25 !important;
-                    height: 510px * 0.25 !important;
-                }
-            }
+            display: none;
         }
         #slide {
-            top: 254px !important;
-            left: 33.5% !important;
-            width: 741px * 0.26 !important;
-            height: 460px * 0.26 !important;
+            display: none;
         }
         #process {
             margin-top: 100px !important;
@@ -119,6 +110,9 @@
                     top: 93px !important;
                 }
             }
+        }
+        .flex {
+            margin-bottom: 0 !important;
         }
     }
     #contact {
