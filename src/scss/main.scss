@@ -396,6 +396,7 @@ body {
     margin: 0;
     background-attachment: fixed;
     border-top: 3px solid $light;
+    -webkit-font-smoothing: antialiased;
 }
 
 #bgOverlay {
@@ -534,13 +535,11 @@ body {
         }
         h2 {
             @include titleStyle;
-            //letter-spacing: 0.2em;
             display: inline-block;
             margin: 5px 0 30px 0;
             opacity: .35;
         }
         h3 {
-            @include titleStyle2;
             margin-top: 0;
         }
     }
@@ -717,6 +716,9 @@ body {
     height: auto;
     padding: 150px 0 0 0;
     margin-bottom: 80px;
+    h3 {
+        color: $dark;
+    }
     .title {
         h2 {
             @include titleStyle;
@@ -747,6 +749,7 @@ body {
         p {
             text-transform: uppercase;
             margin-left: 30px;
+            font-weight: bold;
             color: #fff;
             line-height: 2em;
             letter-spacing: 0.04em;
@@ -984,6 +987,10 @@ body {
         }
     }
     /*steps*/
+    .titleApproach {
+        margin: 50px 0 0 0;
+        display: none;
+    }
     #process {
         width: 85%;
         margin: 0 auto 50px auto;
@@ -994,7 +1001,7 @@ body {
         position: relative;
         .step {
             width: 50%;
-            height: 200px;
+            height: 160px;
             border: 1px solid $light;
             opacity: 0;
             @include transitions(all 1s ease-out 1s);
@@ -1032,10 +1039,10 @@ body {
             .caption {
                 position: relative;
                 width: 50%;
-                height: 200px;
+                height: 160px;
                 color: $dark;
                 overflow: hidden;
-                opacity: .5;
+                opacity: .7;
                 @include transitions (all .2s linear);
                 &:nth-child(n+3) {
                     margin-top: 20px;
@@ -1054,7 +1061,7 @@ body {
                 .text {
                     position: absolute;
                     width: 85%;
-                    top: 163px;
+                    top: 123px;
                     right: 38px;
                     text-align: right;
                     @include transitions (all .2s ease-out);
@@ -1082,9 +1089,6 @@ body {
     }
     .techDesc {
         margin: 50px 0;
-        h3 {
-            color: $dark;
-        }
     }
     .diagonal {
         width: 0;

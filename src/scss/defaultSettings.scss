@@ -2,6 +2,7 @@
 $mNavBgColour: #fff;
 $mNavToggleW: 50px;
 $mNavToggleH: 50px;
+$mBgColour: #ece6df;
 $workThumbBorder: #e0e7f1;
 $light: #d8cec2;
 $dark: #807766;
@@ -32,12 +33,6 @@ $backgroundGrad2: #fff;
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-}
-
-@mixin titleStyle2 {
-    letter-spacing: -0.01em;
-    line-height: 1.5em !important;
-    font-weight: 600 !important;
 }
 
 @mixin containerOne {
@@ -172,6 +167,8 @@ a {
 
 h3 {
     line-height: 1.5em !important;
+    font-weight: 300 !important;
+    letter-spacing: .01em !important;
 }
 
 .flex {
