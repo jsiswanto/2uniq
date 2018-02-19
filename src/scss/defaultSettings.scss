@@ -130,6 +130,14 @@ $y) {
 
 /*bootstrap override*/
 
+html {
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .01);
+}
+
 .container-fluid {
     padding: 0 !important;
 }
