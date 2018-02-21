@@ -185,3 +185,16 @@ h3 {
     justify-content: flex-start;
     padding: 20px 0;
 }
+
+.downloadIcon {
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+        background: url("../images/download.svg") center no-repeat;
+        background-size: contain;
+    }
+    color: #fff !important;
+}
