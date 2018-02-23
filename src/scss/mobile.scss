@@ -2,6 +2,34 @@
 
 /*breakpoints*/
 
+@media screen and (max-height: 315px) and (orientation: landscape) {
+    .mNav {
+        li#logo {
+            display: none !important;
+        }
+    }
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .mNav {
+        &.menuContainer {
+            li {
+                padding: 0 20px;
+                display: inline;
+                &#logo {
+                    display: block;
+                    img {
+                        padding-bottom: 60px;
+                    }
+                }
+                p {
+                    margin: 50px 0 0 0 !important;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 690px) {
     body {
         background: $mBgColour !important;
