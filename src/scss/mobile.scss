@@ -34,9 +34,6 @@
     body {
         background: $mBgColour !important;
     }
-    .mNav {
-        visibility: visible;
-    }
     .fancybox-caption {
         // mobile copy display visible
         h4 {
@@ -55,17 +52,6 @@
             display: block !important;
             line-height: 1.7em;
         }
-    }
-    #titleBar {
-        visibility: hidden;
-    }
-    #titleBarM {
-        display: block;
-    }
-    #about,
-    #tech .techDesc,
-    #contact {
-        text-align: center !important;
     }
     #about {
         margin: 0 !important;
@@ -182,48 +168,9 @@
             margin-bottom: 0 !important;
         }
     }
-    #contact {
-        .row>div {
-            flex: none;
-        }
-        .marginRight {
-            margin: 100px 50px !important;
-            text-align: center;
-        }
-        .flex {
-            margin: 0 !important;
-            padding: 0 0 100px 0 !important;
-            flex-direction: column;
-            a.cv {
-                display: inline-block !important;
-                margin: 20px 0 !important;
-            }
-            img {
-                margin: 20px;
-            }
-        }
-    }
-    a#social {
-        display: none;
-    }
-    #socialIcons {
-        display: none;
-    }
-    #socialIconsM {
-        display: block;
-    }
 }
 
 @media screen and (min-width: 691px) and (max-width: 1100px) {
-    .mNav {
-        visibility: visible;
-    }
-    #titleBar {
-        visibility: hidden;
-    }
-    #titleBarM {
-        display: block;
-    }
     .fancybox-caption {
         a.button {
             line-height: 1.1em !important;
@@ -234,11 +181,6 @@
             font-size: 0.9em !important;
             line-height: 1.4em !important;
         }
-    }
-    #about,
-    #tech .techDesc,
-    #contact {
-        text-align: center !important;
     }
     #about {
         margin: 0 60px !important;
@@ -286,12 +228,29 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 1100px) {
+    .mNav {
+        visibility: visible;
+    }
+    #titleBar {
+        visibility: hidden;
+    }
+    #titleBarM {
+        display: block;
+    }
+    #about,
+    #tech .techDesc,
+    #contact {
+        text-align: center !important;
+    }
     #contact {
         .row>div {
             flex: none;
         }
         .marginRight {
-            margin: 100px 50px !important;
+            margin: 100px 50px 50px 50px !important;
             text-align: center;
         }
         .flex {

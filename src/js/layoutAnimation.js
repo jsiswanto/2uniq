@@ -112,13 +112,15 @@ $(document).ready(function ()
             $("#contact .left img").addClass("active");
 
 
-        }
 
-        scope.contactShiftAway = function () {
-            $("#contact .transition").addClass("opacityZero");
-            $("#contact .transition").removeClass("opacityOne");
-            $("#contact .left img").removeClass("active");
-        }
+        } // run only once
+
+        /*   scope.contactShiftAway = function () {
+               $("#contact .transition").addClass("opacityZero");
+               $("#contact .transition").removeClass("opacityOne");
+               $("#contact .left img").removeClass("active");
+
+           }*/
 
         //slick
 

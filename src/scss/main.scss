@@ -1128,7 +1128,7 @@ body {
         opacity: 1;
     }
     .transition {
-        @include transitions (all 1s linear);
+        @include transitions (all .3s linear);
     }
     p {
         color: $light;
@@ -1176,10 +1176,12 @@ body {
             img {
                 width: 155px * 0.5;
                 height: 155px * 0.5;
-                @include transitions(all .3s ease-out);
+                @include transitions(all .3s ease-out .3s);
                 @include scale(0);
+                opacity: 0;
                 &.active {
                     @include scale(1);
+                    opacity: 1;
                 }
             }
         }
