@@ -1174,12 +1174,13 @@ body {
         .left {
             padding-right: 10px;
             img {
-                width: 140px * 0.5;
-                height: 140px * 0.5;
-            }
-            svg {
-                width: 100px;
-                height: 100px;
+                width: 155px * 0.5;
+                height: 155px * 0.5;
+                @include transitions(all .3s ease-out);
+                @include scale(0);
+                &.active {
+                    @include scale(1);
+                }
             }
         }
         .right {

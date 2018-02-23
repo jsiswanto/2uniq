@@ -256,13 +256,13 @@ html
                             img.arrow
 
                     
-                .col.opacityZero.transition(data-scroll data-scroll-showCallback="contactShiftTowards()" data-scroll-hideCallback="contactShiftAway()")
+                .col(data-scroll data-scroll-showCallback="contactShiftTowards()" data-scroll-hideCallback="contactShiftAway()")
                     .flex
                         .left
 
                         
                             img(src="${require('./images/jeffthumb.png')}")
-                        .right
+                        .right.opacityZero.transition
                             h5 Jeff Siswanto
                             p Web Designer
                                 br

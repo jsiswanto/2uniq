@@ -109,6 +109,7 @@ $(document).ready(function ()
         scope.contactShiftTowards = function () {
             $("#contact .transition").addClass("opacityOne");
             $("#contact .transition").removeClass("opacityZero");
+            $("#contact .left img").addClass("active");
 
 
         }
@@ -116,6 +117,7 @@ $(document).ready(function ()
         scope.contactShiftAway = function () {
             $("#contact .transition").addClass("opacityZero");
             $("#contact .transition").removeClass("opacityOne");
+            $("#contact .left img").removeClass("active");
         }
 
         //slick
