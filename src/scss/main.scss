@@ -1121,6 +1121,15 @@ body {
     background: $defaultTextColour;
     color: #fff;
     padding: 0 0 75px 0 !important;
+    .opacityZero {
+        opacity: 0;
+    }
+    .opacityOne {
+        opacity: 1;
+    }
+    .transition {
+        @include transitions (all 1s linear);
+    }
     p {
         color: $light;
     }

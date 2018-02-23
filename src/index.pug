@@ -256,18 +256,12 @@ html
                             img.arrow
 
                     
-                .col
+                .col.opacityZero.transition(data-scroll data-scroll-showCallback="contactShiftTowards()" data-scroll-hideCallback="contactShiftAway()")
                     .flex
                         .left
-                           
-                           svg
-                            defs
-                             clipPath(id="clip-path")
-                             
-                                path(d="M50,50 v-50 a50,50 0 0,1 0,0 z" fill="#999" stroke-width="0")
-                            
-                            image(clip-path="url(#clip-path)"  xlink:href="${require('./images/jeffthumb.png')}" x="0" y="0" height="100px" width="100px")
-                           //img(src="${require('./images/jeffthumb.png')}")
+
+                        
+                            img(src="${require('./images/jeffthumb.png')}")
                         .right
                             h5 Jeff Siswanto
                             p Web Designer

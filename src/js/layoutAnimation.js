@@ -103,6 +103,21 @@ $(document).ready(function ()
         scope.bgShiftOne_r(); // initialization for first page load
 
 
+        //contact shift
+
+
+        scope.contactShiftTowards = function () {
+            $("#contact .transition").addClass("opacityOne");
+            $("#contact .transition").removeClass("opacityZero");
+
+
+        }
+
+        scope.contactShiftAway = function () {
+            $("#contact .transition").addClass("opacityZero");
+            $("#contact .transition").removeClass("opacityOne");
+        }
+
         //slick
 
         $('#work').slick({
@@ -226,52 +241,6 @@ $(document).ready(function ()
 
 
         );
-
-        //circular wipe
-
-
-        //Drawing the circle arc
-
-
-
-        function drawCircleArc(elem, angle) {
-            var endAngleDeg = angle - 90;
-            var endAngleRad = (endAngleDeg * Math.PI) / 180;
-            var largeArcFlag = (angle < 180 ? '0' : '1');
-
-            var endX = Math.cos(endAngleRad) * 50;
-            var endY = 50 + (Math.sin(endAngleRad) * 50);
-
-            var data = 'M50,50 v-50 a50,50 0 ' + largeArcFlag + ',1 ' +
-                endX + ',' + endY + ' z';
-            var finaldata = 'M 50 50 a 100 100 0 1 0 0.00001 0'
-
-            $(elem).attr('d', data);
-        }
-
-        // Running the animation
-
-        var arcAngle = 0; // Starts at 0, ends at 360
-        var arcAngleBy = 10; // Degrees per frame
-        var arcAngleDelay = 16.64; // Duration of each frame in msec
-
-        function updateCircleWipe() {
-            arcAngle += arcAngleBy;
-
-            drawCircleArc('#contact .left path', arcAngle);
-
-            if (arcAngle < 360) {
-                setTimeout(function () {
-                    updateCircleWipe();
-                }, arcAngleDelay);
-            } else {
-                $('#contact .left path').attr('d', 'M0,50a50,50 0 1,0 100,0a50,50 0 1,0 -100,0');
-            }
-        }
-
-        setTimeout(function () {
-            updateCircleWipe();
-        }, arcAngleDelay);
 
 
 
