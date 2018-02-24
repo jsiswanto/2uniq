@@ -2,7 +2,8 @@
 
 /*breakpoints*/
 
-@media screen and (max-height: 315px) and (orientation: landscape) {
+@media screen and (max-height: 315px) and (orientation: landscape),
+screen and (max-height: 524px) and (orientation: portrait) {
     .mNav {
         li#logo {
             display: none !important;

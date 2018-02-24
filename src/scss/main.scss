@@ -154,6 +154,7 @@
             img {
                 width: 12%;
                 padding-bottom: 30px;
+                min-width: 72px;
             }
             a {
                 display: inline !important; //bootstrap override
@@ -673,6 +674,9 @@ body {
     .slick-next,
     {
         @include prevNextArrows;
+        &:before {
+            content: none;
+        }
     }
     .slick-prev {
         left: 10px;
@@ -692,10 +696,6 @@ body {
     .slick-disabled:hover {
         opacity: 0 !important;
         cursor: default;
-    }
-    .slick-prev:before,
-    .slick-next:before {
-        content: none;
     }
     .slick-dots {
         li,
