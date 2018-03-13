@@ -1,7 +1,7 @@
 doctype html
 html
     head
-        title 2UNIQ - Design Portfolio
+        title 2UNIQ - Jeff Siswanto Design Portfolio
         meta(name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8")
         link(rel="icon" type="image/x-icon" href="${require('./images/favicon.ico')}")
 
@@ -29,7 +29,7 @@ html
                     
                 li.copy 
                     p 
-                        i Hand built in Kitchener. Bundled using Webpack.
+                        i Hand built in Kitchener. Bundled&nbsp;with&nbsp;Webpack.
                         br 
                         |Copyright 2018 Jeff Siswanto. All rights reserved.
                 
@@ -252,7 +252,7 @@ html
                         p.opacityZero.transition Let’s collaborate and create something great for your customers. From Web banners, e-blasts, prototypes, mockups, design concepts to development, I am ready to bring value to your creative endeavours. 
                     
                         p.opacityZero.transition Thank you for your visit.
-                        a.link.opacityZero.transition(href="https://www.behance.net/2uniq" target="_blank") View Behance profile to see more of my work
+                        a.link.opacityZero.transition(href="https://www.behance.net/2uniq" target="_blank") Go to Behance to see more work
                             img.arrow
 
                     
@@ -262,7 +262,7 @@ html
 
                         
                             img(src="${require('./images/jeffthumb.png')}")
-                        .right.opacityZero.transition
+                        .right.opacityZero.transition(data-scroll data-scroll-showCallback="copyrightShiftTowards()" data-scroll-hideCallback="copyrightShiftAway()") 
                             h5 Jeff Siswanto
                             p Web Designer
                                 br
@@ -283,6 +283,9 @@ html
                                         a.twitter(href="https://twitter.com/jeffsiswanto" target="_blank")
 
                 .col-1
+                  
+        #copyright
+          div Copyright 2018 Jeff Siswanto. Hand&nbsp;built&nbsp;in&nbsp;Kitchener. Bundled&nbsp;with&nbsp;Webpack.
         a#social(href="#")
 
         #socialIcons

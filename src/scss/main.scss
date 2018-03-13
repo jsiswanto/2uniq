@@ -100,6 +100,7 @@
 /*dialog box*/
 
 .dialogBox {
+  background: rgba(216, 206, 194, .5);
   display: flex;
   position: fixed;
   justify-content: center;
@@ -113,6 +114,7 @@
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
+  font-weight: 600;
   @include transitions (all .5s linear);
 
   span {
@@ -608,11 +610,11 @@ body {
         height: 0;
         position: absolute;
         content: '';
-        top: 99%;
+        top: 100%;
         left: 0;
         border-top: 1px solid $dark;
         opacity: 0;
-        @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000) 1s);
+        @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000) 1.5s);
       }
 
       &.active {
@@ -662,7 +664,7 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      box-shadow: 3px 3px 0 $backgroundGrad;
+      box-shadow: 5px 5px 0 $workThumbShadow;
       opacity: 0;
       content: '';
       @include transitions (all .2s linear);
@@ -722,8 +724,6 @@ body {
               padding: 20px 15px;
               @include transitions(all .5s ease-out);
             }
-            //letter-spacing: 0.1em;
-            //font-size: 1.3em;
             color: #fff;
             padding: 20px;
 
@@ -1102,7 +1102,7 @@ body {
       height: 160px;
       border: 1px solid $light;
       opacity: 0;
-      @include transitions(all 1s ease-out 1s);
+      @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000) 1s);
 
       &.active {
         opacity: 1;
@@ -1260,7 +1260,7 @@ body {
     img.arrow {
       width: 12px;
       height: 16px;
-      margin-left: 8px;
+      margin: -2px 0 0 8px;
       opacity: .5;
       vertical-align: middle;
       background: #fff;
@@ -1340,6 +1340,25 @@ body {
           @include socialIconsli;
         }
       }
+    }
+  }
+}
+
+#copyright {
+  background: $defaultTextColour;
+  color: $dark;
+  text-transform: uppercase;
+  font-size: .7em;
+  letter-spacing: .2em;
+  line-height: 1.6em;
+
+  div {
+    @include translate(-200px, 0);
+    @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000));
+    padding: 0 0 23px 28px;
+
+    &.active {
+      @include translate(0, 0);
     }
   }
 }

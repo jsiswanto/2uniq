@@ -126,6 +126,17 @@ $(document).ready(function()
 
        }*/
 
+    //copyright shift
+
+    scope.copyrightShiftTowards = function() {
+
+      $("#copyright div").addClass("active");
+    }
+    scope.copyrightShiftAway = function() {
+
+      $("#copyright div").removeClass("active");
+    }
+
     //slick
 
     $('#work').slick({
