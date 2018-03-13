@@ -1,12 +1,11 @@
 doctype html
 html
     head
-        title 2UNIQ - a Web Design Portfolio
+        title 2UNIQ - Design Portfolio
         meta(name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8")
         link(rel="icon" type="image/x-icon" href="${require('./images/favicon.ico')}")
 
     body
-    
         #bgOverlay.active
         .dialogBox
                 span To reveal or hide the caption, click or tap the background area
@@ -30,7 +29,7 @@ html
                     
                 li.copy 
                     p 
-                        i Hand built in Kitchener, packaged using Webpack
+                        i Hand built in Kitchener. Bundled using Webpack.
                         br 
                         |Copyright 2018 Jeff Siswanto. All rights reserved.
                 
@@ -49,7 +48,7 @@ html
                          li
                             a.nav-link(href="#about") About 
                          li
-                            a.nav-link(href="#work") work 
+                            a.nav-link.work(href="#work") work 
                             
                          li
                             a.nav-link(href="#tech") skills 
@@ -73,8 +72,9 @@ html
                         .square.squareTwo.init
                     .main
 
-                        h2 Every moment is beautiful
-                        h3 My name is Jeff, a Front-end Web Designer based in Kitchener-Waterloo  specializing in UX and Interaction Design. I am known for my progressive dedication to refinement, craftsmanship, and attention to detail.
+                        h3.moment Every moment is 
+                            b beautiful.
+                        h3 My name is Jeff, a Front-end Web Designer based in Kitchener-Waterloo focusing on UX and Human Centered Design. I am known for my progressive dedication to refinement, craftsmanship, and attention to detail.
                         p My continuous improvements in Adobe CS, HTML5, CSS3, and JS frameworks allow me to streamline my workflows to design, code, and optimize prototypes 
                                         i from scratch. 
                                         |Like an artisan in the world of  
@@ -153,7 +153,7 @@ html
                     .col
                         .title
                             img(src="${require('./images/tech.svg')}" align="top")
-                            h2 Technical Proficiency
+                            h3 Technical Proficiency
                     .col-1
             .container-fluid
                 .row
@@ -248,11 +248,11 @@ html
                 .col
                     .marginRight 
                         img(src="${require('./images/startshere.svg')}" align="top")
-                        h2 It starts here
-                        p.opacityZero.transition Let’s collaborate and create something impactful for your customers. From Web banners, e-blasts, prototypes, mockups, design concepts to development, I am ready to bring value to your creative endeavours. 
+                        h3 It starts here
+                        p.opacityZero.transition Let’s collaborate and create something great for your customers. From Web banners, e-blasts, prototypes, mockups, design concepts to development, I am ready to bring value to your creative endeavours. 
                     
                         p.opacityZero.transition Thank you for your visit.
-                        a.link.opacityZero.transition(href="https://www.behance.net/2uniq" target="_blank") Go to my Behance profile to see my older work
+                        a.link.opacityZero.transition(href="https://www.behance.net/2uniq" target="_blank") View Behance profile to see more of my work
                             img.arrow
 
                     

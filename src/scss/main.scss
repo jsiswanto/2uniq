@@ -1,860 +1,1001 @@
 @charset 'UTF-8';
 @import 'defaultSettings';
 @import 'scrollTriggers';
-@import 'mobile';
-
-/*social icons*/
-
+@import 'mobile'; /*social icons*/
 @mixin socialIconsli {
-    li {
-        display: inline-table;
-        list-style: none;
-        width: auto;
-        height: auto;
-        a {
-            display: block;
-            margin: 0 20px;
-            vertical-align: middle;
-            background-size: contain;
-            position: relative;
-            &.behance {
-                width: 16px;
-                height: 16px;
-                background: url('../images/behance.svg') no-repeat center;
-                &:before {
-                    content: '';
-                    width: 16px;
-                    height: 16px;
-                    background: url('../images/behance.svg') no-repeat center;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
-                    @include transitions(all .2s linear);
-                }
-                &:hover {
-                    &:before {
-                        top: 5px;
-                        left: 5px;
-                        opacity: .5;
-                    }
-                }
-            }
-            &.linkedin {
-                margin-top: -16px;
-                width: 14px;
-                height: 14px;
-                background: url('../images/linkedin.svg') no-repeat center;
-                &:before {
-                    content: '';
-                    width: 14px;
-                    height: 14px;
-                    background: url('../images/linkedin.svg') no-repeat center;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
-                    @include transitions(all .2s linear);
-                }
-                &:hover {
-                    &:before {
-                        top: 5px;
-                        left: 5px;
-                        opacity: .5;
-                    }
-                }
-            }
-            &.twitter {
-                width: 16px;
-                height: 16px;
-                background: url('../images/twitter.svg') no-repeat center;
-                &:before {
-                    content: '';
-                    width: 16px;
-                    height: 16px;
-                    background: url('../images/twitter.svg') no-repeat center;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
-                    @include transitions(all .2s linear);
-                }
-                &:hover {
-                    &:before {
-                        top: 5px;
-                        left: 5px;
-                        opacity: .5;
-                    }
-                }
-            }
+  li {
+    display: inline-table;
+    list-style: none;
+    width: auto;
+    height: auto;
+
+    a {
+      display: block;
+      margin: 0 20px;
+      vertical-align: middle;
+      background-size: contain;
+      position: relative;
+
+      &.behance {
+        width: 16px;
+        height: 16px;
+        background: url("../images/behance.svg") no-repeat center;
+
+        &:before {
+          content: '';
+          width: 16px;
+          height: 16px;
+          background: url("../images/behance.svg") no-repeat center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          @include transitions(all .2s linear);
         }
+
+        &:hover {
+          &:before {
+            top: 5px;
+            left: 5px;
+            opacity: .5;
+          }
+        }
+      }
+
+      &.linkedin {
+        margin-top: -16px;
+        width: 14px;
+        height: 14px;
+        background: url("../images/linkedin.svg") no-repeat center;
+
+        &:before {
+          content: '';
+          width: 14px;
+          height: 14px;
+          background: url("../images/linkedin.svg") no-repeat center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          @include transitions(all .2s linear);
+        }
+
+        &:hover {
+          &:before {
+            top: 5px;
+            left: 5px;
+            opacity: .5;
+          }
+        }
+      }
+
+      &.twitter {
+        width: 16px;
+        height: 16px;
+        background: url("../images/twitter.svg") no-repeat center;
+
+        &:before {
+          content: '';
+          width: 16px;
+          height: 16px;
+          background: url("../images/twitter.svg") no-repeat center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          @include transitions(all .2s linear);
+        }
+
+        &:hover {
+          &:before {
+            top: 5px;
+            left: 5px;
+            opacity: .5;
+          }
+        }
+      }
     }
+  }
 }
-
-
 /*dialog box*/
 
 .dialogBox {
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    z-index: 99999;
-    visibility: hidden;
-    pointer-events: none;
-    opacity: 0;
-    @include transitions (all .5s linear);
-    span {
-        padding: 30px;
-        background: $inactiveButton;
-        color: #fff;
-        opacity: 1;
-    }
-    &.active {
-        visibility: visible;
-        opacity: 1;
-    }
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 99999;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  @include transitions (all .5s linear);
+
+  span {
+    padding: 30px;
+    background: $inactiveButton;
+    color: #fff;
+    opacity: 1;
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
 }
-
-
 /*responsive nav*/
 
 .menuContainer {
-    @include topRightPos;
-    background: $mNavBgColour;
-    color: $inactiveNav;
-    pointer-events: none;
-    opacity: 0;
+  @include topRightPos;
+  background: $mNavBgColour;
+  color: $inactiveNav;
+  pointer-events: none;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  @include transitions(all .3s ease-out);
+  z-index: 100;
+
+  ul {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 100%;
-    @include transitions(all .3s ease-out);
-    z-index: 100;
-    ul {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        text-align: center;
-        font-size: 1.8em;
-        letter-spacing: 0.1em;
-        font-weight: 600;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        li {
+    text-align: center;
+    font-size: 1.8em;
+    letter-spacing: .1em;
+    font-weight: 600;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    li {
+      display: block;
+      text-transform: uppercase;
+      padding: 20px 0;
+      @include transitions(all .3s ease-out);
+
+      img {
+        width: 12%;
+        padding-bottom: 30px;
+        min-width: 72px;
+      }
+
+      a {
+        display: inline !important; //bootstrap override
+        padding: 0 !important; //bootstrap override
+
+        &.active {
+          position: relative;
+          //font-weight: 600;
+          color: $defaultTextColour !important;
+
+          &:after {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            content: " ";
             display: block;
-            text-transform: uppercase;
-            padding: 20px 0;
-            @include transitions(all .3s ease-out);
-            img {
-                width: 12%;
-                padding-bottom: 30px;
-                min-width: 72px;
-            }
-            a {
-                display: inline !important; //bootstrap override
-                padding: 0 !important; //bootstrap override
-                &.active {
-                    position: relative;
-                    //font-weight: 600;
-                    color: $defaultTextColour !important;
-                    &:after {
-                        position: absolute;
-                        width: 100%;
-                        left: 0;
-                        top: 100%;
-                        content: " ";
-                        display: block;
-                        border-top: 5px solid $light;
-                        border-right: 5px solid transparent;
-                    }
-                }
-            }
-            &.left {
-                transform: translateX(-10px);
-            }
-            &.right {
-                transform: translateX(10px);
-            }
-            &.copy {
-                padding-top: 30px;
-                @include defaultFont;
-                @include defaultFontSize;
-                text-transform: none;
-            }
+            border-top: 5px solid $light;
+            border-right: 5px solid transparent;
+          }
         }
+      }
+
+      &.left {
+        transform: translateX(-10px);
+      }
+
+      &.right {
+        transform: translateX(10px);
+      }
+
+      &.copy {
+        padding-top: 30px;
+        @include defaultFont;
+        @include defaultFontSize;
+        text-transform: none;
+      }
     }
+  }
 }
 
 .checkboxToggle {
-    @include topRightPos;
-    z-index: 102;
-    cursor: pointer;
-    width: $mNavToggleW;
-    height: $mNavToggleH;
-    border: 0;
-    padding: 0;
-    opacity: 0;
-    &:checked {
-        &+.checkboxLabel {
-            span.outer {
-                opacity: 0;
-                &:before {
-                    @extend span.outer;
-                }
-                &:after {
-                    @extend span.outer;
-                }
-            }
-            span.middle {
-                //overlaid visible middle rectangle
-                transform: rotate(45deg);
-            }
-            span.middle2 {
-                transform: rotate(-45deg);
-            }
+  @include topRightPos;
+  z-index: 102;
+  cursor: pointer;
+  width: $mNavToggleW;
+  height: $mNavToggleH;
+  border: 0;
+  padding: 0;
+  opacity: 0;
+
+  &:checked {
+    &+.checkboxLabel {
+      span.outer {
+        opacity: 0;
+
+        &:before {
+          @extend span.outer;
         }
-        &~.menuContainer {
-            pointer-events: auto;
-            opacity: 0.95;
-            ul {
-                li {
-                    transform: translateX(0);
-                }
-            }
+
+        &:after {
+          @extend span.outer;
         }
+      }
+
+      span.middle {
+        //overlaid visible middle rectangle
+        transform: rotate(45deg);
+      }
+
+      span.middle2 {
+        transform: rotate(-45deg);
+      }
     }
+
+    &~.menuContainer {
+      pointer-events: auto;
+      opacity: .95;
+
+      ul {
+        li {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
 }
 
 .checkboxLabel {
-    @include topRightPos;
-    top: 10px;
-    color: #000;
-    z-index: 101;
-    width: $mNavToggleW;
-    height: $mNavToggleH;
-    background: transparent;
-    span.outer {
-        @include mNavStyling; // middle rectangle hidden
-        &:after {
-            @extend span.outer;
-            top: -10px;
-            content: "";
-            visibility: visible; // set to visible
-        }
-        &:before {
-            @extend span.outer;
-            top: 10px;
-            content: "";
-            visibility: visible; // set to visible
-        }
+  @include topRightPos;
+  top: 10px;
+  color: #000;
+  z-index: 101;
+  width: $mNavToggleW;
+  height: $mNavToggleH;
+  background: transparent;
+
+  span.outer {
+    @include mNavStyling; // middle rectangle hidden
+
+    &:after {
+      @extend span.outer;
+      top: -10px;
+      content: "";
+      visibility: visible; // set to visible
     }
-    span.middle,
-    span.middle2 {
-        @include mNavStyling;
-        visibility: visible; // overlaid visible middle rectangle
+
+    &:before {
+      @extend span.outer;
+      top: 10px;
+      content: "";
+      visibility: visible; // set to visible
     }
+  }
+
+  span.middle,
+  span.middle2 {
+    @include mNavStyling;
+    visibility: visible; // overlaid visible middle rectangle
+  }
 }
-
-
 /*fancybox*/
 
 .fancybox-stage {
-    background: $light;
+  background: $light;
 }
 
 .fancybox-is-open .fancybox-bg {
-    opacity: 1 !important;
+  opacity: 1 !important;
 }
 
 .fancybox-caption-wrap {
-    background: #fff !important;
-    padding-top: 15px !important;
-    padding-bottom: 5px !important;
-    .fancybox-caption {
-        border: none !important;
-        color: $defaultTextColour;
-        @include defaultFontSize;
-        padding: 0 !important;
-        line-height: 2em !important;
-        a {
-            color: $dark !important;
-            font-weight: bold;
-            &:hover {
-                color: $inactiveButton !important;
-            }
-        }
-        a.button {
-            @include buttonStyle;
-            color: #fff !important;
-            margin-left: 0 !important;
-            display: inline-table;
-            margin-right: 20px;
-            background: $dark;
-            &:before {
-                background: -moz-linear-gradient(left, $light 0%, $dark 100%);
-                background: -webkit-linear-gradient(left, $light 0%, $dark 100%);
-                background: linear-gradient(to right, $light 0%, $dark 100%);
-            }
-        }
-        h4 {
-            color: $dark;
-            margin-bottom: 10px;
-            // @include defaultFont;
-            @include titleStyle;
-        }
-        .mobile {
-            display: none; //mobile copy display hidden
-        }
-    }
-}
+  background: #fff !important;
+  padding-top: 15px !important;
+  padding-bottom: 5px !important;
 
-@mixin prevNextArrows {
-    z-index: 2;
-    width: 2413px *0.05 !important;
-    height: 3208px *0.015 !important;
-    opacity: 0.4 !important;
-    transform: none !important;
-    @include transitions(all .2s ease-out);
-    &:hover {
-        opacity: 1 !important;
+  .fancybox-caption {
+    border: none !important;
+    color: $defaultTextColour;
+    @include defaultFontSize;
+    padding: 0 !important;
+    line-height: 2em !important;
+
+    a {
+      color: $dark !important;
+      font-weight: bold;
+
+      &:hover {
+        color: $inactiveButton !important;
+      }
     }
+
+    a.button {
+      @include buttonStyle;
+      color: #fff !important;
+      margin-left: 0 !important;
+      display: inline-table;
+      margin-right: 20px;
+      background: $dark;
+
+      &:before {
+        background: -moz-linear-gradient(left, $light 0%, $dark 100%);
+        background: -webkit-linear-gradient(left, $light 0%, $dark 100%);
+        background: linear-gradient(to right, $light 0%, $dark 100%);
+      }
+    }
+
+    h4 {
+      color: $dark;
+      margin-bottom: 10px;
+      // @include defaultFont;
+      @include titleStyle;
+    }
+
+    .mobile {
+      display: none; //mobile copy display hidden
+    }
+  }
+}
+@mixin prevNextArrows {
+  z-index: 2;
+  width: 2413px *0.05 !important;
+  height: 3208px *0.015 !important;
+  opacity: .4 !important;
+  transform: none !important;
+  @include transitions(all .2s ease-out);
+
+  &:hover {
+    opacity: 1 !important;
+  }
 }
 
 .fancybox-arrow {
-    @include prevNextArrows;
-    &:disabled {
-        opacity: 0 !important;
-        cursor: default;
-    }
+  @include prevNextArrows;
+
+  &:disabled {
+    opacity: 0 !important;
+    cursor: default;
+  }
 }
 
-.fancybox-button:before,
+.fancybox-arrow:after,
 .fancybox-button:after,
-.fancybox-arrow:after {
-    content: none !important;
+.fancybox-button:before {
+  content: none !important;
 }
 
 .fancybox-arrow--left {
-    left: 10px !important;
-    background: url("../images/prev.svg") no-repeat 20% 100% !important;
-    &:active {
-        background-position: 0% 100% !important;
-    }
+  left: 10px !important;
+  background: url("../images/prev.svg") no-repeat 20% 100% !important;
+
+  &:active {
+    background-position: 0 100% !important;
+  }
 }
 
 .fancybox-arrow--right {
-    right: 10px !important;
-    background: url("../images/next.svg") no-repeat 80% 100% !important;
-    &:active {
-        background-position: 100% 100% !important;
-    }
+  right: 10px !important;
+  background: url("../images/next.svg") no-repeat 80% 100% !important;
+
+  &:active {
+    background-position: 100% 100% !important;
+  }
 }
 
 .fancybox-button--fullscreen {
-    background: url("../images/fullscreen.svg") no-repeat top left !important;
-    width: 90px * 0.5 !important;
-    height: 50px * 0.5 !important;
+  background: url("../images/fullscreen.svg") no-repeat top left !important;
+  width: 90px * .5 !important;
+  height: 50px * .5 !important;
 }
 
 .fancybox-button--close {
-    background: url("../images/close.svg") no-repeat top left !important;
-    width: 50px * 0.5 !important;
-    height: 50px * 0.5 !important;
-    margin-left: 35px !important;
+  background: url("../images/close.svg") no-repeat top left !important;
+  width: 50px * .5 !important;
+  height: 50px * .5 !important;
+  margin-left: 35px !important;
 }
 
 .fancybox-toolbar {
-    margin: 20px 30px;
+  margin: 20px 30px;
 }
 
 .fancybox-button {
-    opacity: 0.4;
-    @include transitions (all .2s ease-out);
+  opacity: .4;
+  @include transitions (all .2s ease-out);
 }
 
 .fancybox-button:hover {
-    opacity: 1;
-    @include translate(-2px,
-    -2px);
+  opacity: 1;
+  @include translate(-2px, -2px);
 }
 
 button:focus {
-    outline: 0 !important;
+  outline: 0 !important;
 }
-
-
 /* main body*/
 
 body {
-    background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
-    background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
-    background: linear-gradient(135deg, $backgroundGrad 0%, $backgroundGrad2 50%);
-    background-size: 100% auto;
-    @include defaultFontSize;
-    @include defaultFont;
-    margin: 0;
-    background-attachment: fixed;
-    border-top: 3px solid $light;
-    border-bottom: 3px solid $dark;
+  background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
+  background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
+  background: linear-gradient(135deg, $backgroundGrad 0%, $backgroundGrad2 50%);
+  background-size: 100% auto;
+  @include defaultFontSize;
+  @include defaultFont;
+  margin: 0;
+  background-attachment: fixed;
+  border-top: 3px solid $light;
+  border-bottom: 3px solid $dark;
 }
 
 #bgOverlay {
-    z-index: -123;
-    position: fixed;
-    background: #fff;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    pointer-events: none;
-    @include transitions(all 1.5s ease-out);
-    &.active {
-        opacity: 1;
-    }
+  z-index: -123;
+  position: fixed;
+  background: $light;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  @include transitions(all 1.5s ease-out);
+
+  &.active {
+    opacity: 1;
+  }
 }
 
 #titleBar {
-    position: absolute;
-    top: 25px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 35px;
+  color: $inactiveNav;
+
+  &.bgFill {
+    position: fixed;
     left: 0;
-    z-index: 999;
+    top: 0;
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
     width: 100%;
-    height: 35px;
-    color: $inactiveNav;
-    &.bgFill {
-        position: fixed;
-        left: 0;
-        top: 0;
+    text-align: right;
+    font-size: .8em;
+    font-weight: 700;
+
+    li {
+      display: inline-table !important;
+      line-height: 1.2em !important;
+      margin: 0 20px;
+      text-align: left;
+
+      a {
         margin: 0;
-    }
-    ul {
-        margin: 0;
-        width: 100%;
-        text-align: right;
-        font-size: 0.8em;
-        font-weight: 700;
-        li {
-            display: inline-table !important;
-            line-height: 1.2em !important;
-            margin: 0 20px;
-            text-align: left;
-            a {
-                margin: 0;
-                padding: 0;
-                letter-spacing: 0.2em;
-                text-transform: uppercase;
-                position: relative;
-                text-shadow: 0 0 0 rgba(216, 206, 194, 0);
-                @include transitions (all .2s linear);
-                &:after {
-                    position: absolute;
-                    width: 0%;
-                    left: 0;
-                    top: 112%;
-                    content: '';
-                    display: block;
-                    border-top: 3px solid $light;
-                    border-right: 3px solid transparent;
-                    opacity: 0;
-                    @include transitions (width .3s ease-out);
-                }
-                &.active {
-                    color: $defaultTextColour !important;
-                    text-shadow: none !important;
-                    cursor: default;
-                    &:after {
-                        opacity: 1;
-                        width: 100%;
-                    }
-                }
-                &:hover {
-                    color: $defaultTextColour !important;
-                    text-shadow: 3px 3px 0 rgba(216, 206, 194, 1);
-                }
-            }
+        padding: 0;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        position: relative;
+        text-shadow: 0 0 0 rgba(216, 206, 194, 0);
+        @include transitions (all .2s linear);
+
+        &.work {
+          &:after {
+            border-top-color: $backgroundGrad !important;
+          }
         }
+
+        &:after {
+          position: absolute;
+          width: 0;
+          left: 0;
+          top: 112%;
+          content: '';
+          display: block;
+          border-top: 3px solid $light;
+          border-right: 3px solid transparent;
+          opacity: 0;
+          @include transitions (width .3s ease-out);
+        }
+
+        &.active {
+          color: $defaultTextColour !important;
+          text-shadow: none !important;
+          cursor: default;
+
+          &:after {
+            opacity: 1;
+            width: 100%;
+          }
+        }
+
+        &:hover {
+          color: $defaultTextColour !important;
+          text-shadow: 3px 3px 0 rgba(216, 206, 194, 1);
+        }
+      }
     }
-    #twoUniqLogo {
-        width: 12%;
-        min-width: 70px;
-        vertical-align: middle;
-    }
+  }
+
+  #twoUniqLogo {
+    width: 12%;
+    min-width: 70px;
+    vertical-align: middle;
+  }
 }
 
 #titleBarM {
-    text-align: center;
-    padding: 100px 0 0 0;
-    img {
-        width: 100px;
-        height: auto;
-    }
+  text-align: center;
+  padding: 100px 0 0;
+
+  img {
+    width: 100px;
+    height: auto;
+  }
 }
 
 #about {
-    width: auto;
-    display: block;
-    padding: 200px 0 0 0;
-    margin: 0 auto;
-    .graphicCon {
-        width: 30%;
-        margin-right: 10%;
-        height: 350px;
-        position: relative;
-        display: inline-table;
-        .square {
-            mask: url('../images/two.svg') no-repeat center;
-            -webkit-mask: url('../images/two.svg') no-repeat center;
-            position: absolute;
-            width: 100%;
-            height: 300px;
-            &.squareOne {
-                background: url('../images/jeff.png') 0 40% no-repeat #000;
-                background-size: cover;
-                left: 20%;
-                top: 15%;
-                z-index: 1;
-            }
-            &.squareTwo {
-                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-                left: 20% - 5;
-                top: 15% - 12;
-                z-index: 2;
-            }
-        }
+  width: auto;
+  display: block;
+  padding: 200px 0 0;
+  margin: 0 auto;
+
+  .graphicCon {
+    width: 30%;
+    margin-right: 10%;
+    height: 350px;
+    position: relative;
+    display: inline-table;
+
+    .square {
+      mask: url("../images/two.svg") no-repeat center;
+      -webkit-mask: url("../images/two.svg") no-repeat center;
+      position: absolute;
+      width: 100%;
+      height: 300px;
+
+      &.squareOne {
+        background: url("../images/jeff.png") 0 40% no-repeat #000;
+        background-size: cover;
+        left: 20%;
+        top: 15%;
+        z-index: 1;
+      }
+
+      &.squareTwo {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        left: 20% - 5;
+        top: 15% - 12;
+        z-index: 2;
+      }
     }
-    .main {
-        text-align: left;
-        width: 50%;
-        margin: 0 8% 0 2%;
-        display: inline-table;
-        p,
-        h3 {
-            display: block;
-        }
-        h2 {
-            @include titleStyle;
-            display: inline-block;
-            margin: 5px 0 30px 0;
-            opacity: .35;
-        }
-        h3 {
-            margin-top: 0;
-        }
+  }
+
+  .main {
+    text-align: left;
+    width: 50%;
+    margin: 0 8% 0 2%;
+    display: inline-table;
+
+    h3,
+    p {
+      display: block;
     }
+
+    h3.moment {
+      @include titleStyle;
+      display: inline-block;
+      margin: 5px 0 30px;
+      color: $dark;
+      opacity: .7;
+      position: relative;
+      opacity: 0;
+      @include translate(-10px,0);
+      @include transitions(all 1s ease-out);
+
+      &:after {
+        width: 0;
+        height: 0;
+        position: absolute;
+        content: '';
+        top: 99%;
+        left: 0;
+        border-top: 1px solid $dark;
+        opacity: 0;
+        @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000) 1s);
+      }
+
+      &.active {
+        opacity: 1;
+        @include translate(0,0);
+
+        &:after {
+          width: 100%;
+          opacity: .3;
+        }
+      }
+
+      b {
+        font-weight: 600;
+      }
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  }
 }
 
 #work {
-    width: auto;
-    padding: 125px 0 40px 0;
-    .item {
-        color: #fff;
-        outline: none;
-        margin: 0.5%;
-        position: relative;
-        z-index: 0;
-        @include transitions (all .1s linear);
-        &:before {
-            z-index: -1;
+  width: auto;
+  padding: 125px 0 40px;
+
+  .item {
+    color: #fff;
+    outline: none;
+    margin: .5%;
+    position: relative;
+    z-index: 0;
+    opacity: .3;
+    @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000));
+    @include translate(-15px, 0);
+
+    &.active {
+      opacity: 1;
+      @include translate (0, 0);
+    }
+
+    &:before {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 3px 3px 0 $backgroundGrad;
+      opacity: 0;
+      content: '';
+      @include transitions (all .2s linear);
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    a {
+      background-size: 100% !important;
+      width: 100%;
+      height: 100%;
+      display: block;
+      outline: none;
+
+      div {
+        @include transitions(all .3s linear);
+
+        &.bg {
+          background: $inactiveButton;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          opacity: 0;
+          @include transitions(all .2s linear);
+
+          div {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            box-shadow: 3px 3px 0 rgba(216, 206, 194, 1);
-            opacity: 0;
-            content: '';
-            @include transitions (all .2s linear);
-        }
-        &:hover {
-            &:before {
-                opacity: 1;
-            }
-            @include translate(-2px,
-            -2px);
-        }
-        a {
-            background-size: 100% !important;
-            width: 100%;
-            height: 100%;
-            display: block;
-            outline: none;
-            @include transitions(all .2s linear);
+
             &:hover {
-                // @include scale(1.05);
+              h4 {
+                @include translate(5px, 0);
+              }
+
+              img {
+                @include translate(20px, 0);
+              }
             }
-            div {
-                @include transitions(all .3s linear);
-                &.bg {
-                    background: $inactiveButton;
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
-                    opacity: 0;
-                    @include transitions(all .2s linear);
-                    div {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        &:hover {
-                            h4 {
-                                @include translate(5px,
-                                0);
-                            }
-                            img {
-                                @include translate(20px,
-                                0);
-                            }
-                        }
-                    }
-                    .caption {
-                        position: relative;
-                        h4 {
-                            @include titleStyle;
-                            line-height: 1.4em;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            padding: 20px 15px;
-                            @include transitions(all .5s ease-out);
-                        }
-                        //letter-spacing: 0.1em;
-                        //font-size: 1.3em;
-                        color: #fff;
-                        padding: 20px;
-                        img {
-                            position: absolute;
-                            right: 50px;
-                            bottom: 30px;
-                            width: 35px;
-                            @include transitions(all .5s ease-out);
-                        }
-                    }
-                    &:hover {
-                        opacity: 1;
-                    }
-                }
+          }
+
+          .caption {
+            position: relative;
+
+            h4 {
+              @include titleStyle;
+              line-height: 1.4em;
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding: 20px 15px;
+              @include transitions(all .5s ease-out);
             }
+            //letter-spacing: 0.1em;
+            //font-size: 1.3em;
+            color: #fff;
+            padding: 20px;
+
+            img {
+              position: absolute;
+              right: 50px;
+              bottom: 30px;
+              width: 30px;
+              @include transitions(all .5s ease-out);
+            }
+          }
+
+          &:hover {
+            opacity: 1;
+          }
         }
-        /*Gallery*/
-        #one {
-            background: url("../images/work/1prev.png") top left #fff no-repeat;
-        }
-        #two {
-            background: url("../images/work/2prev.png") top left #fff no-repeat;
-        }
-        #three {
-            background: url("../images/work/3prev.png") top left #fff no-repeat;
-        }
-        #four {
-            background: url("../images/work/4prev.png") top left #fff no-repeat;
-        }
-        #five {
-            background: url("../images/work/5prev.png") top left #fff no-repeat;
-        }
-        #six {
-            background: url("../images/work/6prev.png") top left #fff no-repeat;
-        }
-        #seven {
-            background: url("../images/work/7prev.png") top left #fff no-repeat;
-        }
-        #eight {
-            background: url("../images/work/8prev.png") top left #fff no-repeat;
-        }
+      }
     }
-    .slick-prev,
-    .slick-next,
-    {
-        @include prevNextArrows;
-        &:before {
-            content: none;
-        }
+    /*Gallery*/
+    #one {
+      background: url("../images/work/1prev.png") top left #fff no-repeat;
     }
-    .slick-prev {
-        left: 10px;
-        background: url("../images/prev.svg") no-repeat 20% 100%;
-        &:active {
-            background-position: 0% 100%;
-        }
+
+    #two {
+      background: url("../images/work/2prev.png") top left #fff no-repeat;
     }
-    .slick-next {
-        right: 10px;
-        background: url("../images/next.svg") no-repeat 80% 100%;
-        &:active {
-            background-position: 100% 100%;
-        }
+
+    #three {
+      background: url("../images/work/3prev.png") top left #fff no-repeat;
     }
-    .slick-disabled,
-    .slick-disabled:hover {
-        opacity: 0 !important;
-        cursor: default;
+
+    #four {
+      background: url("../images/work/4prev.png") top left #fff no-repeat;
     }
-    .slick-dots {
-        li,
-        button,
-        button:before {
-            width: 50px;
-            height: 3px;
-            margin: 0;
-            padding: 0;
-            background: $dark;
-            content: none;
-            opacity: .3;
-        }
-        .slick-active {
-            opacity: 1 !important;
-        }
+
+    #five {
+      background: url("../images/work/5prev.png") top left #fff no-repeat;
     }
+
+    #six {
+      background: url("../images/work/6prev.png") top left #fff no-repeat;
+    }
+
+    #seven {
+      background: url("../images/work/7prev.png") top left #fff no-repeat;
+    }
+
+    #eight {
+      background: url("../images/work/8prev.png") top left #fff no-repeat;
+    }
+  }
+
+  .slick-next,
+  .slick-prev {
+    @include prevNextArrows;
+
+    &:before {
+      content: none;
+    }
+  }
+
+  .slick-prev {
+    left: 10px;
+    background: url("../images/prev.svg") no-repeat 20% 100%;
+
+    &:active {
+      background-position: 0 100%;
+    }
+  }
+
+  .slick-next {
+    right: 10px;
+    background: url("../images/next.svg") no-repeat 80% 100%;
+
+    &:active {
+      background-position: 100% 100%;
+    }
+  }
+
+  .slick-disabled,
+  .slick-disabled:hover {
+    opacity: 0 !important;
+    cursor: default;
+  }
+
+  .slick-dots {
+    button,
+    button:before,
+    li {
+      width: 50px;
+      height: 3px;
+      margin: 0;
+      padding: 0;
+      background: $dark;
+      content: none;
+      opacity: .3;
+      overflow: hidden;
+    }
+
+    .slick-active {
+      opacity: 1 !important;
+    }
+  }
 }
 
 #tech {
-    width: 100%;
-    height: auto;
-    padding: 150px 0 0 0;
-    margin-bottom: 80px;
+  width: 100%;
+  height: auto;
+  padding: 150px 0 0;
+  margin-bottom: 80px;
+
+  h3 {
+    color: $dark;
+  }
+
+  .title {
     h3 {
-        color: $dark;
+      @include titleStyle;
+      display: inline-block;
+      margin: -2px 0 0 13px;
     }
-    .title {
-        h2 {
-            @include titleStyle;
-            display: inline-block;
-            margin: -5px 0 0 13px;
-        }
-        color: $dark;
+  }
+
+  .flex {
+    margin-bottom: 100px;
+  }
+
+  .techBody {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    background: $dark;
+
+    .techBodyBg {
+      background: -moz-linear-gradient(left, $light 0%, $dark 100%);
+      background: -webkit-linear-gradient(left, $light 0%, $dark 100%);
+      background: linear-gradient(to right, $light 0%, $dark 100%);
+      //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=  '#a9bac8', endColorstr='#7f8f9c', GradientType=1)
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
-    .flex {
-        margin-bottom: 100px;
+
+    p {
+      text-transform: uppercase;
+      margin-left: 30px;
+      font-weight: bold;
+      color: #fff;
+      line-height: 2em;
+      letter-spacing: .04em;
+
+      span {
+        padding: 0 10px;
+        display: inline-table;
+      }
     }
-    .techBody {
-        position: relative;
-        width: 80%;
-        height: 300px;
-        background: $dark;
-        .techBodyBg {
-            background: -moz-linear-gradient(left, $light 0%, $dark 100%);
-            background: -webkit-linear-gradient(left, $light 0%, $dark 100%);
-            background: linear-gradient(to right, $light 0%, $dark 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9bac8', endColorstr='#7f8f9c', GradientType=1);
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+
+    #mac {
+      position: absolute;
+      top: 160px;
+      left: 260px;
+      z-index: 2;
+
+      img.m {
+        width: 1000px * .4;
+        height: 568px * .4;
+      }
+
+      .reflection {
+        position: absolute;
+        top: 1px;
+        left: 202px;
+
+        img.s {
+          width: 392px * .4;
+          height: 510px * .4;
+          opacity: .5;
         }
-        p {
-            text-transform: uppercase;
-            margin-left: 30px;
-            font-weight: bold;
-            color: #fff;
-            line-height: 2em;
-            letter-spacing: 0.04em;
-            span {
-                padding: 0 10px;
-                display: inline-table;
-            }
+      }
+    }
+
+    #slide {
+      position: absolute;
+      width: 741px * .41;
+      height: 460px * .41;
+      top: 172px;
+      left: 308px;
+      background: #000;
+      z-index: 1;
+
+      div {
+        width: 100%;
+        height: 100%;
+        background-size: cover !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 50;
+      }
+      @mixin scene($opac...) {
+        //seven frames
+        0% {
+          opacity: nth($opac, 1);
         }
-        #mac {
-            position: absolute;
-            top: 160px;
-            left: 260px;
-            z-index: 2;
-            img.m {
-                width: 1000px * 0.4;
-                height: 568px * 0.4;
-            }
-            .reflection {
-                position: absolute;
-                top: 1px;
-                left: 202px;
-                img.s {
-                    width: 392px * 0.4;
-                    height: 510px * 0.4;
-                    opacity: 0.5;
-                }
-            }
+
+        6.7% {
+          opacity: nth($opac, 1);
         }
-        #slide {
-            position: absolute;
-            width: 741px * 0.41;
-            height: 460px * 0.41;
-            top: 172px;
-            left: 308px;
-            background: #000;
-            z-index: 1;
-            div {
-                width: 100%;
-                height: 100%;
-                background-size: cover !important;
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                z-index: 50;
-            }
-            @mixin scene($opac...) {
-                //seven frames
-                0% {
-                    opacity: nth($opac, 1);
-                }
-                6.7% {
-                    opacity: nth($opac, 1);
-                }
-                13.3% {
-                    opacity: nth($opac, 2);
-                }
-                20% {
-                    opacity: nth($opac, 2);
-                }
-                26.7% {
-                    opacity: nth($opac, 3);
-                }
-                33.3% {
-                    opacity: nth($opac, 3);
-                }
-                40.0% {
-                    opacity: nth($opac, 4);
-                }
-                46.7% {
-                    opacity: nth($opac, 4);
-                }
-                53.3% {
-                    opacity: nth($opac, 5);
-                }
-                60.0% {
-                    opacity: nth($opac, 5);
-                }
-                66.7% {
-                    opacity: nth($opac, 6);
-                }
-                73.3% {
-                    opacity: nth($opac, 6);
-                }
-                80% {
-                    opacity: nth($opac, 7);
-                }
-                86.7% {
-                    opacity: nth($opac, 7);
-                }
-                93.3% {
-                    opacity: nth($opac, 8);
-                }
-                100% {
-                    opacity: nth($opac, 8);
-                }
-                /*
-                
+
+        13.3% {
+          opacity: nth($opac, 2);
+        }
+
+        20% {
+          opacity: nth($opac, 2);
+        }
+
+        26.7% {
+          opacity: nth($opac, 3);
+        }
+
+        33.3% {
+          opacity: nth($opac, 3);
+        }
+
+        40.0% {
+          opacity: nth($opac, 4);
+        }
+
+        46.7% {
+          opacity: nth($opac, 4);
+        }
+
+        53.3% {
+          opacity: nth($opac, 5);
+        }
+
+        60.0% {
+          opacity: nth($opac, 5);
+        }
+
+        66.7% {
+          opacity: nth($opac, 6);
+        }
+
+        73.3% {
+          opacity: nth($opac, 6);
+        }
+
+        80% {
+          opacity: nth($opac, 7);
+        }
+
+        86.7% {
+          opacity: nth($opac, 7);
+        }
+
+        93.3% {
+          opacity: nth($opac, 8);
+        }
+
+        100% {
+          opacity: nth($opac, 8);
+        }
+        /*
+
                    0% {
                     opacity: nth($opac, 1);
                 }
-                
+
                 14.28% {
                     opacity: nth($opac, 2)
                 }
@@ -877,385 +1018,376 @@ body {
                     opacity: nth($opac, 8)
                 }
                 */
-            } //end mixin
-            @mixin animateSlide($fadeIndex,
-            $duration) {
-                animation: $fadeIndex $duration infinite;
-                -webkit-animation: $fadeIndex $duration infinite;
-            }
-            .one {
-                background: url("../images/macslide/1s.png") no-repeat center;
-                @include animateSlide (fade1,
-                60s);
-            }
-            .two {
-                background: url("../images/macslide/2s.png") no-repeat center;
-                @include animateSlide (fade2,
-                60s);
-            }
-            .three {
-                background: url("../images/macslide/3s.png") no-repeat center;
-                @include animateSlide (fade3,
-                60s);
-            }
-            .four {
-                background: url("../images/macslide/4s.png") no-repeat center;
-                @include animateSlide (fade4,
-                60s);
-            }
-            .five {
-                background: url("../images/macslide/5s.png") no-repeat center;
-                @include animateSlide (fade5,
-                60s);
-            }
-            .six {
-                background: url("../images/macslide/6s.png") no-repeat center;
-                @include animateSlide (fade6,
-                60s);
-            }
-            .seven {
-                background: url("../images/macslide/7s.png") no-repeat center;
-                @include animateSlide (fade7,
-                60s);
-            }
-            @keyframes fade1 {
-                @include scene(1,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1);
-            }
-            @keyframes fade2 {
-                @include scene(0,
-                1,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0);
-            }
-            @keyframes fade3 {
-                @include scene(0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                0,
-                0);
-            }
-            @keyframes fade4 {
-                @include scene(0,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                0);
-            }
-            @keyframes fade5 {
-                @include scene(0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0);
-            }
-            @keyframes fade6 {
-                @include scene(0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0);
-            }
-            @keyframes fade7 {
-                @include scene(0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0);
-            }
-        }
+      }
+      //end mixin
+      @mixin animateSlide($fadeIndex, $duration) {
+        animation: $fadeIndex $duration infinite;
+        -webkit-animation: $fadeIndex $duration infinite;
+      }
+
+      .one {
+        background: url("../images/macslide/1s.png") no-repeat center;
+        @include animateSlide (fade1, 60s);
+      }
+
+      .two {
+        background: url("../images/macslide/2s.png") no-repeat center;
+        @include animateSlide (fade2, 60s);
+      }
+
+      .three {
+        background: url("../images/macslide/3s.png") no-repeat center;
+        @include animateSlide (fade3, 60s);
+      }
+
+      .four {
+        background: url("../images/macslide/4s.png") no-repeat center;
+        @include animateSlide (fade4, 60s);
+      }
+
+      .five {
+        background: url("../images/macslide/5s.png") no-repeat center;
+        @include animateSlide (fade5, 60s);
+      }
+
+      .six {
+        background: url("../images/macslide/6s.png") no-repeat center;
+        @include animateSlide (fade6, 60s);
+      }
+
+      .seven {
+        background: url("../images/macslide/7s.png") no-repeat center;
+        @include animateSlide (fade7, 60s);
+      }
+      @keyframes fade1 {
+        @include scene(1, 0, 0, 0, 0, 0, 0, 1);
+      }
+      @keyframes fade2 {
+        @include scene(0, 1, 0, 0, 0, 0, 0, 0);
+      }
+      @keyframes fade3 {
+        @include scene(0, 0, 1, 0, 0, 0, 0, 0);
+      }
+      @keyframes fade4 {
+        @include scene(0, 0, 0, 1, 0, 0, 0, 0);
+      }
+      @keyframes fade5 {
+        @include scene(0, 0, 0, 0, 1, 0, 0, 0);
+      }
+      @keyframes fade6 {
+        @include scene(0, 0, 0, 0, 0, 1, 0, 0);
+      }
+      @keyframes fade7 {
+        @include scene(0, 0, 0, 0, 0, 0, 1, 0);
+      }
     }
-    /*steps*/
-    .titleApproach {
-        margin: 50px 0 0 0;
-        display: none;
+  }
+  /*steps*/
+  .titleApproach {
+    margin: 50px 0 0;
+    display: none;
+  }
+
+  #process {
+    width: 85%;
+    margin: 0 auto 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .step {
+      width: 50%;
+      height: 160px;
+      border: 1px solid $light;
+      opacity: 0;
+      @include transitions(all 1s ease-out 1s);
+
+      &.active {
+        opacity: 1;
+        @include skew(-22deg);
+      }
+      position: relative;
+      overflow: hidden; //select 3 and 4
+
+      &:nth-child(n+3) {
+        margin-top: 20px;
+      }
+
+      &:nth-child(2n) {
+        border-left: none;
+      }
     }
-    #process {
-        width: 85%;
-        margin: 0 auto 50px auto;
-        flex-direction: row;
-        flex-wrap: wrap;
-        display: flex;
-        align-items: center;
+
+    .captionWrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      @include transitions (all .2s ease-out);
+
+      &.active {
+        opacity: 1;
+      }
+
+      .caption {
         position: relative;
-        .step {
-            width: 50%;
-            height: 160px;
-            border: 1px solid $light;
-            opacity: 0;
-            @include transitions(all 1s ease-out 1s);
-            &.active {
-                opacity: 1;
-                -webkit-transform: skew(-22deg);
-                -moz-transform: skew(-22deg);
-                -o-transform: skew(-22deg);
-            }
-            position: relative;
-            overflow: hidden;
-            &:nth-child(n+3) //select 3 and 4
-            {
-                margin-top: 20px;
-            }
-            &:nth-child(2n) {
-                border-left: none;
-            }
+        width: 50%;
+        height: 160px;
+        color: $dark;
+        overflow: hidden;
+        opacity: .7;
+        @include transitions (all .2s linear);
+
+        &:nth-child(n+3) {
+          margin-top: 20px;
         }
-        .captionWrap {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            flex-direction: row;
-            flex-wrap: wrap;
-            display: flex;
-            align-items: center;
-            opacity: 0;
-            @include transitions (all .2s ease-out);
-            &.active {
-                opacity: 1;
-            }
-            .caption {
-                position: relative;
-                width: 50%;
-                height: 160px;
-                color: $dark;
-                overflow: hidden;
-                opacity: .7;
-                @include transitions (all .2s linear);
-                &:nth-child(n+3) {
-                    margin-top: 20px;
-                }
-                h3 {
-                    position: absolute;
-                    top: 0;
-                    left: 35px;
-                    text-transform: uppercase;
-                    font-weight: 200;
-                    margin-left: 10px;
-                    letter-spacing: 0.1em;
-                    text-shadow: 0 0 0 rgba(216, 206, 194, 0);
-                    @include transitions(all .2s linear);
-                }
-                .text {
-                    position: absolute;
-                    width: 85%;
-                    top: 123px;
-                    right: 38px;
-                    text-align: right;
-                    @include transitions (all .2s ease-out);
-                    h4 {
-                        @include titleStyle;
-                    }
-                    p {
-                        line-height: 1.3em;
-                        font-size: .9em;
-                        margin: 0 0 10px 0 !important;
-                    }
-                }
-                &:hover {
-                    opacity: 1;
-                    h3 {
-                        text-shadow: 4px 4px 0 rgba(216, 206, 194, 1);
-                    }
-                    .text {
-                        @include translate(0,
-                        -60px);
-                    }
-                }
-            }
+
+        h3 {
+          position: absolute;
+          top: 0;
+          left: 35px;
+          text-transform: uppercase;
+          font-weight: 200;
+          margin-left: 10px;
+          letter-spacing: .1em;
+          text-shadow: 0 0 0 rgba(216, 206, 194, 0);
+          @include transitions(all .2s linear);
         }
+
+        .text {
+          position: absolute;
+          width: 85%;
+          top: 123px;
+          right: 38px;
+          text-align: right;
+          @include transitions (all .2s ease-out);
+
+          h4 {
+            @include titleStyle;
+          }
+
+          p {
+            line-height: 1.3em;
+            font-size: .9em;
+            margin: 0 0 10px 0 !important;
+          }
+        }
+
+        &:hover {
+          opacity: 1;
+
+          h3 {
+            text-shadow: 4px 4px 0 rgba(216, 206, 194, 1);
+          }
+
+          .text {
+            @include translate(0, -60px);
+          }
+        }
+      }
     }
-    .techDesc {
-        margin: 50px 0;
-    }
-    .diagonal {
-        width: 0;
-        border-top: 300px solid $dark;
-        border-right: 126px solid transparent;
-        height: 0;
-    }
-    img {
-        width: 35px;
-        height: 35px;
-        vertical-align: top;
-    }
+  }
+
+  .techDesc {
+    margin: 50px 0;
+  }
+
+  .diagonal {
+    width: 0;
+    border-top: 300px solid $dark;
+    border-right: 126px solid transparent;
+    height: 0;
+  }
+
+  img {
+    width: 35px;
+    height: 35px;
+    vertical-align: top;
+  }
 }
 
 .diagonalG {
-    position: relative;
-    width: 100%;
-    height: 150px;
-    background: $defaultTextColour;
-    mask: url('../images/diag.svg') no-repeat center;
-    -webkit-mask: url('../images/diag.svg') no-repeat center;
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background: $defaultTextColour;
+  mask: url("../images/diag.svg") no-repeat center;
+  -webkit-mask: url("../images/diag.svg") no-repeat center;
 }
 
 #contact {
-    width: 100%;
-    background: $defaultTextColour;
+  width: 100%;
+  background: $defaultTextColour;
+  color: #fff;
+  padding: 0 0 125px 0 !important;
+
+  .opacityZero {
+    opacity: 0;
+  }
+
+  .opacityOne {
+    opacity: 1;
+  }
+
+  .transition {
+    @include transitions (all .3s linear);
+  }
+
+  p {
+    color: $light;
+  }
+
+  h3 {
+    @include titleStyle;
+    display: inline-block;
     color: #fff;
-    padding: 0 0 75px 0 !important;
-    .opacityZero {
-        opacity: 0;
+  }
+
+  a.link {
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: 700;
+
+    img.arrow {
+      width: 12px;
+      height: 16px;
+      margin-left: 8px;
+      opacity: .5;
+      vertical-align: middle;
+      background: #fff;
+      mask: url("../images/next.svg") no-repeat center;
+      -webkit-mask: url("../images/next.svg") no-repeat center;
+      @include transitions (all .2s ease-out);
     }
-    .opacityOne {
+
+    &:hover {
+      img.arrow {
         opacity: 1;
+        @include translate(5px, 0);
+      }
     }
-    .transition {
-        @include transitions (all .3s linear);
+  }
+
+  .marginRight {
+    margin: 20px 50px 50px 0;
+
+    h3 {
+      margin: -1px 0 0 15px;
     }
-    p {
-        color: $light;
+
+    img {
+      width: 30px;
+      height: 30px;
+      vertical-align: top;
     }
-    h2 {
-        @include titleStyle;
+  }
+
+  .flex {
+    margin: 50px 0;
+
+    .left {
+      padding-right: 10px;
+
+      img {
+        width: 155px * .5;
+        height: 155px * .5;
+        @include transitions(all .3s ease-out .3s);
+        @include scale(0);
+        opacity: 0;
+
+        &.active {
+          @include scale(1);
+          opacity: 1;
+        }
+      }
+    }
+
+    .right {
+      p {
         color: #fff;
+        margin-top: 0 !important;
+        line-height: 1.5em;
+      }
+
+      h5 {
+        margin: 0;
+        font-size: 1.1em;
+        font-weight: 600 !important;
+        letter-spacing: .04em;
+      }
+
+      a.cv {
+        @include buttonStyle;
+      }
+
+      #socialIconsM {
+        width: 100%;
+        overflow: hidden;
+
+        ul {
+          padding: 0;
+          margin: 30px 0;
+          display: block;
+          @include socialIconsli;
+        }
+      }
     }
-    a.link {
-        img.arrow {
-            width: 12px;
-            height: 16px;
-            margin-left: 8px;
-            opacity: .5;
-            vertical-align: middle;
-            background: #fff;
-            mask: url('../images/next.svg') no-repeat center;
-            -webkit-mask: url('../images/next.svg') no-repeat center;
-            @include transitions (all .2s ease-out);
-        }
-        &:hover {
-            img.arrow {
-                opacity: 1;
-                @include translate(5px,
-                0);
-            }
-        }
-    }
-    .marginRight {
-        margin: 20px 50px 50px 0;
-        h2 {
-            display: inline-block;
-            margin: -1px 0 0 15px;
-        }
-        img {
-            width: 30px;
-            height: 30px;
-            vertical-align: top;
-        }
-    }
-    .flex {
-        margin: 50px 0;
-        .left {
-            padding-right: 10px;
-            img {
-                width: 155px * 0.5;
-                height: 155px * 0.5;
-                @include transitions(all .3s ease-out .3s);
-                @include scale(0);
-                opacity: 0;
-                &.active {
-                    @include scale(1);
-                    opacity: 1;
-                }
-            }
-        }
-        .right {
-            p {
-                color: #fff;
-                margin-top: 0 !important;
-                line-height: 1.5em;
-            }
-            h5 {
-                margin: 0;
-                font-size: 1.1em;
-                font-weight: 600 !important;
-                letter-spacing: 0.04em;
-            }
-            a.cv {
-                @include buttonStyle;
-            }
-            #socialIconsM {
-                width: 100%;
-                overflow: hidden;
-                ul {
-                    padding: 0;
-                    margin: 30px 0;
-                    display: block;
-                    @include socialIconsli;
-                }
-            }
-        }
-    }
+  }
 }
 
 #social {
-    z-index: 2;
-    width: 34px;
-    height: 34px;
-    background: url('../images/social.svg') 45% 50% no-repeat;
-    background-size: 50%;
-    border-radius: 34px*0.5;
-    -moz-border-radius: 34px*0.5;
-    -webkit-border-radius: 34px*0.5;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    pointer-events: none;
-    border: 3px solid rgba(216, 206, 194, 0);
-    @include transitions(all .1s linear);
-    &.active {
-        border: 3px solid rgba(216, 206, 194, 1);
-    }
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  background: url("../images/social.svg") 45% 50% no-repeat;
+  background-size: 50%;
+  border-radius: 34px*0.5;
+  -moz-border-radius: 34px*0.5;
+  -webkit-border-radius: 34px*0.5;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  pointer-events: none;
+  border: 3px solid rgba(216, 206, 194, 0);
+  @include transitions(all .1s linear);
+
+  &.active {
+    border: 3px solid rgba(216, 206, 194, 1);
+  }
 }
 
 #socialIcons {
-    width: 200px;
-    height: 33px;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    z-index: 1;
-    overflow: hidden;
-    ul {
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        top: 0;
-        left: 167px;
-        width: 100%;
-        opacity: 0;
-        @include transitions (all .3s ease-out);
-        @include socialIconsli;
-        &.active {
-            opacity: 1;
-            @include translate(-167px,
-            0);
-        }
+  width: 200px;
+  height: 33px;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  z-index: 1;
+  overflow: hidden;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 167px;
+    width: 100%;
+    opacity: 0;
+    @include transitions (all .3s ease-out);
+    @include socialIconsli;
+
+    &.active {
+      opacity: 1;
+      @include translate(-167px, 0);
     }
+  }
 }
