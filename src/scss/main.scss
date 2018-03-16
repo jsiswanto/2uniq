@@ -98,7 +98,6 @@
   }
 }
 /*dialog box*/
-
 .dialogBox {
   background: rgba(216, 206, 194, .5);
   display: flex;
@@ -130,7 +129,6 @@
   }
 }
 /*responsive nav*/
-
 .menuContainer {
   @include topRightPos;
   background: $mNavBgColour;
@@ -288,7 +286,6 @@
   }
 }
 /*fancybox*/
-
 .fancybox-stage {
   background: $light;
 }
@@ -422,7 +419,6 @@ button:focus {
   outline: 0 !important;
 }
 /* main body*/
-
 body {
   background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
   background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
@@ -610,11 +606,11 @@ body {
         height: 0;
         position: absolute;
         content: '';
-        top: 100%;
+        top: 102%;
         left: 0;
+        opacity: .3;
         border-top: 1px solid $dark;
-        opacity: 0;
-        @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000) 1.5s);
+        @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000) 2s);
       }
 
       &.active {
@@ -623,7 +619,6 @@ body {
 
         &:after {
           width: 100%;
-          opacity: .3;
         }
       }
 
@@ -677,7 +672,7 @@ body {
     }
 
     a {
-      background-size: 100% !important;
+      background-size: 125% !important;
       width: 100%;
       height: 100%;
       display: block;
@@ -1353,8 +1348,8 @@ body {
   line-height: 1.6em;
 
   div {
-    @include translate(-200px, 0);
-    @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000));
+    @include translate(-650px, 0);
+    @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000) 1s);
     padding: 0 0 23px 28px;
 
     &.active {
