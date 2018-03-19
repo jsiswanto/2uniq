@@ -95,7 +95,7 @@
     }
 
     .item {
-      height: 380px;
+      height: 400px;
 
       a {
         background-size: 150% !important;
@@ -253,7 +253,7 @@
 
   #work {
     .item {
-      height: 420px;
+      height: 450px;
     }
 
     a {
@@ -361,15 +361,25 @@
 
   #work {
     .item {
-      height: 500px;
-    }
-
-    a {
-      background-size: 100% !important;
+      height: 475px;
     }
   }
 
   #socialIconsM {
     display: none;
+  }
+}
+@media screen and (min-width: 1101px) and (max-width: 1750px) {
+  #work {
+    .item a {
+      background-size: 115% !important;
+    }
+  }
+}
+@media screen and (min-width:1751px) {
+  #work {
+    .item a {
+      background-size: 100% !important;
+    }
   }
 }
