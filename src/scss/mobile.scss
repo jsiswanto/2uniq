@@ -95,7 +95,11 @@
     }
 
     .item {
-      height: 375px;
+      height: 380px;
+
+      a {
+        background-size: 150% !important;
+      }
     }
 
     .slick-dots {
@@ -249,7 +253,11 @@
 
   #work {
     .item {
-      height: 400px;
+      height: 420px;
+    }
+
+    a {
+      background-size: 125% !important;
     }
   }
 
@@ -354,6 +362,10 @@
   #work {
     .item {
       height: 500px;
+    }
+
+    a {
+      background-size: 100% !important;
     }
   }
 
