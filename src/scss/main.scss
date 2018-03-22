@@ -1347,7 +1347,7 @@ body {
   line-height: 1.6em;
 
   div {
-    @include translate(-650px, 0);
+    @include translate(-850px, 0);
     @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000) 1s);
     padding: 0 0 23px 28px;
 

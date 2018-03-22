@@ -28,6 +28,20 @@
     }
   }
 }
+@media screen and (max-width: 420px) {
+  #work {
+    a {
+      background-size: 100% !important;
+    }
+  }
+}
+@media screen and (min-width: 421px) and (max-width: 690px) {
+  #work {
+    a {
+      background-size: 150% !important;
+    }
+  }
+}
 @media screen and (max-width: 690px) {
   body {
     background: $mBgColour !important;
@@ -90,24 +104,20 @@
   }
 
   #work {
+    .item {
+      height: 400px;
+    }
+
     h4 {
       font-size: 1.3em !important;
     }
+  }
 
-    .item {
-      height: 400px;
-
-      a {
-        background-size: 150% !important;
-      }
-    }
-
-    .slick-dots {
-      button,
-      button:before,
-      li {
-        width: 30px !important;
-      }
+  .slick-dots {
+    button,
+    button:before,
+    li {
+      width: 30px !important;
     }
   }
 
@@ -257,7 +267,7 @@
     }
 
     a {
-      background-size: 125% !important;
+      background-size: 130% !important;
     }
   }
 
