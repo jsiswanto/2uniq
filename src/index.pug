@@ -1,7 +1,7 @@
 doctype html
 html
     head
-        title 2UNIQ - A Jeff Siswanto design portfolio
+        title 2UNIQ - Jeff Siswanto Design Portfolio
         meta(name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8")
         link(rel="icon" type="image/x-icon" href="${require('./images/favicon.ico')}")
 
@@ -14,7 +14,8 @@ html
                 span.outer
                 span.middle
                 span.middle2
-        .mNav.menuContainer.scrollSpy
+        nav.mNav.menuContainer.scrollSpy
+            
             ul
                 li#logo
                     img#twoUniqLogo(src="${require('./images/2uniq.svg')}")
@@ -37,13 +38,13 @@ html
             
     
         
-        #titleBar.container-fluid.scrollSpy
+        header#titleBar.container-fluid.scrollSpy
             .row
                 .col-1
                 .col
                     img#twoUniqLogo(src="${require('./images/2uniq.svg')}")
                 .col
-
+                    nav
                         ul
                          li
                             a.nav-link(href="#about") About 
@@ -61,7 +62,7 @@ html
 
        
         
-        #about(data-scroll data-scroll-showCallback="squareShiftTowards()" data-scroll-hideCallback="squareShiftAway()")
+        section#about(data-scroll data-scroll-showCallback="squareShiftTowards()" data-scroll-hideCallback="squareShiftAway()")
                     #titleBarM
                         img(src="./images/2uniq.svg")
                     
@@ -88,7 +89,7 @@ html
                     
                    
                     
-        #work(data-scroll data-scroll-showCallback="bgShiftOne()" data-scroll-hideCallback="bgShiftOne_r()")
+        section#work(data-scroll data-scroll-showCallback="bgShiftOne()" data-scroll-hideCallback="bgShiftOne_r()")
                
                 .item
                        a#one(href="${require('./images/work/1.png')}" data-caption="<h4>Sun Life e-newsletters</h4><p class='mobile'>Designing and developing IBM Watson Campaign Automation templates for monthly deployment to over ten thousand wholesale advisors and financial centres.</p><p>As a Digital Designer in Individual Marketing at Sun Life Financial, my responsibilities include designing and developing IBM Watson Campaign Automation templates for monthly deployment to over ten thousand wholesale advisors and financial centres nationwide. These e-mails inform regulatory changes and provide tips to strengthen relationships between advisors and their clients. Analytics and feedback including conversion rates were used to design more effective marketing communications.</p><p>A recurring design theme was to promote the financial strength and competitive advantage of Sun Life’s Money for Life, a wholistic financial and insurance advice to support every lifestyle and business requirements of individuals, small businesses, and corporations.</p>" data-fancybox="gal")
@@ -146,7 +147,7 @@ html
 
         
       
-        #tech
+        section#tech
             .container-fluid
                 .row
                     .col-1
@@ -160,7 +161,7 @@ html
                     .col-xl
                         .flex
                             .techBody
-                                .techBodyBg
+                                figure.techBodyBg
                                     p 
                                         span Photoshop 
                                         span HTML5 
@@ -177,7 +178,7 @@ html
                                         span Illustrator
                                         span Photography
 
-                                #mac
+                                figure#mac
                                     
                                     img.m(src="${require('./images/mac.png')}")
                                     
@@ -187,7 +188,7 @@ html
                                         img.s(src="${require('./images/mac-s.png')}")
                                         
                                
-                                #slide
+                                figcaption#slide
                                         .one
                                         .two
                                         .three
@@ -210,22 +211,22 @@ html
                                     
                                 .step
                                 .captionWrap
-                                    .caption 
+                                    article.caption 
                                         h3 01
                                         .text
                                             h4 Research
                                             p Brainstorming, personas, user stories, competitive analysis, value proposition
-                                    .caption 
+                                    article.caption 
                                         h3 02
                                         .text
                                             h4 Ideation
                                             p Mood boards, colour and material selection, typography, technology
-                                    .caption 
+                                    article.caption 
                                         h3 03
                                         .text
                                             h4 Concepts
                                             p Wireframes, mockups, prototypes,  interactions, user testing
-                                    .caption 
+                                    article.caption 
                                         h3 04
                                         .text
                                             h4 Development
@@ -242,7 +243,7 @@ html
                     .col-1
         .diagonalG
            
-        #contact.container-fluid(data-scroll data-scroll-showCallback="contactShiftTowards()")
+        footer#contact.container-fluid(data-scroll data-scroll-showCallback="contactShiftTowards()")
             .row
                 .col-1
                 .col
@@ -284,11 +285,11 @@ html
 
                 .col-1
                   
-        #copyright
+        aside#copyright
           div Copyright 2018 Jeff Siswanto. Hand&nbsp;built&nbsp;in&nbsp;Kitchener,&nbsp;Ontario. Bundled&nbsp;with&nbsp;Webpack.
         a#social(href="#")
 
-        #socialIcons
+        aside#socialIcons
             ul
                 li
                     a.behance(href="https://www.behance.net/2uniq" target="_blank")

@@ -104,6 +104,11 @@
   }
 
   #work {
+    .slick-next,
+    .slick-prev {
+      width: 2413px *0.03 !important;
+    }
+
     .item {
       height: 400px;
     }
@@ -214,6 +219,19 @@
 
     .flex {
       margin-bottom: 0 !important;
+    }
+  }
+
+  .diagonalG {
+    //resolves div gap on mobile Chrome
+    display: none;
+  }
+}
+@media screen and (min-width: 691px) {
+  #work {
+    .slick-next,
+    .slick-prev {
+      width: 2413px *0.05 !important;
     }
   }
 }
