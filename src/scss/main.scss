@@ -598,12 +598,9 @@ body {
       display: inline-block;
       margin: 5px 0 30px;
       color: $dark;
-      opacity: .7;
       position: relative;
-      opacity: 0;
-      @include translate(-10px,0);
-      @include transitions(all 1s ease-out);
-
+      //opacity: 0;
+      //@include transitions(all 1s ease-out);
       &:after {
         width: 0;
         height: 0;
@@ -617,9 +614,7 @@ body {
       }
 
       &.active {
-        opacity: 1;
-        @include translate(0,0);
-
+        //opacity: 1;
         &:after {
           width: 100%;
         }
