@@ -7,7 +7,7 @@ $workThumbBorder: #e0e7f1;
 $light: #d8cec2;
 $dark: #807766;
 $workThumbShadow: #efe6da;
-$defaultTextColour: #252219;
+$defaultTextColour: #807766;
 $inactiveNav: #efe6da;
 $inactiveButton: #42392f;
 $activeButton: #595047;
@@ -15,11 +15,12 @@ $navBarInactive: #726a62;
 $navBarActive: #fff;
 $backgroundGrad: #807766;
 $backgroundGrad2: #fff;
+$footerBg: #252219;
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,700,700i');
 @mixin defaultFontSize {
   font-size: 16px;
   line-height: 2.2em !important;
-  color: $defaultTextColour;
+  color: $defaultTextColour !important;
 }
 @mixin defaultFont {
   font-family: 'Source Sans Pro', sans-serif !important;
