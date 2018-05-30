@@ -98,7 +98,6 @@
   }
 }
 /*dialog box*/
-
 .dialogBox {
   background: rgba(216, 206, 194, .5);
   display: flex;
@@ -130,7 +129,6 @@
   }
 }
 /*responsive nav*/
-
 .menuContainer {
   @include topRightPos;
   background: $mNavBgColour;
@@ -288,7 +286,6 @@
   }
 }
 /*fancybox*/
-
 .fancybox-stage {
   background: $light;
 }
@@ -414,7 +411,6 @@ button:focus {
   outline: 0 !important;
 }
 /* main body*/
-
 body {
   background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
   background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
@@ -598,10 +594,11 @@ body {
         height: 0;
         position: absolute;
         content: '';
-        top: 102%;
+        top: 110%;
         left: 0;
         opacity: .3;
-        border-top: 1px solid $dark;
+        border-top: 4px solid $dark;
+        border-right: 4px solid transparent;
         @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000) 2s);
       }
 
