@@ -120,6 +120,7 @@ $footerBg: #252219;
   }
 }
 /*bootstrap override*/
+
 html {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -144,6 +145,7 @@ p {
   margin-top: 20px !important;
 }
 /* clearfix */
+
 %clearfix {
   &:after {
     content: " ";
