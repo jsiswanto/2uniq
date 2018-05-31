@@ -27,15 +27,16 @@ $(document).ready(function()
     trigger.callScope = scope;
     //custom functions
 
-    function socialIn() {
-      $('#socialIcons ul').addClass('active');
-      $('#social').addClass('active');
+    //social icon underline footer
+
+    function socialIconIn() {
+      $("#social").addClass("active");
     }
 
-    function socialOut() {
-      $('#socialIcons ul').removeClass('active');
-      $('#social').removeClass('active');
+    function socialIconOut() {
+      $("#social").removeClass("active");
     }
+
 
     //square shift
 
@@ -238,36 +239,32 @@ $(document).ready(function()
       }
     );
 
-    //social icons hover over
 
-
-    $('#socialIcons ul').hover(socialIn, socialOut);
 
     //scroll
 
     $('#titleBar ul li a').click(function(event) {
 
-        if (this.hash !== '') {
-          event.preventDefault();
-          hash = this.hash;
+      if (this.hash !== '') {
+        event.preventDefault();
+        hash = this.hash;
 
 
 
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 900, function() {
-            window.location.hash = hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function() {
+          window.location.hash = hash;
 
-          });
+        });
 
-
-        }
 
       }
 
+    });
 
-    );
-
+    // Social icon underline trigger
+    $("#socialIcons ul").hover(socialIconIn, socialIconOut);
 
 
   });
