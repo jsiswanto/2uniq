@@ -124,7 +124,6 @@
   }
 }
 /*dialog box*/
-
 .dialogBox {
   background: rgba(216, 206, 194, .5);
   display: flex;
@@ -156,7 +155,6 @@
   }
 }
 /*responsive nav*/
-
 .menuContainer {
   @include topRightPos;
   background: $mNavBgColour;
@@ -314,7 +312,6 @@
   }
 }
 /*fancybox*/
-
 .fancybox-stage {
   background: $light;
 }
@@ -439,7 +436,6 @@ button:focus {
   outline: 0 !important;
 }
 /* main body*/
-
 body {
   background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
   background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
@@ -1276,6 +1272,7 @@ body {
       margin: -2px 0 0 8px;
       opacity: .5;
       vertical-align: middle;
+      display: inline-block; //Firefox fix
       background: #fff;
       mask: url("../images/next.svg") no-repeat center;
       -webkit-mask: url("../images/next.svg") no-repeat center;
@@ -1297,7 +1294,7 @@ body {
       margin: -1px 0 0 15px;
     }
 
-    img {
+    img.headerIcon {
       width: 30px;
       height: 30px;
       vertical-align: top;

@@ -333,6 +333,16 @@
     .marginRight {
       margin: 100px 50px 50px 50px !important;
       text-align: center;
+
+      img.headerIcon {
+        width: 50px !important;
+        height: 50px !important;
+      }
+
+      h3 {
+        margin: 20px auto !important;
+        display: block;
+      }
     }
 
     .flex {
