@@ -373,6 +373,12 @@
   #socialIconsM {
     display: block;
   }
+
+  #copyright {
+    div {
+      padding: 0 0 23px 0 !important;
+    }
+  }
 }
 @media screen and (orientation: landscape) and (min-width: 1101px) {
   .mNav {
