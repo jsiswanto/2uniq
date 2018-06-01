@@ -221,6 +221,17 @@
     //resolves div gap on mobile Chrome
     display: none;
   }*/
+  #contact {
+    img.headerIcon {
+      width: 40px !important;
+      height: 40px !important;
+    }
+
+    h3 {
+      margin: 20px auto !important;
+      display: block !important;
+    }
+  }
 }
 @media screen and (min-width: 691px) {
   #work {
@@ -333,16 +344,6 @@
     .marginRight {
       margin: 100px 50px 50px 50px !important;
       text-align: center;
-
-      img.headerIcon {
-        width: 50px !important;
-        height: 50px !important;
-      }
-
-      h3 {
-        margin: 20px auto !important;
-        display: block;
-      }
     }
 
     .flex {
