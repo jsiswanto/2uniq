@@ -19,7 +19,7 @@ $footerBg: #252219;
 $diagonalFooterLength: 6000px;
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,700,700i');
 @mixin defaultFontSize {
-  font-size: 16px;
+  font-size: 16px !important;
   line-height: 2.2em !important;
   color: $defaultTextColour !important;
 }
@@ -121,6 +121,7 @@ $diagonalFooterLength: 6000px;
   }
 }
 /*bootstrap override*/
+
 html {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -145,6 +146,7 @@ p {
   margin-top: 20px !important;
 }
 /* clearfix */
+
 %clearfix {
   &:after {
     content: " ";

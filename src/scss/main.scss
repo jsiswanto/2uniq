@@ -124,6 +124,7 @@
   }
 }
 /*dialog box*/
+
 .dialogBox {
   background: rgba(216, 206, 194, .5);
   display: flex;
@@ -155,6 +156,7 @@
   }
 }
 /*responsive nav*/
+
 .menuContainer {
   @include topRightPos;
   background: $mNavBgColour;
@@ -312,6 +314,7 @@
   }
 }
 /*fancybox*/
+
 .fancybox-stage {
   background: $light;
 }
@@ -349,11 +352,10 @@
       margin-right: 20px;
     }
 
-    h4 {
+    h3 {
       color: $dark;
       margin-bottom: 10px;
       // @include defaultFont;
-      @include titleStyle;
     }
 
     .mobile {
@@ -437,6 +439,7 @@ button:focus {
   outline: 0 !important;
 }
 /* main body*/
+
 body {
   background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
   background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
@@ -722,9 +725,7 @@ body {
           .caption {
             position: relative;
 
-            h4 {
-              @include titleStyle;
-              line-height: 1.4em;
+            h3 {
               position: absolute;
               top: 0;
               left: 0;
@@ -1189,10 +1190,6 @@ body {
 
         &:hover {
           opacity: 1;
-
-          h3 {
-            text-shadow: 4px 4px 0 rgba(216, 206, 194, 1);
-          }
 
           .text {
             @include translate(0, -60px);
