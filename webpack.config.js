@@ -6,9 +6,6 @@ var extractplugin = new extracttextplugin({
   filename: 'styles.css'
 });
 
-
-
-
 module.exports = {
   entry: './src/main.js',
 

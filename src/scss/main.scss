@@ -124,6 +124,7 @@
   }
 }
 /*dialog box*/
+
 .dialogBox {
   background: rgba(216, 206, 194, .5);
   display: flex;
@@ -155,6 +156,7 @@
   }
 }
 /*responsive nav*/
+
 .menuContainer {
   @include topRightPos;
   background: $mNavBgColour;
@@ -312,6 +314,7 @@
   }
 }
 /*fancybox*/
+
 .fancybox-stage {
   background: $light;
 }
@@ -425,6 +428,7 @@ button:focus {
   outline: 0 !important;
 }
 /* main body*/
+
 body {
   background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
   background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
@@ -608,7 +612,7 @@ body {
         height: 0;
         position: absolute;
         content: '';
-        top: 110%;
+        top: 120%;
         left: 0;
         opacity: .5;
         border-top: 4px solid $light;
@@ -619,7 +623,7 @@ body {
       &.active {
         //opacity: 1;
         &:after {
-          width: 200%;
+          width: 250%;
         }
       }
 
