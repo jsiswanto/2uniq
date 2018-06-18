@@ -334,6 +334,9 @@
 
   #about {
     .moment {
+      padding-bottom: 45px !important;
+      width: 80% !important;
+
       &.active {
         &:after {
           width: 100% !important;
