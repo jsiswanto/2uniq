@@ -182,22 +182,21 @@ $(document).ready(function()
       ]
     });
 
-    //fancybox init
+    //fancybox override default
 
-    $('#work .item a').fancybox({
+    $.extend($.fancybox.defaults, {
 
-
+      infobar: false,
+      buttons: ['fullScreen', 'close'],
       idleTime: 7,
       transitionEffect: 'zoom-in-out',
       transitionDuration: 500,
-      infobar: false,
-      buttons: ['fullScreen', 'close'],
       margin: [0, 80],
       protect: true,
       clickSlide: 'toggleControls',
 
 
-      beforeShow: function() {
+      beforeShow: () => {
 
         if (fancyboxClicked == false) {
           $('.dialogBox').addClass('active').delay(8000).queue(function(next) {
@@ -217,7 +216,7 @@ $(document).ready(function()
 
     //sticky nav
 
-    $(window).scroll(function()
+    $(window).scroll(() =>
 
       {
         //sticky nav

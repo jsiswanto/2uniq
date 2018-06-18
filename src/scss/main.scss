@@ -124,6 +124,7 @@
   }
 }
 /*dialog box*/
+
 .dialogBox {
   background: rgba(216, 206, 194, .5);
   display: flex;
@@ -155,6 +156,7 @@
   }
 }
 /*responsive nav*/
+
 .menuContainer {
   @include topRightPos;
   background: $mNavBgColour;
@@ -312,6 +314,7 @@
   }
 }
 /*fancybox*/
+
 .fancybox-stage {
   background: $light;
 }
@@ -417,7 +420,7 @@
   margin: 20px 30px;
 
   button:hover {
-    @include translate(-5px, -5px);
+    @include translate(-2px, -2px);
   }
 }
 
@@ -425,6 +428,7 @@ button:focus {
   outline: 0 !important;
 }
 /* main body*/
+
 body {
   background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
   background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
