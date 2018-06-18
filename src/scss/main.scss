@@ -124,7 +124,6 @@
   }
 }
 /*dialog box*/
-
 .dialogBox {
   background: rgba(216, 206, 194, .5);
   display: flex;
@@ -156,7 +155,6 @@
   }
 }
 /*responsive nav*/
-
 .menuContainer {
   @include topRightPos;
   background: $mNavBgColour;
@@ -314,7 +312,6 @@
   }
 }
 /*fancybox*/
-
 .fancybox-stage {
   background: $light;
 }
@@ -330,10 +327,6 @@
   color: $defaultTextColour;
   line-height: 2em !important;
   @include defaultFont;
-
-  p {
-    @include defaultFontSize;
-  }
 
   a {
     color: $dark !important;
@@ -415,12 +408,21 @@
   height: 50px * .5 !important;
   margin-left: 35px !important;
 }
+//prev, next buttons always visible by default
+
+.fancybox-navigation a {
+  opacity: 1;
+  visibility: visible !important;
+}
+//toolbars for fullscreen, close always visible by default
 
 .fancybox-toolbar {
   margin: 20px 30px;
+  opacity: 1 !important;
+  visibility: visible !important;
 
   button:hover {
-    @include translate(-2px, -2px);
+    @include translate(-5px, -5px);
   }
 }
 
@@ -428,7 +430,6 @@ button:focus {
   outline: 0 !important;
 }
 /* main body*/
-
 body {
   background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
   background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);

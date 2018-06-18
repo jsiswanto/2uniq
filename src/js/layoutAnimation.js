@@ -184,7 +184,10 @@ $(document).ready(function()
 
     //fancybox override default
 
+
+
     $.extend($.fancybox.defaults, {
+
 
       infobar: false,
       buttons: ['fullScreen', 'close'],
@@ -195,6 +198,22 @@ $(document).ready(function()
       protect: true,
       clickSlide: 'toggleControls',
 
+
+      // Arrows
+      btnTpl: {
+        download: '',
+        zoom: '',
+        fullScreen: '<button data-fancybox-fullscreen class="fancybox-button fancybox-button--fullscreen" title="{{FULL_SCREEN}}"></button>',
+
+        close: '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}"></button>',
+        smallBtn: '<button data-fancybox-close class="fancybox-close-small" title="{{CLOSE}}"></button>',
+
+        arrowLeft: '<a data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}" href="javascript:;"></a>',
+
+        arrowRight: '<a data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}" href="javascript:;"></a>'
+      },
+
+      clickOutside: false,
 
       beforeShow: () => {
 
@@ -211,6 +230,7 @@ $(document).ready(function()
 
 
     });
+
 
 
 
