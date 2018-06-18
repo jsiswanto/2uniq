@@ -152,7 +152,7 @@ $(document).ready(function()
 
         {
 
-          breakpoint: 1600,
+          breakpoint: 1751,
           settings: {
             slidesToShow: 4
           }
@@ -161,20 +161,20 @@ $(document).ready(function()
 
         {
 
-          breakpoint: 1200,
+          breakpoint: 1101,
           settings: {
             slidesToShow: 3
           }
         },
         {
-          breakpoint: 770,
+          breakpoint: 691,
           settings: {
             slidesToShow: 2
           }
         },
         {
 
-          breakpoint: 420,
+          breakpoint: 421,
           settings: {
             slidesToShow: 1
           }
@@ -190,6 +190,7 @@ $(document).ready(function()
       idleTime: 7,
       transitionEffect: 'zoom-in-out',
       transitionDuration: 500,
+      infobar: false,
       buttons: ['fullScreen', 'close'],
       margin: [0, 80],
       protect: true,

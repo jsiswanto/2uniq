@@ -19,14 +19,14 @@ $footerBg: #252219;
 $diagonalFooterLength: 6000px;
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,700,700i');
 @mixin defaultFontSize {
-  font-size: 16px !important;
+  font-size: 16px;
   line-height: 2.2em !important;
-  color: $defaultTextColour !important;
 }
 @mixin defaultFont {
   font-family: 'Source Sans Pro', sans-serif !important;
   letter-spacing: .01em;
   font-weight: 400;
+  color: $defaultTextColour !important;
 }
 @mixin titleStyle {
   font-weight: 300;
@@ -121,7 +121,6 @@ $diagonalFooterLength: 6000px;
   }
 }
 /*bootstrap override*/
-
 html {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -146,7 +145,6 @@ p {
   margin-top: 20px !important;
 }
 /* clearfix */
-
 %clearfix {
   &:after {
     content: " ";
@@ -189,4 +187,10 @@ h3 {
     background-size: contain;
   }
   color: #fff !important;
+}
+
+.fancybox-container {
+  svg {
+    display: none !important;
+  }
 }
