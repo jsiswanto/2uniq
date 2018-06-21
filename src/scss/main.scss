@@ -1120,7 +1120,8 @@ body {
     .step {
       width: 50%;
       height: 160px;
-      border: 1px solid $light;
+      background: $inactiveButton;
+      border-bottom: 5px solid $light;
       opacity: 0;
       @include transitions(all 1s cubic-bezier(0.180, 0.695, 0.430, 1.000) 1s);
 
@@ -1129,14 +1130,14 @@ body {
         @include skew(-22deg);
       }
       position: relative;
-      overflow: hidden; //select 3 and 4
-
+      overflow: hidden;
+      //select 3 and 4
       &:nth-child(n+3) {
         margin-top: 20px;
       }
 
-      &:nth-child(2n) {
-        border-left: none;
+      &:nth-child(2n+1) {
+        border-right: 1px solid $light;
       }
     }
 
@@ -1159,8 +1160,9 @@ body {
 
       .caption {
         position: relative;
+        color: #fff;
         width: 50%;
-        height: 160px;
+        height: 150px;
         overflow: hidden;
         opacity: .7;
         @include transitions (all .2s linear);
@@ -1171,6 +1173,7 @@ body {
 
         h3 {
           font-weight: 200;
+          color: #fff;
 
           &.num {
             position: absolute;
@@ -1187,7 +1190,7 @@ body {
         .text {
           position: absolute;
           width: 85%;
-          top: 123px;
+          top: 100px;
           right: 38px;
           text-align: right;
           @include transitions (all .2s ease-out);
