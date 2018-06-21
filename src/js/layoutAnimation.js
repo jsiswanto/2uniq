@@ -1,15 +1,15 @@
-$(document).ready(function()
+$(document).ready(() =>
 
   {
 
-    var fancyboxClicked = false;
-    var scope = {};
-    var hash;
-    var scrollPositionTop = true; // fixes scrolltrigger bug on mobile version where squareOne and squareTwo fades away on the very top of window scroll
+    let fancyboxClicked = false;
+    let scope = {};
+    let hash;
+    let scrollPositionTop = true; // fixes scrolltrigger bug on mobile version where squareOne and squareTwo fades away on the very top of window scroll
 
     //scrolltrigger
 
-    var trigger = new ScrollTrigger({
+    const trigger = new ScrollTrigger({
       toggle: {
         visible: 'visible',
         hidden: 'visible'
@@ -41,7 +41,7 @@ $(document).ready(function()
     //square shift
 
     // bug fix so that squareOne and squareTwo doesn't fade away when scrolling to top of smaller window
-    $(window).scroll(function(event) {
+    $(window).scroll((event) => {
 
       if ($(this).scrollTop() <= $('#about h2').offset.top) {
         scrollPositionTop = true;
@@ -56,7 +56,7 @@ $(document).ready(function()
 
 
 
-    scope.squareShiftTowards = function() {
+    scope.squareShiftTowards = () => {
 
 
       $('#about .squareOne').removeClass('init');
@@ -66,7 +66,7 @@ $(document).ready(function()
     }
 
 
-    scope.squareShiftAway = function() {
+    scope.squareShiftAway = () => {
 
       if (scrollPositionTop == false) { // don't fade away when scroll position is top of window
         $('#about .squareOne').addClass('init');
@@ -83,24 +83,24 @@ $(document).ready(function()
     //techStepsShift
 
 
-    scope.techStepsShiftTowards = function() {
+    scope.techStepsShiftTowards = () => {
       $('#process .step').addClass('active');
       $('#process .captionWrap').addClass('active');
 
     }
-    scope.techStepsShiftAway = function() {
+    scope.techStepsShiftAway = () => {
       $('#process .step').removeClass('active');
       $('#process .captionWrap').removeClass('active');
 
     }
 
     //bg shift
-    scope.bgShiftOne = function() {
+    scope.bgShiftOne = () => {
       $('#bgOverlay').addClass('active');
       $('#work .item').addClass('active');
     }
 
-    scope.bgShiftOne_r = function() {
+    scope.bgShiftOne_r = () => {
       $('#bgOverlay').removeClass('active');
       $('#work .item').removeClass('active');
     }
@@ -111,7 +111,7 @@ $(document).ready(function()
     //contact shift
 
 
-    scope.contactShiftTowards = function() {
+    scope.contactShiftTowards = () => {
       $("#contact .transition").addClass("opacityOne");
       $("#contact .transition").removeClass("opacityZero");
       $("#contact .left img").addClass("active");
@@ -129,11 +129,11 @@ $(document).ready(function()
 
     //copyright shift
 
-    scope.copyrightShiftTowards = function() {
+    scope.copyrightShiftTowards = () => {
 
       $("#copyright div").addClass("active");
     }
-    scope.copyrightShiftAway = function() {
+    scope.copyrightShiftAway = () => {
 
       $("#copyright div").removeClass("active");
     }
@@ -201,7 +201,7 @@ $(document).ready(function()
       // Manage image size when zooming in
 
       afterLoad: (instance, current) => {
-        var pixelRatio = window.devicePixelRatio || 1;
+        let pixelRatio = window.devicePixelRatio || 1;
 
         if (pixelRatio > 1.5) {
           current.width = current.width / pixelRatio;
@@ -230,7 +230,7 @@ $(document).ready(function()
       beforeShow: () => {
 
         if (fancyboxClicked == false) {
-          $('.dialogBox').addClass('active').delay(8000).queue(function(next) {
+          $('.dialogBox').addClass('active').delay(8000).queue((next) => {
 
             $(this).removeClass('active');
             next();
@@ -263,7 +263,7 @@ $(document).ready(function()
 
     //mNav hide after click on a link
 
-    $('.mNav.menuContainer a').click(function()
+    $('.mNav.menuContainer a').click(() =>
 
       {
         $('input.mNav').prop('checked', false);
@@ -275,7 +275,7 @@ $(document).ready(function()
 
     //scroll
 
-    $('#titleBar ul li a').click(function(event) {
+    $('#titleBar ul li a').click((event) => {
 
       if (this.hash !== '') {
         event.preventDefault();
