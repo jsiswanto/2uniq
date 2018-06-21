@@ -198,6 +198,17 @@ $(document).ready(function()
       protect: true,
       clickSlide: 'toggleControls',
 
+      // Manage image size when zooming in
+
+      afterLoad: (instance, current) => {
+        var pixelRatio = window.devicePixelRatio || 1;
+
+        if (pixelRatio > 1.5) {
+          current.width = current.width / pixelRatio;
+          current.height = current.height / pixelRatio;
+        }
+      },
+
 
       // Arrows
       btnTpl: {
@@ -215,6 +226,7 @@ $(document).ready(function()
 
       clickOutside: false,
 
+      //Dialog box popup
       beforeShow: () => {
 
         if (fancyboxClicked == false) {
