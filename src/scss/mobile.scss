@@ -175,8 +175,9 @@
     }
 
     #process {
-      margin-top: 20px !important;
-      width: 90% !important;
+      margin: 20px 0 !important;
+      width: 100% !important;
+      background: $inactiveButton;
 
       .step {
         display: none !important;
@@ -184,12 +185,16 @@
 
       .captionWrap {
         position: relative !important;
+        width: 85% !important;
+        margin: 0 auto;
+        padding-bottom: 40px;
 
         .caption {
           width: 100% !important;
           margin-top: 20px !important;
-          height: 140px !important;
+          height: 150px !important;
           width: 100% !important;
+          border-bottom: 1px solid $light;
 
           h3 {
             top: 5px !important;
@@ -202,7 +207,6 @@
             width: 100% !important;
             top: 106px !important;
             right: 0 !important;
-            border-top: 1px solid $light;
             z-index: 1;
           }
         }
@@ -306,7 +310,7 @@
         height: 130px !important;
 
         .text {
-          top: 93px !important;
+          top: 80px !important;
         }
       }
     }
