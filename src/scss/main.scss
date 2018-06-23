@@ -124,6 +124,7 @@
   }
 }
 /*dialog box*/
+
 .dialogBox {
   background: rgba(216, 206, 194, .5);
   display: flex;
@@ -155,6 +156,7 @@
   }
 }
 /*responsive nav*/
+
 .menuContainer {
   @include topRightPos;
   background: $mNavBgColour;
@@ -312,6 +314,7 @@
   }
 }
 /*fancybox*/
+
 .fancybox-stage {
   background: $light;
 }
@@ -430,6 +433,7 @@ button:focus {
   outline: 0 !important;
 }
 /* main body*/
+
 body {
   background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
   background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
@@ -679,26 +683,17 @@ body {
       opacity: 1;
       @include translate (0, 0);
     }
-
-    &:before {
+    /*&:before {
       z-index: -1;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      box-shadow: 0 5px 0 $workThumbShadow;
       opacity: 0;
       content: '';
       @include transitions (all .2s linear);
-    }
-
-    &:hover {
-      &:before {
-        opacity: 1;
-      }
-    }
-
+    }*/
     a {
       width: 100%;
       height: 100%;
@@ -715,6 +710,7 @@ body {
           position: relative;
           opacity: 0;
           @include transitions(all .2s linear);
+          border-bottom: $workThumbShadow;
 
           div {
             position: absolute;
@@ -758,6 +754,7 @@ body {
 
           &:hover {
             opacity: 1;
+            border-bottom: $workThumbShadowActive;
           }
         }
       }

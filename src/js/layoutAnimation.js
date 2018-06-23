@@ -2,14 +2,14 @@ $(document).ready(() =>
 
   {
 
-    let fancyboxClicked = false;
-    let scope = {};
-    let hash;
-    let scrollPositionTop = true; // fixes scrolltrigger bug on mobile version where squareOne and squareTwo fades away on the very top of window scroll
+    var fancyboxClicked = false;
+    var scope = {};
+    var hash;
+    var scrollPositionTop = true; // fixes scrolltrigger bug on mobile version where squareOne and squareTwo fades away on the very top of window scroll
 
     //scrolltrigger
 
-    const trigger = new ScrollTrigger({
+    var trigger = new ScrollTrigger({
       toggle: {
         visible: 'visible',
         hidden: 'visible'
@@ -198,10 +198,8 @@ $(document).ready(() =>
       protect: true,
       clickSlide: 'toggleControls',
 
-      // Manage image size when zooming in
-
       afterLoad: (instance, current) => {
-        let pixelRatio = window.devicePixelRatio || 1;
+        var pixelRatio = window.devicePixelRatio || 1;
 
         if (pixelRatio > 1.5) {
           current.width = current.width / pixelRatio;
@@ -226,11 +224,10 @@ $(document).ready(() =>
 
       clickOutside: false,
 
-      //Dialog box popup
       beforeShow: () => {
 
         if (fancyboxClicked == false) {
-          $('.dialogBox').addClass('active').delay(8000).queue((next) => {
+          $('.dialogBox').addClass('active').delay(8000).queue(function(next) {
 
             $(this).removeClass('active');
             next();
@@ -285,7 +282,7 @@ $(document).ready(() =>
 
         $('html, body').animate({
           scrollTop: $(hash).offset().top
-        }, 900, function() {
+        }, 900, () => {
           window.location.hash = hash;
 
         });
