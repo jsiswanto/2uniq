@@ -124,7 +124,6 @@
   }
 }
 /*dialog box*/
-
 .dialogBox {
   background: rgba(216, 206, 194, .5);
   display: flex;
@@ -156,7 +155,6 @@
   }
 }
 /*responsive nav*/
-
 .menuContainer {
   @include topRightPos;
   background: $mNavBgColour;
@@ -314,7 +312,6 @@
   }
 }
 /*fancybox*/
-
 .fancybox-stage {
   background: $light;
 }
@@ -433,7 +430,6 @@ button:focus {
   outline: 0 !important;
 }
 /* main body*/
-
 body {
   background: -moz-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
   background: -webkit-linear-gradient(-45deg, $backgroundGrad 0%, $backgroundGrad2 50%);
@@ -1184,8 +1180,8 @@ body {
   }
 
   img {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     vertical-align: top;
   }
 }
